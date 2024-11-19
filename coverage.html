@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coverage</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            font-family: 'Montserrat';
+            border-color: #DEE2E6;
+            color: #212529;
+            background-color: #FFFFFF;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1440px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0px 20px;
+        }
+
+        .container-fluid {
+            width: 100%;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+        }
+
+        .row .col-1,
+        .row .col-2 {
+            width: 50%;
+        }
+
+        .small-title {
+            font-family: "Montserrat";
+            font-size: 32px;
+            line-height: 35px;
+            font-weight: 700;
+        }
+
+        .sub-title {
+            font-family: "Montserrat";
+            font-size: 28px;
+            line-height: normal;
+            font-weight: 700;
+        }
+
+        .text-montserrat {
+            font-family: "Montserrat";
+            font-size: 16px;
+            line-height: 25px;
+            font-weight: 400;
+        }
+
+        /* ---------- Banner Section CSS START ---------- */
+
+        section.banner-section {
+            line-height: 0px;
+        }
+
+        section.banner-section img {
+            width: 100%;
+        }
+
+        /* ---------- Banner Section CSS END ---------- */
+
+
+        /* ---------- Coverage Guarantee Section CSS START ---------- */
+
+        .coverage-guarantee-section {
+            padding: 60px 0px 40px;
+        }
+
+        .coverage-guarantee-section .call-to-action-title {
+            padding-bottom: 50px;
+        }
+
+        .coverage-guarantee-section h3.small-title {
+            color: #182857;
+            text-align: center;
+            text-transform: capitalize;
+        }
+
+        .coverage-guarantee-section .row {
+            gap: 60px;
+        }
+
+        .coverage-guarantee-section .image-section {
+            line-height: 0px;
+        }
+
+        .coverage-guarantee-section .image-section img {
+            width: 100%;
+        }
+
+        .coverage-guarantee-section .well-come-content-section h4.sub-title {
+            color: #B53243;
+            padding-bottom: 20px;
+        }
+
+        .coverage-guarantee-section .well-come-content-section p.text-montserrat {
+            margin-bottom: 15px;
+            color: #757589;
+        }
+
+        .coverage-guarantee-section .well-come-content-section p.text-montserrat:last-child {
+            padding-top: 35px;
+        }
+
+        /* ---------- Coverage Guarantee Section CSS END ---------- */
+
+
+
+        /* ***** Media Query START ***** */
+
+        @media only screen and (max-width: 1024px) {
+
+            .small-title {
+                font-size: 28px;
+                line-height: 34px;
+            }
+
+            .sub-title {
+                font-size: 25px;
+                line-height: 32px;
+            }
+
+            .row {
+                flex-wrap: wrap;
+            }
+
+            .row .col-1,
+            .row .col-2 {
+                width: 100%;
+            }
+
+            .coverage-guarantee-section {
+                padding: 50px 0px;
+            }
+
+            .coverage-guarantee-section .well-come-content-section p.text-montserrat:last-child {
+                padding-top: 0px;
+            }
+
+            .coverage-guarantee-section .row {
+                gap: 15px;
+            }
+
+        }
+
+
+        @media only screen and (max-width: 767px) {
+
+            .small-title {
+                font-size: 25px;
+                line-height: 32px;
+            }
+
+            .sub-title {
+                font-size: 22px;
+                line-height: 30px;
+            }
+
+            .coverage-guarantee-section {
+                padding: 40px 0px;
+            }
+
+            .coverage-guarantee-section .call-to-action-title {
+                padding-bottom: 40px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <section class="banner-section">
+            <div class="container-fluid">
+                <picture>
+                    <source media="(max-width:767px)" srcset="images/PM_Performance-Guarantee-768x512.jpg">
+                    <img src="/images/PM_Coverage-Guarantee_1900x500.jpg" style="width:100%;">
+                </picture>
+            </div>
+        </section>
+        <section class="coverage-guarantee-section">
+            <div class="container">
+                <div class="call-to-action-title">
+                    <h3 class="small-title">Never having to switch cellphone carriers due to coverage is a reality with
+                        Patriot Mobile’s Coverage Guarantee.</h3>
+                </div>
+                <div class="row">
+                    <div class="well-come-content-section col-2">
+                        <h4 class="sub-title">What is a Coverage Guarantee?</h4>
+
+                        <p class="text-montserrat">Patriot Mobile is one of the only mobile carriers offering wireless
+                            coverage on <b>all three major networks.</b></p>
+
+                        <p class="text-montserrat">Because our service uses the same towers as <b>ALL THREE</b> of the
+                            big carriers, if you’re ever experiencing service issues, we can switch you for <b>FREE</b>
+                            to the service most appropriate for your area.</p>
+
+                        <p class="text-montserrat"><b>Call 972-PATRIOT.</b> One of our US-based member service agents
+                            will get you switched to the right network coverage.</p>
+
+                        <p class="text-montserrat">4G/5G capable devices are required for 4G/5G service, respectively.
+                            Cellular service is not available in all areas and is subject to system limitations.
+                            Coverage in areas outside of the continental U.S. is specifically excluded from the Coverage
+                            Guarantee. Pricing, promotions, terms and restrictions subject to change and may be modified
+                            or terminated at any time without notice.</p>
+                    </div>
+                    <div class="image-section col-1">
+                        <img src="images/PM_Performance-Guarantee-768x512.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>

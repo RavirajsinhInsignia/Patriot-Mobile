@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Patriot Mobile International</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Montserrat';
+            border-color: #DEE2E6;
+            color: #212529;
+            background-color: #FFFFFF;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .container {
+            max-width: 1440px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0px 20px;
+        }
+        .container-fluid {
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0px;
+        }
+        img {
+            width: 100%;
+        }
+        .title {
+            font-family: "Montserrat";
+            font-size: 42px;
+            line-height: 50px;
+            font-weight: 700;
+        }
+        .small-title {
+            font-family: "Montserrat";
+            font-size: 32px;
+            line-height: 40px;
+            font-weight: 700;
+        }
+        .sub-title {
+            font-family: "Montserrat";
+            font-size: 28px;
+            line-height: normal;
+            font-weight: 700;
+        }
+        .small-sub-title {
+            font-family: "Montserrat";
+            font-size: 22px;
+            line-height: 28px;
+            font-weight: 500;
+        }
+        .btn-text {
+            font-family: "Montserrat";
+            font-size: 20px;
+            line-height: 20px;
+            font-weight: 700;
+        }
+        .text-montserrat {
+            font-family: "Montserrat";
+            font-size: 16px;
+            line-height: 25px;
+            font-weight: 400;
+        }
+
+
+        .under-banner-section {
+            background-color: #182857;
+            color: #fff;
+        }
+        .international-banner-section-wrp {
+            line-height: 0;
+        }
+        .international-banner-section-wrp .international-banner-phone-img {
+            display: none;
+        }
+        .introducing-section-wrp {
+            padding: 100px 0 90px 0;
+        }
+        .introducing-section-wrp .introducing-container-wrp {
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+        }
+        .introducing-heading-wrp {
+            text-align: center;
+        }
+        .introducing-heading-wrp h1.title {
+            color: #00205B;
+            margin: 0 0 20px;
+        }
+        .introducing-heading-wrp p.small-sub-title {
+            color: #182857;
+            font-weight: 400;
+        }
+        .introducing-section-wrp .introducing-image-box-wrp {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            gap: 20px;
+        }
+        .introducing-section-wrp .introducing-image-box-single {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        .introducing-section-wrp .introducing-image-box-single:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .introducing-section-wrp .introducing-image-box-single-bottom {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            color: #001468;
+        }
+        .introducing-section-wrp .introducing-image-box-single-top {
+            line-height: 0;
+        }
+
+        .introducing-section-wrp .introducing-image-box-single-top img.introducing-image-box-img {
+            border-bottom: 3px solid #0c1e50;
+        }
+        .introducing-section-wrp h4.btn-text {
+            font-weight: 500;
+            text-align: center;
+        }
+        .introducing-section-wrp .tooltip1 {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            font-size: 14px;
+            margin-left: 5px;
+        }
+        .introducing-section-wrp .tooltip1 .tooltiptext {
+            visibility: hidden;
+            width: 300px;
+            background-color: #001468;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 10px;
+            position: absolute;
+            z-index: 9999;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s, visibility 0.3s;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .introducing-section-wrp .tooltip1:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        .introducing-section-wrp .tooltip1 .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 5px;
+            border-style: solid;
+            border-color: #001468 transparent transparent transparent;
+        }
+        .international-roaming-section-wrp {
+            padding: 10px 0px 70px;
+        }
+        .international-roaming-section-wrp .international-roaming-half-wrp {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .international-roaming-section-wrp .international-roaming-left-wrp {
+            flex: 1;
+            text-align: center;
+        }
+        .international-roaming-section-wrp .international-roaming-right-wrp {
+            flex: 1;
+            padding-left: 20px;
+        }
+        .international-roaming-section-wrp img.international-roaming-img {
+            max-width: 500px;
+        }
+        .international-roaming-section-wrp .international-roaming-right-wrp p,
+        .international-roaming-right-wrp ul {
+            color: #212529;
+            margin-bottom: 16px;
+        }
+        .international-roaming-section-wrp .international-roaming-title-wrp h2.small-title {
+            font-weight: 500;
+            color: #001468;
+            margin-bottom: 8px;
+        }
+        .international-roaming-section-wrp .international-roaming-content-wrp h4.sub-title,
+        .international-roaming-section-wrp .international-roaming-content-wrp h4.small-sub-title {
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        .international-roaming-section-wrp .international-roaming-right-wrp .international-roaming-list-wrp {
+            padding-left: 30px;
+        }
+        .international-roaming-section-wrp .international-roaming-right-wrp ul.text-montserrat {
+            padding-left: 28px;
+        }
+        .international-roaming-section-wrp .international-roaming-right-wrp ul.text-montserrat li {
+            padding-left: 20px;
+        }
+        .international-roaming-faq-link-wrp h3.sub-title {
+            text-align: center;
+            padding: 40px 0 30px 0;
+        }
+        .international-roaming-faq-link-wrp a {
+            text-decoration: none;
+            color: #003366;
+            transition: color 0.3s;
+        }
+        .international-zim-section-wrp {
+            background: #d3d3d3;
+            padding: 40px 0;
+        }
+        .international-zim-section-wrp .international-zim-container-wrp {
+            display: flex;
+            flex-direction: column;
+            gap: 90px 0;
+        }
+        .international-zim-section-wrp .international-zim-heading-wrp {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px 0;
+            text-align: center;
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #001468;
+        }
+        .international-zim-section-wrp .international-zim-heading-wrp h2.small-title {
+            font-weight: 500;
+            text-align: center;
+        }
+        .international-zim-section-wrp .international-zim-heading-wrp .international-zim-active-link {
+            color: #0d6efd;
+        }
+        .international-zim-section-wrp .international-zim-heading-wrp .international-zim-active-link:hover {
+            color: #0a58ca;
+        }
+        .international-zim-section-wrp .international-zim-half-wrp {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            gap: 20px;
+        }
+        .international-zim-section-wrp .international-zim-left-wrp,
+        .international-zim-section-wrp .international-zim-right-wrp {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            flex: 1;
+        }
+        .international-zim-section-wrp .international-zim-right-wrp {
+            display: flex;
+            align-items: center;
+        }
+        .international-zim-section-wrp .international-zim-right-wrp img {
+            border-radius: 8px;
+        }
+
+
+        /* ***** Media Query START ***** */
+
+        @media only screen and (max-width: 1024px) {
+
+            .title {
+                font-size: 36px;
+                line-height: 40px;
+            }
+            .small-title {
+                font-size: 28px;
+                line-height: 34px;
+            }
+            .sub-title {
+                font-size: 25px;
+                line-height: 32px;
+            }
+            .btn-text {
+                font-size: 18px;
+                line-height: 18px;
+            }
+
+
+            .introducing-section-wrp {
+                padding: 70px 0 60px 0;
+            }
+            .introducing-section-wrp .introducing-container-wrp {
+                gap: 60px;
+            }
+            .introducing-section-wrp .introducing-image-box-wrp {
+                flex-wrap: wrap;
+            }
+            .introducing-section-wrp .introducing-image-box-single {
+                flex: unset;
+                width: 48.5%;
+            }
+
+
+            .international-zim-section-wrp {
+                padding: 70px 0;
+            }
+            .international-roaming-section-wrp .international-roaming-right-wrp ul.text-montserrat li {
+                padding-left: 10px;
+            }
+            .international-roaming-faq-link-wrp h3.sub-title {
+                padding: 25px 0 0px 0;
+            }
+            .international-zim-section-wrp .international-zim-container-wrp {
+                gap: 50px 0;
+            }
+        } /* 1024 */
+
+
+        @media only screen and (max-width: 767px) {
+
+            .title {
+                font-size: 30px;
+                line-height: 34px;
+            }
+            .small-title {
+                font-size: 25px;
+                line-height: 32px;
+            }
+            .sub-title {
+                font-size: 22px;
+                line-height: 30px;
+            }
+            .small-sub-title {
+                font-size: 20px;
+                line-height: 26px;
+            }
+            .btn-text {
+                font-size: 16px;
+                line-height: 16px;
+            }
+            .small-btn-text {
+                font-size: 14px;
+                line-height: 15px;
+            }
+
+
+            .introducing-section-wrp {
+                padding: 50px 0 40px 0;
+            }
+            .introducing-section-wrp .introducing-container-wrp {
+                gap: 40px;
+            }
+            .international-roaming-section-wrp {
+                padding: 10px 0px 50px;
+            }
+            .introducing-section-wrp .introducing-image-box-single {
+                width: 100%;
+            }
+            .introducing-section-wrp .introducing-image-box-single-bottom {
+                gap: 15px;
+            }
+            .international-roaming-section-wrp .international-roaming-half-wrp {
+                flex-wrap: wrap;
+            }
+            .international-roaming-section-wrp .international-roaming-left-wrp {
+                flex: unset;
+                width: 100%;
+            }
+            .international-roaming-section-wrp .international-roaming-right-wrp {
+                padding-left: 0px;
+            }
+            .international-zim-section-wrp {
+                padding: 50px 0px;
+            }
+            .international-zim-section-wrp .international-zim-container-wrp {
+                gap: 40px 0;
+            }
+            .international-zim-section-wrp .international-zim-half-wrp {
+                gap: 30px;
+            }
+            .international-zim-section-wrp .international-zim-left-wrp,
+            .international-zim-section-wrp .international-zim-right-wrp {
+                flex: unset;
+                width: 100%;
+            }
+        }/* 767 */
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="banner-section international-banner-section-wrp">
+            <picture>
+                <source media="(max-width:767px)" srcset="/images/International-2.gif">
+                <img src="/images/International-1.gif" style="width:100%;">
+            </picture>
+        </section>
+        <section class="introducing-section-wrp">
+            <div class="container introducing-container-wrp">
+                <div class="introducing-heading-wrp">
+                    <h1 class="title">INTRODUCING PATRIOT MOBILE GLOBAL™</h1>
+                    <p class="small-sub-title">Our commitment to providing exceptional service and innovative solutions
+                        has driven us to develop
+                        best-of-breed international wireless solutions for our customers. So, whether you're exploring
+                        new
+                        countries or simply keeping in touch with loved ones around the world, Patriot Mobile Global
+                        ensures
+                        you stay connected!</p>
+                </div>
+                <div class="introducing-image-box-wrp">
+                    <div class="introducing-image-box-single">
+                        <div class="introducing-image-box-single-top">
+                            <img src="./images/MicrosoftTeams-image-4.jpg" alt="AMERICA DAYPASS"
+                                class="introducing-image-box-img">
+                        </div>
+                        <div class="introducing-image-box-single-bottom">
+                            <h4 class="btn-text">AMERICA DAYPASS</h4>
+                            <p class="text-montserrat">For $12 a day, take your unlimited talk, text, and
+                                data
+                                plan with you when you travel. Available in more than 195 <a
+                                    href="https://landing.patriotmobile.com/americadaypass/">Countries and
+                                    Destinations</a>
+                                on our America Network.
+                                <span class="tooltip1">ℹ️
+                                    <span class="tooltiptext">
+                                        Make traveling easier by ensuring your DayPass is always active—no need to
+                                        remember
+                                        to call before you leave! For just $2 a month, you can enjoy the convenience of
+                                        having your DayPass ready whenever you travel. Please note that international
+                                        usage
+                                        and charges may take up to 60 days to reflect on your Patriot Mobile bill.
+                                    </span>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="introducing-image-box-single">
+                        <div class="introducing-image-box-single-top">
+                            <img src="./images/MicrosoftTeams-image-6.jpg" alt="PATRIOT PASSPORT"
+                                class="introducing-image-box-img">
+                        </div>
+                        <div class="introducing-image-box-single-bottom">
+                            <h4 class="btn-text">PATRIOT PASSPORT</h4>
+                            <p class="text-montserrat">Travel with our Patriot Network. 300 talk minutes,
+                                500
+                                text messages, and 1GB of data for 30 days. Plans range from $25-$100 depending on the
+                                <a href="https://landing.patriotmobile.com/countrydestination/">Country and
+                                    Destination</a>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="introducing-image-box-single">
+                        <div class="introducing-image-box-single-top">
+                            <img src="./images/MicrosoftTeams-image-7.jpg" alt="CONNECT WITH ZIM™"
+                                class="introducing-image-box-img">
+                        </div>
+                        <div class="introducing-image-box-single-bottom">
+                            <h4 class="btn-text">CONNECT WITH ZIM™</h4>
+                            <p class="text-montserrat">Patriot Mobile has partnered with ZIM Connections.
+                                With
+                                available ZIM data plans, you can easily use your mobile device as a hotspot to connect
+                                to
+                                the internet in more than 120 countries around the world. Using your smartphone, <a
+                                    href="https://www.zimconnections.com/">Click here</a> to download the FREE ZIM app.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="introducing-image-box-single">
+                        <div class="introducing-image-box-single-top">
+                            <img src="./images/MicrosoftTeams-image-8.jpg" alt="SMART DEVICE CONNECT"
+                                class="introducing-image-box-img">
+                        </div>
+                        <div class="introducing-image-box-single-bottom">
+                            <h4 class="btn-text">SMART DEVICE CONNECT</h4>
+                            <p class="text-montserrat">ZIM is a low-cost solution that provides data
+                                connections utilizing your smartphone. Ready to revolutionize your travel connectivity?
+                                Download the free ZIM app today, and pay only when you use it abroad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="international-roaming-section-wrp">
+            <div class="container">
+                <div class="international-roaming-half-wrp">
+                    <div class="international-roaming-left-wrp">
+                        <img src="./images/international-roaming-img.png" alt="International Roaming Image"
+                            class="international-roaming-img">
+                    </div>
+                    <div class="international-roaming-right-wrp">
+                        <div class="international-roaming-title-wrp">
+                            <h2 class="small-title">Avoid High Maritime and In-Flight Data Roaming Charges</h2>
+                            <p class="text-montserrat">Travelers often face unexpectedly high phone bills during cruises
+                                or in flights due to
+                                costly
+                                maritime and in-flight roaming charges. Here's why:</p>
+                        </div>
+                        <div class="international-roaming-content-wrp">
+                            <h4 class="sub-title">Maritime Roaming:</h4>
+                            <p class="text-montserrat">While on a cruise, your phone connects to a maritime network that
+                                uses satellite
+                                communication instead of land-based cell towers.</p>
+                            <h4 class="small-sub-title">How to Avoid Expensive Charges:</h4>
+                            <ul class="text-montserrat">
+                                <li>Switch your phone to airplane mode to prevent automatic connections.</li>
+                                <li>Use the ship's Wi-Fi for calls, messaging, and data, which is usually offered in
+                                    affordable packages.</li>
+                            </ul>
+
+                            <h4 class="sub-title">In-Flight Roaming:</h4>
+                            <p class="text-montserrat">Similarly, on a plane, your phone may connect to the airline's
+                                in-flight Wi-Fi or
+                                cellular
+                                service, which also uses satellite communication.</p>
+                            <h4 class="small-sub-title">How to Avoid Expensive Charges:</h4>
+                            <ul class="text-montserrat">
+                                <li>Set your phone to airplane mode when the flight begins.</li>
+                                <li>Most airlines offer Wi-Fi packages at a fixed rate, which is generally much cheaper
+                                    than
+                                    roaming charges.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="international-roaming-faq-link-wrp">
+                    <h3 class="sub-title"><a href="https://patriotmobile.com/faq/?open=about5">Travel Confidently -
+                            Click Here for
+                            International FAQs</a></h2>
+                </div>
+            </div>
+        </section>
+        <section class="international-zim-section-wrp">
+            <div class="container international-zim-container-wrp">
+                <div class="international-zim-heading-wrp">
+                    <h2 class="small-title">Explore the World with ZIM - Your International Travel Companion</h2>
+                    <p class="text-montserrat"><a
+                            href="https://landing.patriotmobile.com/wp-content/uploads/2024/05/Activation-Guide-1.pdf"
+                            class="international-zim-active-link">ZIM Activation Guide.</a> <strong>ZIM offers country
+                            and
+                            region-specific plans tailored to your travel needs.</strong></p>
+                </div>
+                <div class="international-zim-half-wrp">
+                    <div class="international-zim-left-wrp">
+                        <!-- FORM -->
+                        <script charset="utf-8" type="text/javascript"
+                            src="//js.hsforms.net/forms/embed/v2.js"></script>
+                        <script>
+                            hbspt.forms.create({
+                                region: "na1",
+                                portalId: "7603176",
+                                formId: "27152665-aad4-4118-87b8-e858efe0e73b"
+                            });
+                        </script>
+                    </div>
+                    <div class="international-zim-right-wrp">
+                        <img src="./images/Zim-img.png" alt="International Zim Image" class="international-zim-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

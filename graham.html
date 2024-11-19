@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Patriot Mobile Graham</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat';
+            border-color: #DEE2E6;
+            color: #212529;
+            background-color: #FFFFFF;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1440px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0px 20px;
+        }
+
+        .container-fluid {
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .row .col-1,
+        .row .col-2 {
+            width: 50%;
+        }
+
+        .title {
+            font-family: "Montserrat";
+            font-size: 42px;
+            line-height: 47px;
+            font-weight: 700;
+        }
+
+        .sub-title {
+            font-family: "Montserrat";
+            font-size: 28px;
+            line-height: normal;
+            font-weight: 700;
+        }
+
+        .small-title {
+            font-family: "Montserrat";
+            font-size: 32px;
+            line-height: 35px;
+            font-weight: 700;
+        }
+
+        .btn-text {
+            font-family: "Montserrat";
+            font-size: 20px;
+            line-height: 20px;
+            font-weight: 700;
+        }
+
+        .text-montserrat {
+            font-family: "Montserrat";
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+        }
+
+        /* product-banner-section section css */
+
+        .product-banner-section {
+            margin: 0;
+            padding: 0;
+        }
+
+        .product-banner-section .row {
+            display: block;
+        }
+
+        .product-banner-section .full-width-col {
+            padding: 0px;
+            line-height: 0;
+        }
+
+        .product-banner-section img {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        /* ---------- Welcome Patriots Section CSS START ---------- */
+
+        .welcome-patriots-section {
+            padding: 100px 0px 0px;
+        }
+
+        .welcome-patriots-section .call-to-action-title {
+            margin-bottom: 40px;
+        }
+
+        .welcome-patriots-section h3.small-title {
+            color: #182857;
+            text-align: center;
+            text-transform: capitalize;
+        }
+
+        .welcome-patriots-section .row {
+            gap: 60px;
+        }
+
+        .welcome-patriots-section .image-section {
+            line-height: 0px;
+        }
+
+        .welcome-patriots-section .image-section img {
+            width: 100%;
+        }
+
+        .welcome-patriots-section .well-come-content-section h4.sub-title {
+            color: #B53243;
+            padding-bottom: 20px;
+        }
+
+        .welcome-patriots-section .well-come-content-section p.text-montserrat {
+            margin-bottom: 15px;
+            color: #000000;
+        }
+
+        .welcome-patriots-section .well-come-content-section ul.text-montserrat {
+            line-height: 25px;
+            padding-left: 32px;
+            margin-bottom: 16px;
+            color: #212529;
+        }
+
+        /* ---------- Form Section CSS START ---------- */
+
+        .form-main-section .video-section h2.small-title {
+            color: #182857;
+        }
+
+        section.form-main-section {
+            padding: 100px 0px 100px;
+        }
+
+        .form-main-section .row {
+            gap: 50px;
+            align-items: stretch;
+        }
+
+        .form-main-section .video-section {
+            padding: 45px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: left;
+        }
+
+        .form-main-section .form-section h2.sub-title-font-montserrat {
+            color: #33475b;
+            margin-bottom: 20px;
+        }
+
+        .form-main-section .video-section p.text-montserrat {
+            color: #757589;
+            margin-bottom: 15px;
+        }
+
+        .form-main-section .form-section .input-field-common-class {
+            margin-bottom: 20px;
+        }
+
+        /* ---------- Blue / White Bg CTA Section CSS START ---------- */
+        .trasparent-bg {
+            background-color: transparent !important;
+        }
+
+        .trasparent-bg {
+            padding-top: 100px !important;
+            color: #000000 !important;
+        }
+
+        .blue-bg-cta-section {
+            background-color: #182857;
+            color: #fff;
+            padding: 40px 0px;
+        }
+
+        .white-bg-cta-section {
+            color: #182857;
+            padding: 100px 0px 40px;
+        }
+
+        .blue-bg-cta-section h2.small-title {
+            text-align: center;
+            padding-bottom: 20px;
+            max-width: 580px;
+            margin: auto;
+        }
+
+        .white-bg-cta-section h2.small-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-no-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding-bottom: 10px;
+        }
+
+        .contact-no-row .button-link {
+            color: #FFFFFF;
+            background-color: #C41F3E;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+            padding: 12px 24px;
+            border-radius: 3px;
+            text-decoration: none;
+            outline: none;
+        }
+
+        /* data-plans-section section css */
+
+        .data-plans-section {
+            padding: 100px 0px 100px;
+        }
+
+        .data-plans-section .data-fees {
+            line-height: 0px;
+        }
+
+        /* ---------- Testimonial Section CSS START ---------- */
+
+        .testimonial-section .swiper-slide {
+            min-height: 400px;
+            height: auto;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 50px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .testimonial-section .slide-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .testimonial-section .swiper-slide-next,
+        .testimonial-section .swiper-slide-prev {
+            opacity: 0;
+        }
+
+        .testimonial-section .swiper-slide-active {
+            opacity: 1;
+        }
+
+        .testimonial-section .slide-content {
+            opacity: 0;
+            transform: translateY(150%);
+            transition: transform 1s ease, opacity 1s ease-in;
+        }
+
+        .testimonial-section .slide-content a.testimonial-link {
+            display: block;
+            text-decoration: none;
+            color: #fff;
+            text-shadow: 4px 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .testimonial-section .swiper-slide-active .slide-content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .testimonial-section h3.title {
+            margin-bottom: 20px;
+        }
+
+        .testimonial-section .sub-title {
+            font-weight: 400;
+        }
+
+        .testimonial-section .author-name {
+            display: inline-block;
+            font-weight: 700;
+            margin: 20px 0px 0px 24px;
+        }
+
+        .testimonial-section .swiper-button-next,
+        .testimonial-section .swiper-button-prev {
+            width: 25px !important;
+            height: 25px !important;
+        }
+
+        .testimonial-section .swiper-button-next::after,
+        .testimonial-section .swiper-button-prev::after {
+            font-size: 20px !important;
+            line-height: 22px !important;
+            color: #fff;
+        }
+
+        /* Why Choose Us section css  */
+
+        .why-choose-section {
+            padding: 60px 0px 100px;
+        }
+
+        .why-choose-section .why-choose-upper-container {
+            text-align: center;
+        }
+
+        .why-choose-section .why-choose-upper-container h2.title {
+            color: #001468;
+            margin: 0px 0px 10px;
+        }
+
+        .why-choose-section .why-choose-upper-container p.small-sub-title {
+            color: #001468;
+        }
+
+        .why-choose-section .why-choose-upper-container .divider {
+            width: 45%;
+            height: 3px;
+            background-color: #182857;
+            margin: 0px auto 40px;
+        }
+
+        .why-choose-section .why-choose-upper-container h3.small-title {
+            color: #182857;
+            margin-bottom: 40px;
+        }
+
+        .why-choose-section .why-choose-option-main {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .why-choose-option-main .why-choose-option-common-class {
+            width: 25%;
+            padding: 10px 25px;
+            border-right: 3px solid #182857;
+        }
+
+        .why-choose-option-main .why-choose-option-common-class:last-child {
+            border: none;
+        }
+
+        .why-choose-option-main .why-choose-option-common-class .img-container {
+            line-height: 0px;
+            text-align: center;
+        }
+
+        .why-choose-option-main .why-choose-option-common-class .img-container img {
+            max-width: 250px;
+            width: 100%;
+        }
+
+        .why-choose-option-main .why-choose-option-common-class .text-container {
+            padding: 20px 0px 15px;
+        }
+
+        .why-choose-option-common-class .text-container p.text-montserrat {
+            text-align: center;
+            color: #757589;
+        }
+
+        /* ***** Media Query START ***** */
+
+        @media only screen and (max-width: 1024px) {
+            .title {
+                font-size: 36px;
+                line-height: 40px;
+            }
+
+            .small-title {
+                font-size: 28px;
+                line-height: 30px;
+            }
+
+            .small-title br {
+                display: none;
+            }
+
+            .sub-title {
+                font-size: 25px;
+            }
+
+            .btn-text {
+                font-size: 18px;
+                line-height: 18px;
+            }
+
+            .welcome-patriots-section {
+                padding: 70px 0px 55px;
+            }
+
+            .welcome-patriots-section .row {
+                gap: 40px;
+            }
+
+            section.form-main-section {
+                padding: 0px 0px 70px;
+            }
+
+            .form-main-section .row {
+                gap: 40px;
+            }
+
+            .data-plans-section {
+                padding: 70px 0px 70px;
+            }
+
+            .trasparent-bg {
+                padding-top: 70px !important;
+            }
+
+            .form-main-section .video-section {
+                padding: 25px;
+            }
+
+
+            .why-choose-section {
+                padding: 30px 0px 70px;
+            }
+
+            .why-choose-section .why-choose-upper-container .divider {
+                margin: 0px auto 25px;
+            }
+
+            .why-choose-option-main .why-choose-option-common-class {
+                width: 50%;
+                border-bottom: 3px solid #182857;
+            }
+
+            .why-choose-option-main .why-choose-option-common-class:nth-child(1) {
+                border-top: 3px solid #182857;
+            }
+
+            .why-choose-option-main .why-choose-option-common-class:nth-child(2) {
+                border-right: 0px;
+                border-top: 3px solid #182857;
+            }
+
+            .why-choose-option-main .why-choose-option-common-class:last-child {
+                border-bottom: 3px solid #182857;
+            }
+
+            .why-choose-option-main .why-choose-option-common-class .text-container {
+                padding: 0px 0px 15px;
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+
+            .row {
+                flex-wrap: wrap;
+            }
+
+            .row .col-1,
+            .row .col-2 {
+                width: 100% !important;
+            }
+
+            .title {
+                font-size: 30px;
+                line-height: 34px;
+            }
+
+            .small-title {
+                font-size: 25px;
+            }
+
+            .sub-title {
+                font-size: 22px;
+            }
+
+            .small-sub-title {
+                font-size: 20px;
+                line-height: 22px;
+            }
+
+            .btn-text {
+                font-size: 16px;
+                line-height: 16px;
+            }
+
+            .small-btn-text {
+                font-size: 14px;
+                line-height: 15px;
+            }
+
+            .welcome-patriots-section {
+                padding: 50px 0px 35px;
+            }
+
+            .welcome-patriots-section .row {
+                gap: 30px;
+            }
+
+            section.form-main-section {
+                padding: 0px 0px 33px;
+            }
+
+            .data-plans-section {
+                padding: 50px 0px 50px;
+            }
+
+            .testimonial-section .swiper-slide {
+                padding: 40px 20px;
+            }
+
+            .testimonial-section .author-name {
+                margin: 20px 0px 0px 15px;
+            }
+
+            .testimonial-section .swiper-button-next,
+            .testimonial-section .swiper-button-prev {
+                width: 20px !important;
+                height: 20px !important;
+            }
+
+            .testimonial-section .swiper-button-next::after,
+            .testimonial-section .swiper-button-prev::after {
+                font-size: 16px !important;
+                line-height: 18px !important;
+            }
+
+            .trasparent-bg {
+                padding-top: 50px !important;
+            }
+
+            .why-choose-section {
+                padding: 10px 0px 50px;
+            }
+
+            .why-choose-section .why-choose-upper-container h3.small-title {
+                margin-bottom: 30px;
+            }
+
+            .why-choose-option-main .why-choose-option-common-class {
+                width: 100%;
+                border-right: 0px;
+                border-bottom: 3px solid #182857;
+            }
+
+            .why-choose-option-main .why-choose-option-common-class:nth-child(1),
+            .why-choose-option-main .why-choose-option-common-class:nth-child(2) {
+                border-top: 0px;
+            }
+
+            .why-choose-option-main .why-choose-option-common-class .img-container img {
+                max-width: 200px;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="product-banner-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="full-width-col">
+                    <picture>
+                        <source media="(max-width:767px)" srcset="/images/Graham-640-x-424-px-2.png">
+                        <img src="/images/Graham-2-1536x400.png" style="width:100%;">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="welcome-patriots-section">
+        <div class="container">
+            <div class="call-to-action-title">
+                <h3 class="small-title">Call (817) 380-9081 to take advantage of<br> a FREE month when switch to Patriot
+                    Mobile!</h3>
+            </div>
+            <div class="row">
+                <div class="image-section col-1">
+                    <img src="images/PM_Banner24_600x400.jpg" alt="">
+                </div>
+                <div class="well-come-content-section col-2">
+                    <h4 class="sub-title">Patriot Mobile</h4>
+                    <p class="text-montserrat">Patriot Mobile is America’s ONLY Christian conservative wireless
+                        provider. We offer broad coverage on dependable, nationwide 4G or 5G networks. We are committed
+                        to providing our members dependable wireless service and exceptional support, while relentlessly
+                        fighting for our shared values. Patriot Mobile donates a portion of every dollar earned to
+                        support organizations that fight for</p>
+                    <ul class="text-montserrat">
+                        <li>Add a second line to your eSIM-compatible smartphone.</li>
+                        <li>Ideal for separating work and personal calls or texts.</li>
+                        <li>Manage privacy effectively with a dedicated number.</li>
+                        <li>Eliminate the need for multiple devices, reducing cost and clutter.</li>
+                    </ul>
+                    <p class="text-montserrat"><strong>Join the movement of like-minded conservatives who support
+                            companies that share their values.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="form-main-section">
+        <div class="container">
+            <div class="row">
+                <div class="video-section col-1">
+                    <h2 class="small-title">Can't call? Fill out the form:</h2>
+                    <p class="text-montserrat">Patriot Mobile, is America’s only Christian conservative wireless service
+                        provider that supports Christian conservative causes. Patriot Mobile offers unlimited talk and
+                        text in every plan, and US-based customer support. In 2022, Patriot Mobile donated over $2
+                        million to support Christian conservative causes, highlighting its commitment to leveraging cell
+                        phone usage for promoting shared values and making a significant impact.</p>
+                </div>
+                <div class="form-section col-2">
+                    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+                    <script data-hubspot-rendered="true">
+                        hbspt.forms.create({
+                            region: "na1",
+                            portalId: "7603176",
+                            formId: "e3179ec1-6f56-4451-b5dc-4b21809324ca"
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="blue-bg-cta-section">
+        <div class="container">
+            <h2 class="small-title">Use Promo code: GRAHAM now
+                and get a FREE Month!</h2>
+            <div class="contact-no-row">
+                <h3 class="small-title">Call (817)380-9081</h3>
+                <h3 class="small-title">- or -</h3>
+                <a class="btn-text button-link" href="https://patriotmobile.com/Shop/ShopPlans/">Switch Online Today</a>
+            </div>
+        </div>
+    </section>
+    <section class="data-plans-section">
+        <div class="container">
+            <div class="data-heading">
+                <div class="data-fees">
+                    <picture>
+                        <source media="(max-width:767px)" srcset="/images/easy-one-two-three.png">
+                        <img src="/images/Easy-as-one-two-three-1536x556.png" alt="Data Plan's Prices"
+                            style="width: 100%;">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonial-section">
+        <div class="container">
+            <div
+                class="swiper mySwiper swiper-fade swiper-initialized swiper-horizontal swiper-watch-progress swiper-backface-hidden">
+                <div class="swiper-wrapper" id="swiper-wrapper-908c14341dacca7d" aria-live="polite">
+                    <div class="swiper-slide swiper-slide-visible swiper-slide-fully-visible swiper-slide-active"
+                        role="group" aria-label="1 / 3" data-swiper-slide-index="0"
+                        style="width: 1903px; opacity: 1; transform: translate3d(0px, 0px, 0px);">
+                        <img src="images/red-background.png" class="slide-background">
+                        <div class="slide-content">
+                            <div class="container">
+                                <a href="https://www.trustpilot.com/review/patriotmobile.com" target="_blank"
+                                    class="testimonial-link">
+                                    <h3 class="title">Devoted Christian company</h3>
+                                    <p class="sub-title">I love that Patriot Mobile is a devoted Christian company with
+                                        affordable plans and better benefits. I love the name of this company, plus they
+                                        are strong conservatives and loyal supporters of our constitutional rights. The
+                                        service I have received has always been patient, compassionate and professional.
+                                    </p>
+                                    <span class="author-name sub-title">~ Linda</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 3"
+                        data-swiper-slide-index="1"
+                        style="width: 1903px; opacity: 0; transform: translate3d(-1903px, 0px, 0px);">
+                        <img src="images/blue-background.png" class="slide-background">
+                        <div class="slide-content">
+                            <div class="container">
+                                <a href="https://www.trustpilot.com/review/patriotmobile.com" target="_blank"
+                                    class="testimonial-link">
+                                    <h3 class="title">Put your money to work. Shop conservative!</h3>
+                                    <p class="sub-title">When we are passionate about our beliefs, it’s important our
+                                        actions backup our voiced beliefs. Otherwise, we are telling businesses to do
+                                        what they want, whenever they want, and we will be forced to deal with it.
+                                    </p>
+                                    <span class="author-name sub-title">~ Mark & Cathy</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" role="group" aria-label="3 / 3" data-swiper-slide-index="2"
+                        style="width: 1903px; opacity: 0; transform: translate3d(-3806px, 0px, 0px);">
+                        <img src="images/red-background.png" class="slide-background">
+                        <div class="slide-content">
+                            <div class="container">
+                                <a href="https://www.trustpilot.com/review/patriotmobile.com" target="_blank"
+                                    class="testimonial-link">
+                                    <h3 class="title">Not just one reason to switch</h3>
+                                    <p class="sub-title">I’ve been happy with the consistency of service and the cost of
+                                        the plan. I am especially thankful to be able to do business with a
+                                        conservative, patriotic company with very good online help by friendly people.
+                                    </p>
+                                    <span class="author-name sub-title">~ James</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more slides as needed -->
+                </div>
+                <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"
+                    aria-controls="swiper-wrapper-908c14341dacca7d"></div>
+                <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"
+                    aria-controls="swiper-wrapper-908c14341dacca7d"></div>
+                <div class="swiper-pagination"></div>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+            </div>
+        </div>
+    </section>
+    <section class="blue-bg-cta-section trasparent-bg">
+        <div class="container">
+            <h2 class="small-title">Use Promo code: GRAHAM now
+                and get a FREE Month!</h2>
+            <div class="contact-no-row">
+                <h3 class="small-title">Call (817)380-9081</h3>
+                <h3 class="small-title">- or -</h3>
+                <a class="btn-text button-link" href="https://patriotmobile.com/Shop/ShopPlans/">Switch Online Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Pillars Section -->
+    <section>
+        <div class="container-fluid w-100 mt-0 p-0" id="Pillars">
+          @await Html.PartialAsync("/Views/Shared/_MainPillars_V4.cshtml")
+        </div>
+    </section>
+    
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="why-choose-upper-container">
+                <div class="divider"></div>
+                <h3 class="small-title">Join Patriot Mobile and support our 4 pillars</h3>
+            </div>
+            <div class="why-choose-option-main">
+                <div class="why-choose-option-common-class">
+                    <div class="img-container">
+                        <img src="images/1A.png" alt="">
+                    </div>
+                    <div class="text-container">
+                        <p class="text-montserrat">Patriot Mobile champions the First Amendment by actively promoting
+                            freedom of speech and religion, ensuring your right to express and live by your beliefs is
+                            protected.</p>
+                    </div>
+                </div>
+                <div class="why-choose-option-common-class">
+                    <div class="img-container">
+                        <img src="images/Defend-2A.png" alt="">
+                    </div>
+                    <div class="text-container">
+                        <p class="text-montserrat">Through donations and advocacy, we stand firm in our Second Amendment
+                            rights, supporting the fundamental right to bear arms for defense and liberty.</p>
+                    </div>
+                </div>
+                <div class="why-choose-option-common-class">
+                    <div class="img-container">
+                        <img src="images/Pro-Life.png" alt="">
+                    </div>
+                    <div class="text-container">
+                        <p class="text-montserrat">Our unwavering commitment to the sanctity of life is evident as we
+                            support organizations and initiatives that advocate for the right to life from conception.
+                        </p>
+                    </div>
+                </div>
+                <div class="why-choose-option-common-class">
+                    <div class="img-container">
+                        <img src="images/First-Responders.png" alt="">
+                    </div>
+                    <div class="text-container">
+                        <p class="text-montserrat">Patriot Mobile supports military and first responders by backing
+                            organizations and programs that provide them with the respect, resources, and recognition
+                            they deserve, embodying our gratitude for their service and sacrifice.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        const swiper = new Swiper('.mySwiper', {
+            loop: true,
+            effect: 'fade',
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+        });
+    </script>
+</body>
+
+</html>

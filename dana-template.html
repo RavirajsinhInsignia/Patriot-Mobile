@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Patriot Mobile Dana</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat';
+            border-color: #DEE2E6;
+            color: #212529;
+            background-color: #FFFFFF;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1440px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0px 20px;
+        }
+
+        .container-fluid {
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0px;
+        }
+
+        .title {
+            font-family: "Montserrat";
+            font-size: 42px;
+            line-height: 50px;
+            font-weight: 700;
+        }
+
+        .small-title {
+            font-family: "Montserrat";
+            font-size: 32px;
+            line-height: 40px;
+            font-weight: 700;
+        }
+
+        .btn-text {
+            font-family: "Montserrat";
+            font-size: 20px;
+            line-height: 20px;
+            font-weight: 700;
+        }
+
+        .text-montserrat {
+            font-family: "Montserrat";
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+        }
+
+        /* banner-slider-section section css */
+
+        .banner-slider-section {
+            background-image: url(./images/black-background.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 0px 0px;
+        }
+
+        .banner-slider-section .row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .banner-slider-section .col {
+            flex: 1;
+            padding: 10px 0px;
+        }
+
+        .banner-slider-section .swiper-slide img {
+            width: 100%;
+            min-height: 800px;
+            object-fit: cover;
+        }
+
+        .banner-slider-section .left-col {
+            overflow: hidden;
+            padding-right: 10px;
+        }
+
+        .banner-slider-section .left-col .swiper-slide {
+            cursor: pointer;
+        }
+
+        .banner-slider-section .right-col {
+            padding-left: 10px;
+        }
+
+        .banner-slider-section .right-col img {
+            max-width: 493px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .banner-slider-section .right-col h5.btn-text {
+            font-weight: 400;
+            color: #FFFFFF;
+            margin: 0 0 20px;
+        }
+
+        .banner-slider-section .right-col h3.title {
+            color: #FFFFFF;
+            margin: 0 0 20px;
+        }
+
+        .banner-slider-section .right-col p.text-montserrat {
+            color: #757589;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .red-globle-btn {
+            text-align: center;
+            margin: 35px auto 0px;
+        }
+
+        .cta-button {
+            text-transform: capitalize;
+            text-decoration: none;
+            letter-spacing: 0.9px;
+            background-color: #B53243;
+            border-radius: 4px;
+            padding: 11px 12px 11px 12px;
+            box-shadow: none;
+            display: inline-block;
+            color: #fff;
+        }
+
+
+        /* form-section section css */
+
+        .form-section {
+            padding: 90px 0px 73px;
+            background-color: #F6F6F6;
+        }
+
+        .form-section .row {
+            display: flex;
+            align-items: center;
+        }
+
+        .form-section .form-left-col {
+            padding: 0px 65px 0px 0px !important;
+        }
+
+        .form-section .form-col {
+            padding-left: 10px !important;
+        }
+
+        .form-section .col {
+            flex: 1;
+            padding: 10px 0px;
+        }
+
+        .form-section h3.title {
+            color: #00205B;
+            margin: 0 0 20px;
+        }
+
+        .form-section p.text-montserrat {
+            color: #757589;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        /* identification-section section css */
+
+        .identification-section {
+            background-image: url(./images/eagleflag.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 10% 0%;
+        }
+
+        .identification-section .row {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .identification-section .blank-col {
+            width: 62.813%;
+            padding: 0;
+        }
+
+        .identification-section .right-content-col {
+            max-width: 500px;
+        }
+
+        .identification-section .right-content-col h3.title {
+            color: #FFFFFF;
+            margin: 0 0 20px;
+        }
+
+        .identification-section .right-content-col div.text-montserrat {
+            color: #FFFFFF;
+            letter-spacing: 0.7px;
+        }
+
+        .identification-section .right-content-col div.text-montserrat ul {
+            padding-left: 32px;
+            margin: 20px 0px;
+        }
+
+        /* stand-for-section section css */
+
+        .stand-for-section {
+            padding: 46px 0px 30px;
+        }
+
+        .stand-for-section .row {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .stand-for-section .left-col {
+            width: 41%;
+            padding: 10px 15px 0px 0px;
+        }
+
+        .stand-for-section .right-col {
+            width: 59%;
+            padding: 10px 0px 0px 15px;
+            text-align: end;
+        }
+
+        .stand-for-section h3.title {
+            color: #00205B;
+            margin: 0 0 20px;
+        }
+
+        .stand-for-section p.text-montserrat {
+            color: #757589;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        /* full-img-section section css */
+
+        .full-img-section {
+            margin-top: 14px;
+            margin-bottom: 0px;
+            padding: 0px 0px 0px 0px;
+        }
+
+        .full-img-section .full-width-col {
+            padding: 0px 0px;
+            line-height: 0;
+        }
+
+        .full-img-section img {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        /* icons-section section css */
+
+        .icons-section {
+            padding: 40px 0px 90px;
+        }
+
+        .icons-section .row,
+        .icons-section .inner-row {
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+
+        .icons-section .center-col {
+            max-width: 980px;
+            margin: auto;
+            padding: 10px 10px;
+            text-align: center;
+        }
+
+        .icons-section h3.title {
+            color: #00205B;
+            margin: 0 0 20px;
+            text-align: center;
+        }
+
+        .icons-section p.text-margin.text-montserrat {
+            color: #757589;
+            margin-top: 0;
+            margin-bottom: 55px;
+        }
+
+        .icons-section .inner-row .col {
+            flex: 1;
+            text-align: center;
+        }
+
+        .icons-section .inner-row img {
+            margin-bottom: 10px;
+        }
+
+        .icons-section .inner-row .small-title {
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .icons-section .inner-row h3 a {
+            text-decoration: none;
+            color: #252E6C;
+        }
+
+        .icons-section .inner-row p.text-montserrat {
+            letter-spacing: 0.7px;
+            color: #000000A3;
+        }
+
+
+
+        /* ***** Media Query START ***** */
+
+        @media only screen and (max-width: 1024px) {
+
+            .title {
+                font-size: 36px;
+                line-height: 40px;
+            }
+
+            .small-title {
+                font-size: 28px;
+                line-height: 34px;
+            }
+
+            .btn-text {
+                font-size: 18px;
+                line-height: 18px;
+            }
+
+
+            .form-section {
+                padding: 60px 0px 43px;
+            }
+
+            .form-section .form-left-col {
+                padding: 0px 40px 0px 0px !important;
+            }
+
+
+            .identification-section .right-content-col {
+                max-width: 450px;
+            }
+
+            .identification-section {
+                padding: 7.5% 0%;
+            }
+
+
+            .icons-section {
+                padding: 40px 0px 60px;
+            }
+
+            .icons-section p.text-margin.text-montserrat {
+                margin-bottom: 40px;
+            }
+
+
+            .stand-for-section .row {
+                gap: 10px;
+            }
+        }
+
+        /* 1024 End */
+
+
+
+        @media only screen and (max-width: 767px) {
+
+            .title {
+                font-size: 30px;
+                line-height: 34px;
+            }
+
+            .small-title {
+                font-size: 25px;
+                line-height: 32px;
+            }
+
+            .btn-text {
+                font-size: 16px;
+                line-height: 16px;
+            }
+
+
+            .banner-slider-section .col {
+                flex: unset;
+                padding-top: 50px;
+                padding-bottom: 0px;
+            }
+
+            .banner-slider-section .left-col {
+                width: 100%;
+                padding-right: 0px;
+            }
+
+            .banner-slider-section .right-col {
+                width: 100%;
+                padding: 50px 0px 40px 0px;
+            }
+
+            .banner-slider-section .swiper-slide img {
+                min-height: 650px;
+            }
+
+            .form-section .col {
+                flex: unset;
+            }
+
+            .form-section .row {
+                flex-wrap: wrap;
+            }
+
+            .form-section .form-left-col {
+                width: 100%;
+                padding: 0px !important;
+            }
+
+            .form-section .form-col {
+                width: 100%;
+                padding: 15px 0px 0px !important;
+            }
+
+            .form-section {
+                padding: 50px 0px 33px;
+            }
+
+            .identification-section .blank-col {
+                display: none;
+            }
+
+            .identification-section {
+                padding: 50px 0px;
+            }
+
+            .identification-section .right-content-col {
+                margin-left: auto;
+            }
+
+
+
+            .stand-for-section {
+                padding: 46px 0px 50px;
+            }
+
+            .stand-for-section .row {
+                flex-wrap: wrap;
+                gap: 0px;
+            }
+
+            .stand-for-section .left-col {
+                width: 100%;
+                padding: 4px 0px 0px 0px;
+            }
+
+            .stand-for-section .right-col {
+                width: 100%;
+                padding: 15px 0px 0px 0px;
+            }
+
+            .full-img-section {
+                margin-top: 4px;
+            }
+
+
+            .icons-section p.text-margin.text-montserrat {
+                margin-bottom: 30px;
+            }
+
+            .icons-section .inner-row {
+                flex-wrap: wrap;
+            }
+
+            .icons-section .inner-row .col {
+                flex: unset;
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            .icons-section .inner-row img {
+                margin-bottom: 0px;
+            }
+
+            .icons-section .inner-row .small-title {
+                margin-bottom: 10px;
+            }
+
+            .icons-section {
+                padding: 40px 0px 10px;
+            }
+        }
+
+        /* 767 End */
+    </style>
+</head>
+
+<body>
+    <section class="banner-slider-section">
+        <div class="container">
+            <div class="row">
+                <div class="col left-col">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./images/DanaHeadShot-2018.jpg" alt="Image 1">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/DanaSpeech-CPAC-Headshot.jpeg" alt="Image 2">
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="col right-col">
+                    <img src="./images/Dana-Loesch-2-768x605.png" alt="">
+                    <h5 class="btn-text">Welcome Members!</h5>
+                    <h3 class="title">Patriot Mobile</h3>
+                    <p class="text-montserrat">For 10 years, Patriot Mobile has been America’s only Christian
+                        Conservative wireless
+                        provider, standing behind its service and their values as a company on the frontlines
+                        defending our God-given rights and freedoms.</p>
+                    <p class="text-montserrat">Now, we’ve reached a pivotal moment where our choices matter more than
+                        ever. Americans are
+                        tired of compromise and have had enough of supporting companies that hate our values. If
+                        you’re fed up with the woke nonsense, it’s time to stand up for what you believe in and
+                        switch to Patriot Mobile.</p>
+                    <p class="text-montserrat">For a limited time use code <strong>DANA</strong> to get FREE Month!</p>
+                    <div class="red-globle-btn">
+                        <a class="cta-button text-montserrat" href="https://patriotmobile.com/Shop/ShopPlans/">Check
+                            Coverage</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="form-section">
+        <div class="container">
+            <div class="row">
+                <div class="col form-left-col">
+                    <h3 class="title">Dana Loesch</h3>
+                    <p class="text-montserrat">Dana Loesch is a top nationally syndicated talk radio host and the author
+                        of several books, including Hands Off My Gun, which shaped the gun control debate. A prominent
+                        Second Amendment advocate, she has represented gun owners in high-profile discussions like CNN’s
+                        town hall after Parkland. Outside her career, Dana enjoys video games, historical biographies,
+                        and spending time with her family.</p>
+                </div>
+                <div class="col form-col">
+                    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+                    <script>
+                        hbspt.forms.create({
+                            portalId: "7603176",
+                            formId: "da137da5-4037-4a6b-a0cb-084af299affd"
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="identification-section">
+        <div class="container">
+            <div class="row">
+                <div class="blank-col">
+                </div>
+                <div class="right-content-col">
+                    <h3 class="title">Who is Patriot Mobile?</h3>
+                    <div class="text-montserrat">Patriot Mobile is America’s ONLY Christian conservative wireless
+                        provider. We offer
+                        broad coverage on dependable, nationwide 4G or 5G networks. We are committed to providing our
+                        members dependable wireless service and exceptional support, while relentlessly fighting for our
+                        shared values. Patriot Mobile donates a portion of every dollar earned to support organizations
+                        that fight for
+                        <ul>
+                            <li>First Amendment Freedom of Speech &amp; Religion</li>
+                            <li>Second Amendment Right to Bear Arms</li>
+                            <li>Sanctity of Life</li>
+                            <li>The needs of our Veterans and First Responders.</li>
+                        </ul>
+                        <strong>Join the movement of like-minded conservatives who support companies that share their
+                            values.</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="stand-for-section">
+        <div class="container">
+            <div class="row">
+                <div class="left-col">
+                    <h3 class="title">What we stand for.</h3>
+                    <p class="text-montserrat">Each year, Patriot Mobile helps raise money and awareness to support
+                        freedom of speech, freedom of religion, freedom of peaceful assembly, the right to bear arms,
+                        sanctity of life and the unique needs of our Veterans and First Responders. A portion of every
+                        dollar we earn goes toward supporting organizations that share our Christian conservative
+                        values. In 2022 we donated $2 million to our causes. Join us so we can give even more in 2023.
+                    </p>
+                </div>
+                <div class="right-col">
+                    <img src="./images/template-collage.png" alt="" style="width: 100%;">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="full-img-section">
+        <div class="container">
+            <div class="row">
+                <div class="full-width-col">
+                    <img src="./images/2022-1-March-for-Life-27.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="icons-section">
+        <div class="container">
+            <div class="row">
+                <div class="col center-col">
+                    <h3 class="title">America’s ONLY Christian Conservative Wireless Service Provider</h3>
+                    <p class="text-margin text-montserrat">We are humbled to have achieved the highest customer
+                        satisfaction among
+                        all wireless companies. And, now, with the broadest coverage of any provider on dependable,
+                        nationwide 4G or 5G networks.</p>
+                    <div class="inner-row">
+                        <div class="col">
+                            <a href="#"><img src="./images/coverage.png" alt=""></a>
+                            <h3><a href="#" class="small-title">1. Coverage</a></h3>
+                            <p class="text-montserrat">Check your location</p>
+                        </div>
+                        <div class="col">
+                            <a href="#"><img src="./images/plan.png" alt=""></a>
+                            <h3><a href="#" class="small-title">2. Plans</a></h3>
+                            <p class="text-montserrat">Build the right plan for you</p>
+                        </div>
+                        <div class="col">
+                            <a href="#"><img src="./images/phone.png" alt=""></a>
+                            <h3><a href="#" class="small-title">3. Phones</a></h3>
+                            <p class="text-montserrat">All the latest brands</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Swiper JavaScript and Initialization -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            loop: true,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true,
+            },
+            pagination: false,
+            navigation: false,
+        });
+    </script>
+</body>
+
+</html>

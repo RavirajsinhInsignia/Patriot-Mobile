@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Patriot Mobile Bannon</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat';
+            border-color: #DEE2E6;
+            color: #212529;
+            background-color: #FFFFFF;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1440px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0px 20px;
+        }
+
+        .container-fluid {
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0px;
+        }
+
+        .title {
+            font-family: "Montserrat";
+            font-size: 42px;
+            line-height: 47px;
+            font-weight: 700;
+        }
+
+        .small-title {
+            font-family: "Montserrat";
+            font-size: 32px;
+            line-height: 32px;
+            font-weight: 700;
+        }
+
+        .btn-text {
+            font-family: "Montserrat";
+            font-size: 28px;
+            line-height: 28px;
+            font-weight: 700;
+        }
+
+        .text-montserrat {
+            font-family: "Montserrat";
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+        }
+
+        /* banner-slider-section section css */
+
+        .banner-slider-section {
+            background-color: #0D0C11;
+            padding: 0px 0px;
+        }
+
+        .banner-slider-section .row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .banner-slider-section .col {
+            width: 50%;
+            padding: 0px 0px;
+        }
+
+        .banner-slider-section .left-col {
+            overflow: hidden;
+            padding-right: 0px;
+        }
+
+        .banner-slider-section .left-col figcaption {
+            text-align: center;
+            color: #757589;
+            background-color: #BF0D3E00;
+            font-family: "Montserrat";
+            font-size: 33px;
+            font-weight: 900;
+            font-style: normal;
+            text-decoration: overline;
+            line-height: 55px;
+            margin: 0.8075em 0;
+        }
+
+        .banner-slider-section .left-col img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .banner-slider-section .right-col {
+            padding: 83px 108px;
+        }
+
+        .banner-slider-section .right-col h3.btn-text {
+            font-weight: 700;
+            color: #FFFFFF;
+            margin: 0 0 20px;
+            width: 100%;
+        }
+
+        .banner-slider-section .right-col p.text-montserrat {
+            color: #757589;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .banner-slider-section .right-col .mini-white-txet {
+            font-family: "Montserrat";
+            font-size: 17px;
+            line-height: 24px;
+            letter-spacing: 0.01px;
+            font-weight: 400;
+            color: #FFFFFF;
+            margin-top: 0px;
+            margin-bottom: 15px;
+        }
+
+        .banner-slider-section .right-col .call-text {
+            font-family: "Montserrat";
+            font-size: 22px;
+            line-height: 24px;
+            letter-spacing: 0;
+            font-weight: 400;
+            color: #FFFFFF;
+            margin-top: 25px;
+            margin-bottom: 0px;
+        }
+
+        /* identification-section section css */
+
+        .identification-section {
+            background-image: url(./images/eagleflag.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 10% 0%;
+        }
+
+        .identification-section .row {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .identification-section .blank-col {
+            width: 62.813%;
+            padding: 0;
+        }
+
+        .identification-section .right-content-col {
+            max-width: 500px;
+        }
+
+        .identification-section .right-content-col h3.title {
+            color: #FFFFFF;
+            margin: 0 0 20px;
+        }
+
+        .identification-section .right-content-col div.text-montserrat {
+            color: #FFFFFF;
+            letter-spacing: 0.7px;
+        }
+
+        .identification-section .right-content-col div.text-montserrat ul {
+            padding-left: 32px;
+            margin: 20px 0px;
+        }
+
+        /* stand-for-section section css */
+
+        .stand-for-section {
+            padding: 46px 0px 30px;
+        }
+
+        .stand-for-section .row {
+            display: flex;
+            align-items: center;
+        }
+
+        .stand-for-section .left-col {
+            width: 41%;
+            padding: 10px 15px 0px 0px;
+        }
+
+        .stand-for-section .right-col {
+            width: 59%;
+            padding: 10px 0px 0px 15px;
+            text-align: end;
+            line-height: 0;
+        }
+
+        .stand-for-section h3.title {
+            color: #00205B;
+            margin: 0 0 20px;
+        }
+
+        .stand-for-section p.text-montserrat {
+            color: #757589;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        /* full-img-section section css */
+
+        .full-img-section {
+            margin-top: 14px;
+            margin-bottom: 0px;
+            padding: 0px 0px 0px 0px;
+        }
+
+        .full-img-section .full-width-col {
+            padding: 0px 0px;
+            line-height: 0;
+        }
+
+        .full-img-section img {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        /* icons-section section css */
+
+        .icons-section {
+            padding: 40px 0px 90px;
+        }
+
+        .icons-section .row,
+        .icons-section .inner-row {
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+
+        .icons-section .center-col {
+            max-width: 980px;
+            margin: auto;
+            padding: 10px 10px;
+            text-align: center;
+        }
+
+        .icons-section h3.title {
+            color: #00205B;
+            margin: 0 0 20px;
+            text-align: center;
+        }
+
+        .icons-section p.text-margin.text-montserrat {
+            color: #757589;
+            margin-top: 0;
+            margin-bottom: 55px;
+        }
+
+        .icons-section .inner-row .col {
+            flex: 1;
+            text-align: center;
+        }
+
+        .icons-section .inner-row img {
+            margin-bottom: 10px;
+        }
+
+        .icons-section .inner-row .small-title {
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .icons-section .inner-row h3 a {
+            text-decoration: none;
+            color: #252E6C;
+        }
+
+        .icons-section .inner-row p.text-montserrat {
+            letter-spacing: 0.7px;
+            color: #000000A3;
+        }
+
+        .why-choose-section {
+            padding: 0px 0px 85px;
+        }
+
+        .why-choose-section .why-choose-upper-container {
+            text-align: left;
+        }
+
+        .why-choose-section .why-choose-upper-container h2.title {
+            color: #001468;
+            margin: 0px 0px 30px;
+        }
+
+        .why-choose-section .why-choose-upper-container p.text-montserrat {
+            color: #757589;
+            margin-bottom: 15px;
+        }
+
+
+        /* ***** Media Query START ***** */
+
+        @media only screen and (max-width: 1440px) {
+
+            .banner-slider-section .right-col {
+                padding: 80px;
+            }
+
+        }
+
+
+        @media only screen and (max-width: 1024px) {
+
+            .title {
+                font-size: 36px;
+                line-height: 40px;
+            }
+
+            .small-title {
+                font-size: 28px;
+                line-height: 30px;
+            }
+
+            .btn-text {
+                font-size: 18px;
+                line-height: 18px;
+            }
+
+            .stand-for-section .left-col,
+            .stand-for-section .right-col {
+                width: 50%;
+            }
+
+            .stand-for-section .row {
+                gap: 50px;
+            }
+
+            .identification-section .right-content-col {
+                max-width: 450px;
+            }
+
+            .identification-section {
+                padding: 7.5% 0%;
+            }
+
+            .icons-section {
+                padding: 40px 0px 60px;
+            }
+
+            .icons-section p.text-margin.text-montserrat {
+                margin-bottom: 40px;
+            }
+
+            .why-choose-section {
+                padding: 0px 0px 55px;
+            }
+
+            .banner-slider-section .right-col {
+                padding: 53px 50px;
+            }
+
+            .banner-slider-section .left-col figcaption {
+                font-size: 28px;
+                line-height: 45px;
+            }
+        }
+
+        /* 1024 End */
+
+
+
+        @media only screen and (max-width: 767px) {
+
+            .title {
+                font-size: 30px;
+                line-height: 34px;
+            }
+
+            .small-title {
+                font-size: 25px;
+            }
+
+            .btn-text {
+                font-size: 16px;
+                line-height: 16px;
+            }
+
+            .banner-slider-section .col {
+                flex: unset;
+                padding-top: 50px;
+                padding-bottom: 0px;
+            }
+
+            .banner-slider-section .left-col {
+                width: 100%;
+                padding: 0 !important;
+            }
+
+            .banner-slider-section .right-col {
+                width: 100%;
+                padding: 50px 20px 40px 20px;
+            }
+
+            .banner-slider-section .left-col figcaption {
+                font-size: 25px;
+                line-height: 40px;
+            }
+
+            .banner-slider-section .swiper-slide img {
+                min-height: 650px;
+            }
+
+            .identification-section .blank-col {
+                display: none;
+            }
+
+            .identification-section {
+                padding: 50px 0px;
+            }
+
+            .identification-section .right-content-col {
+                margin-left: auto;
+            }
+
+            .stand-for-section .row {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .stand-for-section .left-col {
+                width: 100%;
+                padding: 4px 0px 0px 0px;
+            }
+
+            .stand-for-section .right-col {
+                width: 100%;
+                padding: 15px 0px 0px 0px;
+            }
+
+            .full-img-section {
+                margin-top: 4px;
+            }
+
+
+            .icons-section p.text-margin.text-montserrat {
+                margin-bottom: 30px;
+            }
+
+            .icons-section .inner-row {
+                flex-wrap: wrap;
+            }
+
+            .icons-section .inner-row .col {
+                flex: unset;
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            .icons-section .inner-row img {
+                margin-bottom: 0px;
+            }
+
+            .icons-section .inner-row .small-title {
+                margin-bottom: 10px;
+            }
+
+            .icons-section {
+                padding: 40px 0px 10px;
+            }
+
+            .why-choose-section {
+                padding: 0px 0px 35px;
+            }
+        }
+
+        /* 767 End */
+    </style>
+</head>
+
+<body>
+    <section class="banner-slider-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col left-col">
+                    <figure>
+                        <img src="images/bannon-banner-man.png" alt="">
+                        <figcaption>Use Code FRIDAY for <br>A FREE A15 Smartphone</figcaption>
+                    </figure>
+                </div>
+                <div class="col right-col">
+                    <h3 class="btn-text">Welcome Members!</h3>
+                    <p class="text-montserrat">For 10 years, Patriot Mobile has been America’s only Christian
+                        Conservative wireless provider, standing behind its service and their values as a company on the
+                        frontlines defending our God-given rights and freedoms.</p>
+                    <p class="text-montserrat">Now, we’ve reached a pivotal moment where our choices matter more than
+                        ever. Americans are tired of compromise and have had enough of supporting companies that hate
+                        our values. If you’re fed up with the woke nonsense, it’s time to stand up for what you believe
+                        in and switch to Patriot Mobile.</p>
+                    <p class="text-montserrat">For a limited time use code <strong>FRIDAY</strong> to get FREE A15
+                        Smarphone!</p>
+                    <h3 style="margin-top: 35px;" class="btn-text">Patriot Mobile</h3>
+                    <div class="mini-white-txet">Are you getting tired of woke companies trying to destroy our country
+                        and strip us of our freedoms? Join Patriot Mobile, a company that loves America, defends our
+                        God-given constitutional rights and freedoms, and doesn’t engage in conservative censorship.
+                    </div>
+                    <h2 class="call-text">Call (972) PATRIOT to switch today!</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="identification-section">
+        <div class="container">
+            <div class="row">
+                <div class="blank-col">
+                </div>
+                <div class="right-content-col">
+                    <h3 class="title">Who is Patriot Mobile?</h3>
+                    <div class="text-montserrat">Patriot Mobile is America’s ONLY Christian conservative wireless
+                        provider. We offer broad coverage on dependable, nationwide 4G or 5G networks. We are committed
+                        to providing our members dependable wireless service and exceptional support, while relentlessly
+                        fighting for our shared values. Patriot Mobile donates a portion of every dollar earned to
+                        support organizations that fight for
+                        <ul>
+                            <li>First Amendment Freedom of Speech &amp; Religion</li>
+                            <li>Second Amendment Right to Bear Arms</li>
+                            <li>Sanctity of Life</li>
+                            <li>The needs of our Veterans and First Responders.</li>
+                        </ul>
+                        <strong>Join the movement of like-minded conservatives who support companies that share their
+                            values.</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="stand-for-section">
+        <div class="container">
+            <div class="row">
+                <div class="left-col">
+                    <h3 class="title">What we stand for.</h3>
+                    <p class="text-montserrat">Each year, Patriot Mobile helps raise money and awareness to support
+                        freedom of speech, freedom of religion, freedom of peaceful assembly, the right to bear arms,
+                        sanctity of life and the unique needs of our Veterans and First Responders. A portion of every
+                        dollar we earn goes toward supporting organizations that share our Christian conservative
+                        values. In 2022 we donated $2 million to our causes. Join us so we can give even more in 2023.
+                    </p>
+                </div>
+                <div class="right-col">
+                    <img src="./images/template-collage.png" alt="" style="width: 100%;">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="full-img-section">
+        <div class="container">
+            <div class="row">
+                <div class="full-width-col">
+                    <picture>
+                        <source media="(max-width:767px)" srcset="images/2022-1-March-for-Life-27-1024x683.jpeg">
+                        <img src="/images/2022-1-March-for-Life-27.jpeg" style="width:100%;">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="icons-section">
+        <div class="container">
+            <div class="row">
+                <div class="col center-col">
+                    <h3 class="title">America’s ONLY Christian Conservative Wireless Service Provider</h3>
+                    <p class="text-margin text-montserrat">We are humbled to have achieved the highest customer
+                        satisfaction among all wireless companies. And, now, with the broadest coverage of any provider
+                        on dependable, nationwide 4G or 5G networks.</p>
+                    <div class="inner-row">
+                        <div class="col">
+                            <a href="#"><img src="./images/coverage.png" alt=""></a>
+                            <h3><a href="#" class="small-title">1. Coverage</a></h3>
+                            <p class="text-montserrat">Check your location</p>
+                        </div>
+                        <div class="col">
+                            <a href="#"><img src="./images/plan.png" alt=""></a>
+                            <h3><a href="#" class="small-title">2. Plans</a></h3>
+                            <p class="text-montserrat">Build the right plan for you</p>
+                        </div>
+                        <div class="col">
+                            <a href="#"><img src="./images/phone.png" alt=""></a>
+                            <h3><a href="#" class="small-title">3. Phones</a></h3>
+                            <p class="text-montserrat">All the latest brands</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="why-choose-upper-container">
+                <h2 class="title">Every Friday Matters 2024 Terms and Conditions</h2>
+                <p class="text-montserrat"><strong>Offer Details: </strong>New customers who sign a 24-month contract
+                    for a new line of service of at least a 3GB Plan will receive a complimentary Samsung Galaxy A15 5G
+                    128 GB Smartphone mobile device. The offer is limited to one device per new line of service.
+                    Customers must place their orders via phone or online and use the promotional code “FRIDAY” at the
+                    time of purchase.</p>
+
+                <p class="text-montserrat"><strong>Limited Time Offer: </strong>This Offer is valid from the earlier of:
+                    November 11, 2024 through December 31, 2024 or while supplies last. Available to new customers only.
+                    Pricing, promotions, terms and restrictions subject to change and may be modified or terminated at
+                    any time without notice.</p>
+
+                <p class="text-montserrat"><strong>Data Plan Requirement: </strong>Customers are required to subscribe
+                    to and maintain a data plan of 3GB or greater during the contract period of 24 months.</p>
+
+                <p class="text-montserrat"><strong>Promotion Payment: </strong>The device will be billed to the customer
+                    in 24 monthly installments with an equal monthly credit applied against the installment for each
+                    month of customer’s contract. If customer terminates the contract prior to the end of the contract
+                    period, then customer will be responsible for the entire unpaid balance with respect to the device
+                    at the time of termination.</p>
+
+                <p class="text-montserrat"><strong>Taxes: </strong>The customer will be responsible for paying all taxes
+                    on the retail value of the Samsung Galaxy A15 5G 128 GB (MSRP $229), billed in equal, monthly
+                    increments for the duration of the 24-month contract.</p>
+
+                <p class="text-montserrat"><strong>Early Termination Fee (ETF): </strong>In the event the contract for a
+                    new line of service is terminated prior to the end of the 24-month period, customer will also be
+                    responsible for an ETF of $250.</p>
+
+                <p class="text-montserrat"><strong>Activation Fee: </strong>Customers will be required to pay a $30
+                    activation fee per line of service.</p>
+
+                <p class="text-montserrat"><strong>SIM: </strong>Customers will be required to pay a $10 SIM fee per
+                    line of service</p>
+
+                <div style="height: 43px;"></div>
+
+                <p class="text-montserrat">Additional terms and conditions apply. See Terms & Conditions (including
+                    arbitration provision) at https://www.patriotmobile.com/terms-and-conditions/.</p>
+                <p class="text-montserrat">Copyright © 2024 patriotmobile – Patriot Mobile, Patriot Mobile Mobilizing
+                    Conservatives, Patriot Mobile Mobilizing Freedom are trademarks or registered trademarks of Patriot
+                    Mobile LLC</p>
+            </div>
+    </section>
+
+    <!-- Swiper JavaScript and Initialization -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            loop: true,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true,
+            },
+            pagination: false,
+            navigation: false,
+        });
+    </script>
+</body>
+
+</html>

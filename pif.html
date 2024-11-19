@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patriot Mobile Pif</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Montserrat";
+            border-color: #dee2e6;
+            color: #212529;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1440px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0px 20px;
+        }
+
+        .container-fluid {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            padding: 0px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .row .col-1,
+        .row .col-2 {
+            width: 50%;
+        }
+
+        .title {
+            font-family: "Montserrat";
+            font-size: 42px;
+            line-height: 47px;
+            font-weight: 700;
+        }
+
+        .small-title {
+            font-family: "Montserrat";
+            font-size: 32px;
+            line-height: 32px;
+            font-weight: 700;
+        }
+
+        .sub-title {
+            font-family: "Montserrat";
+            font-size: 28px;
+            line-height: normal;
+            font-weight: 700;
+        }
+
+        .small-sub-title {
+            font-family: "Montserrat";
+            font-size: 22px;
+            line-height: 28px;
+            font-weight: 500;
+        }
+
+        .btn-text {
+            font-family: "Montserrat";
+            font-size: 20px;
+            line-height: 20px;
+            font-weight: 700;
+        }
+
+        .small-btn-text {
+            font-family: "Montserrat";
+            font-size: 15px;
+            line-height: 15px;
+            font-weight: 400;
+        }
+
+        .text-montserrat {
+            font-family: "Montserrat";
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+        }
+
+        /* ---------- Banner Section CSS START ---------- */
+
+        section.banner-section {
+            /* height: 315px; */
+            margin-bottom: 0px;
+            line-height: 0px;
+        }
+
+        section.banner-section img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* ---------- Banner Section CSS END ---------- */
+
+        /* ---------- Blue / White Bg CTA Section CSS START ---------- */
+
+        .blue-bg-cta-section {
+            background-color: #182857;
+            color: #fff;
+            padding: 40px 0px;
+        }
+
+        .white-bg-cta-section {
+            color: #182857;
+            padding: 100px 0px 40px;
+        }
+
+        .blue-bg-cta-section h2.small-title {
+            text-align: center;
+            padding-bottom: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .white-bg-cta-section h2.small-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-no-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding-bottom: 10px;
+        }
+
+        .contact-no-row .button-link {
+            color: #ffffff;
+            background-color: #c41f3e;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+            padding: 12px 24px;
+            border-radius: 3px;
+            text-decoration: none;
+            outline: none;
+        }
+
+        /* ---------- Blue / White Bg CTA Section CSS END ---------- */
+
+        /* ---------- Form Section CSS START ---------- */
+
+        .form-main-section .video-section h2.small-title,
+        .form-main-section .form-section h2.small-title {
+            color: #182857;
+        }
+
+        section.form-main-section {
+            padding: 100px 0px 90px;
+        }
+
+        .form-main-section {
+            align-items: stretch;
+        }
+
+        .form-main-section .row {
+            display: flex;
+            align-items: stretch;
+            gap: 50px;
+        }
+
+        .form-main-section .video-section {
+            padding: 45px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .form-main-section .form-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-main-section .form-section ol.text-montserrat {
+            padding-left: 35px;
+            color: #182857;
+        }
+
+        .form-main-section .form-section ol li {
+            margin-bottom: 10px;
+        }
+
+        .form-main-section .form-section ol li .faq-section-link {
+            text-decoration: none;
+        }
+
+        .form-main-section .video-section p.text-montserrat,
+        .form-main-section .form-section p.text-montserrat {
+            color: #757589;
+        }
+
+        .form-section img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Ensure the iframe is responsive */
+        .form-main-section .form-section h2.sub-title-font-montserrat {
+            color: #33475b;
+            margin-bottom: 20px;
+        }
+
+        .form-main-section .form-section .input-field-common-class {
+            margin-bottom: 20px;
+        }
+
+        /* ---------- Form Section CSS END ---------- */
+
+        /* ---------- Welcome Patriots Section CSS START ---------- */
+
+        .welcome-patriots-section {
+            padding: 10px 0px;
+        }
+
+        .welcome-patriots-section h3.small-title {
+            color: #182857;
+            text-align: center;
+            text-transform: capitalize;
+        }
+
+        .welcome-patriots-section .row {
+            gap: 50px;
+        }
+
+        .welcome-patriots-section .image-section {
+            line-height: 0px;
+        }
+
+        .welcome-patriots-section .image-section img {
+            width: 100%;
+        }
+
+        .welcome-patriots-section .well-come-content-section h4.sub-title {
+            color: #b53243;
+            padding-bottom: 20px;
+        }
+
+        .welcome-patriots-section .well-come-content-section p.text-montserrat {
+            margin-bottom: 15px;
+            color: #757589;
+        }
+
+        .welcome-patriots-section .well-come-content-section ul.text-montserrat {
+            padding-left: 35px;
+            color: #757589;
+        }
+
+        .welcome-patriots-section .well-come-content-section ul li {
+            margin-bottom: 10px;
+        }
+
+        /* ---------- Welcome Patriots Section CSS END ---------- */
+
+
+        /* ---------- Testimonial Section CSS START ---------- */
+
+        section.testimonial-section {
+            margin: 80px 0px 100px;
+        }
+
+        .testimonial-section .swiper-slide {
+            min-height: 400px;
+            height: auto;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 50px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .testimonial-section .slide-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .testimonial-section .swiper-slide-next,
+        .testimonial-section .swiper-slide-prev {
+            opacity: 0;
+        }
+
+        .testimonial-section .swiper-slide-active {
+            opacity: 1;
+        }
+
+        .testimonial-section .slide-content {
+            opacity: 0;
+            transform: translateY(150%);
+            transition: transform 1s ease, opacity 1s ease-in;
+        }
+
+        .testimonial-section .slide-content a.testimonial-link {
+            display: block;
+            text-decoration: none;
+            color: #fff;
+            text-shadow: 4px 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .testimonial-section .swiper-slide-active .slide-content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .testimonial-section h3.title {
+            margin-bottom: 20px;
+        }
+
+        .testimonial-section .sub-title {
+            font-weight: 400;
+        }
+
+        .testimonial-section .author-name {
+            display: inline-block;
+            font-weight: 700;
+            margin: 20px 0px 0px 24px;
+        }
+
+        .testimonial-section .swiper-button-next,
+        .testimonial-section .swiper-button-prev {
+            width: 25px !important;
+            height: 25px !important;
+        }
+
+        .testimonial-section .swiper-button-next::after,
+        .testimonial-section .swiper-button-prev::after {
+            font-size: 20px !important;
+            line-height: 22px !important;
+            color: #fff;
+        }
+
+        /* ---------- Testimonial Section CSS END ---------- */
+
+
+        /* ---------- FAQ Section CSS START ---------- */
+
+        .faq-section {
+            padding: 0px 0px 100px;
+        }
+
+        .faq-section h2.small-title {
+            color: #182857;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .faq-item:last-child {
+            margin-bottom: 0px;
+        }
+
+        .faq-item {
+            background-color: transparent;
+            border: none;
+            margin-bottom: 15px;
+        }
+
+        .faq-question {
+            padding: 15px 60px 15px 30px;
+            cursor: pointer;
+            position: relative;
+            border: none;
+            font-weight: 700;
+            color: #141714;
+            border-radius: 10px;
+            box-shadow: none;
+            background-color: #F9FAFF;
+            text-transform: uppercase;
+        }
+
+        .faq-question::after {
+            content: "\f078";
+            width: auto;
+            height: auto;
+            background-image: none;
+            font-weight: 700;
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: "Font Awesome 5 Free";
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: translateY(-50%) rotate(-180deg);
+        }
+
+        .faq-answer {
+            padding: 20px 70px 10px 30px;
+            display: none;
+            border: none;
+            background-color: transparent;
+            font-weight: 400;
+            color: #757589;
+        }
+
+        .faq-answer a {
+            text-decoration: none;
+            text-shadow: none;
+            color: #7E54F8;
+        }
+
+        .faq-item.active .faq-question {
+            background-color: #1d1d1d;
+            color: #fff;
+            box-shadow: none;
+        }
+
+        /* ---------- FAQ Section CSS END ---------- */
+
+
+        /* ---------- Term And Condition Section CSS START ---------- */
+
+        .term-condition {
+            padding: 0px 0px 90px;
+        }
+
+        .term-condition .term-condition-container {
+            text-align: left;
+        }
+
+        .term-condition .term-condition-container h2.text-montserrat {
+            display: inline-block;
+            text-decoration: underline;
+            font-weight: 700;
+            color: #757589;
+            margin: 0px 0px 20px;
+        }
+
+        .term-condition .term-condition-container ul.text-montserrat {
+            color: #757589;
+            padding-left: 35px;
+        }
+
+        .term-condition .term-condition-container ul li {
+            margin-bottom: 10px;
+        }
+
+        /* ---------- Term And Condition Section CSS END ---------- */
+
+
+
+        /* ***** Media Query START ***** */
+
+        @media only screen and (max-width: 1024px) {
+            .title {
+                font-size: 36px;
+                line-height: 40px;
+            }
+
+            .small-title {
+                font-size: 28px;
+                line-height: 30px;
+            }
+
+            .sub-title {
+                font-size: 25px;
+            }
+
+            .btn-text {
+                font-size: 18px;
+                line-height: 18px;
+            }
+
+            section.form-main-section {
+                padding: 70px 0px 60px;
+            }
+
+            .form-main-section .row {
+                gap: 40px;
+            }
+
+            .welcome-patriots-section .joining-img {
+                margin-top: 55px;
+            }
+
+            .form-main-section .video-section {
+                padding: 25px;
+            }
+
+            .welcome-patriots-section .row {
+                gap: 40px;
+            }
+
+            section.testimonial-section {
+                margin: 50px 0px 70px;
+            }
+
+            .faq-section {
+                padding: 0px 0px 70px;
+            }
+
+            .faq-section h2.small-title {
+                margin-bottom: 30px;
+            }
+
+            .term-condition {
+            padding: 0px 0px 60px;
+        }
+
+
+        }
+
+        /* 1024 End */
+
+        @media only screen and (max-width: 767px) {
+            .row {
+                flex-wrap: wrap;
+            }
+
+            .row .col-1,
+            .row .col-2 {
+                width: 100%;
+            }
+
+            .title {
+                font-size: 30px;
+                line-height: 34px;
+            }
+
+            .small-title {
+                font-size: 25px;
+            }
+
+            .sub-title {
+                font-size: 22px;
+            }
+
+            .small-sub-title {
+                font-size: 20px;
+                line-height: 22px;
+            }
+
+            .btn-text {
+                font-size: 16px;
+                line-height: 16px;
+            }
+
+            .small-btn-text {
+                font-size: 14px;
+                line-height: 15px;
+            }
+
+            .img-container {
+                text-align: center;
+            }
+
+            .contact-no-row {
+                gap: 5px;
+            }
+
+            .contact-no-row h3.small-title {
+                width: 100%;
+                text-align: center;
+            }
+
+            .contact-no-row .button-link {
+                padding: 10px 16px;
+            }
+
+            section.form-main-section {
+                padding: 50px 0px 40px;
+            }
+
+            .welcome-patriots-section .call-to-action-title {
+                margin-bottom: 30px;
+            }
+
+            .welcome-patriots-section .well-come-content-section p.text-montserrat {
+                margin-bottom: 10px;
+            }
+
+            section.testimonial-section {
+                margin: 30px 0px 50px;
+            }
+
+            .testimonial-section .swiper-slide {
+                padding: 40px 20px;
+            }
+
+            .testimonial-section .author-name {
+                margin: 20px 0px 0px 15px;
+            }
+
+            .testimonial-section .swiper-button-next,
+            .testimonial-section .swiper-button-prev {
+                width: 20px !important;
+                height: 20px !important;
+            }
+
+            .testimonial-section .swiper-button-next::after,
+            .testimonial-section .swiper-button-prev::after {
+                font-size: 16px !important;
+                line-height: 18px !important;
+            }
+
+            .faq-section {
+                padding: 0px 0px 50px;
+            }
+
+            .faq-section h2.small-title {
+                margin-bottom: 30px;
+            }
+
+            .faq-question {
+                padding: 12px 55px 12px 20px;
+                font-weight: 600;
+            }
+
+            .faq-question::after {
+                right: 25px;
+                /* top: 12px; */
+            }
+
+            .faq-answer {
+                padding: 15px 40px 5px 20px;
+            }
+
+            .term-condition {
+            padding: 0px 0px 40px;
+        }
+        }
+
+        /* 767 End */
+
+        /* ***** Media Query END ***** */
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="banner-section">
+            <div class="container-fluid">
+                <picture>
+                    <source media="(max-width:767px)" srcset="images/Payforward-Updated-Graphic.png" />
+                    <img src="images/Defend-Freedom-with-your-cell-phone-and-get-2-Months-Free_v5-2048x597.png"
+                        style="width: 100%" />
+                </picture>
+            </div>
+        </section>
+        <section class="blue-bg-cta-section">
+            <div class="container">
+                <h2 class="small-title">
+                    Click below to login to MyAccount and Pay it Forward for 2 months FREE!
+                </h2>
+                <div class="contact-no-row">
+                    <a class="btn-text button-link" href="https://myaccount.patriotmobile.com/login">Go to MyAccount</a>
+                </div>
+            </div>
+        </section>
+        <section class="form-main-section">
+            <div class="container">
+                <div class="row">
+                    <div class="video-section col-1">
+                        <h2 class="small-title">Don’t wait. Pay it Forward today and make a difference when it matters
+                            most.</h2>
+                        <p class="text-montserrat">
+                            As we approach a critical time in our nation’s history and an election that could change the
+                            course of our democracy, the battle to preserve our God-given rights and freedoms has never
+                            been more important. As you know, every month when you pay your Patriot Mobile bill, a
+                            portion goes towards supporting organizations that are on the front lines defending freedom.
+                        </p>
+                    </div>
+                    <div class="form-section col-2">
+                        <h2 class="small-title">How to Take Advantage of the Pay It Forward Promotion:</h2>
+                        <ol class="text-montserrat">
+                            <li><strong>Click the button above</strong> to get started.</li>
+                            <li>Log into your MyAccount page using your account credentials.</li>
+                            <li>Once logged in, look for the <strong>Pay It Forward</strong> tab on the
+                                <strong>left-hand side</strong> of your portal.
+                            </li>
+                            <li><strong>Click the Pay It Forward tab</strong> and follow the on-screen prompts to
+                                complete the process and activate the special offer.</li>
+                            <li>For more information <a href="#faq-section" class="faq-section-link">view the FAQ’s
+                                    below.</a>
+                            </li>
+                        </ol>
+                        <p class="text-montserrat">
+                            Once completed, you’ll be all set to enjoy two free months of service after prepaying for a
+                            full year!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="welcome-patriots-section">
+            <div class="container">
+                <div class="row">
+                    <div class="image-section col-1">
+                        <img src="images/PM_Banner24_600x400.jpg" alt="" />
+                    </div>
+                    <div class="well-come-content-section col-2">
+                        <h4 class="sub-title">Here’s How it Works</h4>
+                        <p class="text-montserrat">
+                            Prepay for 12 months of service and you will receive a credit equal to the amount you paid
+                            forward (“<strong>PayForward Credit</strong>”) PLUS another credit equal to two months of
+                            service at your current plan charges (“<strong>2 Months FREE Credit</strong>”).
+                        </p>
+                        <ul class="text-montserrat">
+                            <li>You can prepay for 12 months either by account or by individual line.</li>
+                            <li>The PayForward Credit and 2 Months FREE Credit can only be used to offset your monthly
+                                recurring service charges with Patriot Mobile.</li>
+                            <li>If you leave before the 12 months, you will only receive a refund of your remaining
+                                PayForward Credit balance which will be used first to apply to any recurring service
+                                charges.</li>
+                            <li>You will not receive a refund equal to the 2 Months FREE Credit balance as that may only
+                                be applied to offsetting the cost of service with Patriot Mobile.</li>
+                            <li>Offers may change without notice, and they cannot be combined with other promotions.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="testimonial-section">
+            <div class="container">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/red-background.png" class="slide-background" />
+                            <div class="slide-content">
+                                <div class="container">
+                                    <a href="https://www.trustpilot.com/review/patriotmobile.com" target="_blank"
+                                        class="testimonial-link">
+                                        <h3 class="title">Not just one reason to switch</h3>
+                                        <p class="sub-title">
+                                            I’ve been happy with the consistency of service and the
+                                            cost of the plan. I am especially thankful to be able to
+                                            do business with a conservative, patriotic company with
+                                            very good online help by friendly people.
+                                        </p>
+                                        <span class="author-name sub-title">~ James</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/red-background.png" class="slide-background" />
+                            <div class="slide-content">
+                                <div class="container">
+                                    <a href="https://www.trustpilot.com/review/patriotmobile.com" target="_blank"
+                                        class="testimonial-link">
+                                        <h3 class="title">Devoted Christian company</h3>
+                                        <p class="sub-title">
+                                            "I love that Patriot Mobile is a devoted Christian company with affordable plans and better benefits. I love the name of this company, plus they are strong conservatives and loyal supporters of our constitutional rights. The service I have received has always been patient, compassionate and professional."
+                                        </p>
+                                        <span class="author-name sub-title">~ Linda</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/blue-background.png" class="slide-background" />
+                            <div class="slide-content">
+                                <div class="container">
+                                    <a href="https://www.trustpilot.com/review/patriotmobile.com" target="_blank"
+                                        class="testimonial-link">
+                                        <h3 class="title">
+                                            Put your money to work. Shop conservative!
+                                        </h3>
+                                        <p class="sub-title">
+                                            When we are passionate about our beliefs, it’s important
+                                            our actions backup our voiced beliefs. Otherwise, we are
+                                            telling businesses to do what they want, whenever they
+                                            want, and we will be forced to deal with it.
+                                        </p>
+                                        <span class="author-name sub-title">~ Mark & Cathy</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add more slides as needed -->
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="small-title">Frequently Asked Questions</h2>
+                <div class="faq-item active">
+                    <div class="faq-question text-montserrat">What is the Pay It Forward promotion?
+                    </div>
+                    <div class="faq-answer text-montserrat">The Pay It Forward promotion allows Patriot Mobile members
+                        to prepay for a full year of service and receive two additional months for free. Here’s how it
+                        works: Prepay for 12 months of service and you will receive a credit equal to the amount you
+                        paid forward (“PayForward Credit”) PLUS another credit equal to two months of service at your
+                        current plan charges (“2 Months FREE Credit”).</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question text-montserrat">How do I take advantage of the Pay It Forward promotion?
+                    </div>
+                    <div class="faq-answer text-montserrat">You can participate in the promotion by logging into the
+                        MyAccount portal, navigating to the Pay It Forward tab, and prepaying for a year of service. The
+                        2 Months FREE Credit will automatically be added to your account.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question text-montserrat">Can I use the Pay It Forward promotion more than once?
+                    </div>
+                    <div class="faq-answer text-montserrat">Yes! If you've already used the promotion, you can do it
+                        again to lock in your current rate and get another 14 months’ worth of service, at your current
+                        plan charges. </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question text-montserrat">What happens if I upgrade my plan after prepaying for a
+                        year?
+                    </div>
+                    <div class="faq-answer text-montserrat">If you upgrade your plan or add a line during the 12-month
+                        period, you will consume your PayForward Credit balance before the 12-month period and will be
+                        responsible for the incremental charges, after the 2 Months FREE Credit is fully applied.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question text-montserrat">Is the credit applied to my entire account or just one
+                        line of service?</div>
+                    <div class="faq-answer text-montserrat">You can prepay for the entire account or individual lines of
+                        service. In the event a customer prepays by line of service, the Credits’ balances will be
+                        applied to the service charges on the entire account rather than to the respective line of
+                        service. Therefore, if you do not prepay on all lines of service on an account, the PayForward
+                        Credit balance will run out before the 12-month period as the Credit will be applied to actual
+                        charges on the entire account. Once the PayForward Credit balance is fully applied to your
+                        service charges, then the 2 Months FREE Credit balance will be applied to service charges until
+                        fully used.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question text-montserrat">What if I cancel my account before using all 14 months of
+                        service?</div>
+                    <div class="faq-answer text-montserrat">If you leave before the 12 months, you will only receive a
+                        refund of your remaining PayForward Credit balance which will be used first to apply to any
+                        outstanding recurring service charges.
+                        The value of the 2 Months FREE Credit will not be refunded.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question text-montserrat">Can I combine the Pay It Forward promotion with other
+                        offers or discounts?
+                    </div>
+                    <div class="faq-answer text-montserrat">Yes, the Pay It Forward promotion can be combined with most
+                        other discounts, promotions, or offers. </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question text-montserrat">Can I apply the Pay It Forward promotion to multiple lines
+                        on my account?</div>
+                    <div class="faq-answer text-montserrat">Yes, you can prepay for multiple lines, and the free months
+                        will apply to the overall account. The credit will be distributed across all lines based on your
+                        account balance.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="term-condition">
+            <div class="container">
+                <div class="term-condition-container">
+                    <h2 class="text-montserrat">*Terms & Conditions</h2>
+                    <ul class="text-montserrat">
+                        <li>In order to receive the <strong>2 Months FREE Credit</strong>, you must pay 12 months of
+                            service charges upfront based on your current plan charges. You will receive a
+                            <strong>PayForward Credit</strong> equal to the amount of this payment and another credit
+                            equal to two months of service at your current plan charges (<strong>“2 Months FREE
+                                Credit”</strong>), together referred as <strong>Credits.</strong></li>
+                        <li>If you upgrade a plan or add a line during the 12-month period, you will consume your
+                            PayForward Credit balance before the 12-month period and will be responsible for the
+                            incremental charges.</li>
+                        <li>You may prepay the 12 months of service charges by account or by line of service. In the
+                            event a customer prepays by line of service, the Credits’ balances will be applied to the
+                            service charges on the entire account rather than to the respective line of service.
+                            Therefore, if you do not prepay on all lines of service on an account, the PayForward Credit
+                            balance will run out before the 12-month period as the Credit will be applied to actual
+                            charges on the entire account. Once the PayForward Credit balance is fully applied to your
+                            service charges, then the 2 Months FREE Credit balance will be applied to service charges
+                            until fully used.</li>
+                        <li>Any charges incurred on your plan in excess of your existing recurring service plan charges
+                            will be applied first towards the PayForward Credit balance and then the 2 Months Free
+                            Credit balance.</li>
+                        <li>Service Charges are comprised of plan prices, fees, taxes and any surcharges.</li>
+                        <li>The Credit balances can only be used towards recurring monthly service charges and cannot be
+                            applied or used towards the purchase of devices, tablets or accessories.</li>
+                        <li>Pricing, promotions, terms, and restrictions subject to change and may be modified or
+                            terminated at any time without notice. Offers not valid with prior purchases, returns or
+                            exchanges. Cannot be combined with other offers.</li>
+                        <li>See Terms & Conditions at Terms & Conditions for additional terms and conditions.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        const swiper = new Swiper(".mySwiper", {
+            loop: true,
+            effect: "fade",
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Open the first FAQ item by default
+            $('.faq-item').first().find('.faq-answer').show();
+
+            $('.faq-question').on('click', function () {
+                const $faqItem = $(this).closest('.faq-item');
+
+                // Toggle active state
+                $faqItem.toggleClass('active');
+
+                // Slide toggle answer
+                $faqItem.find('.faq-answer').slideToggle();
+
+                // Close other answers if open
+                $('.faq-item').not($faqItem).removeClass('active').find('.faq-answer').slideUp();
+            });
+        });
+    </script>
+</body>
+
+</html>

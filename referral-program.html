@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>referral-program</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            font-family: 'Montserrat';
+            border-color: #DEE2E6;
+            color: #212529;
+            background-color: #FFFFFF;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1440px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0px 20px;
+        }
+
+        .container-fluid {
+            width: 100%;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .row .col-1,
+        .row .col-2 {
+            width: 50%;
+        }
+
+        .title {
+            font-family: "Montserrat";
+            font-size: 42px;
+            line-height: 50px;
+            font-weight: 700;
+        }
+
+        .small-title {
+            font-family: "Montserrat";
+            font-size: 32px;
+            line-height: 40px;
+            font-weight: 700;
+        }
+
+        .sub-title {
+            font-family: "Montserrat";
+            font-size: 28px;
+            line-height: normal;
+            font-weight: 700;
+        }
+
+        .btn-text {
+            font-family: "Montserrat";
+            font-size: 20px;
+            line-height: 28px;
+            font-weight: 700;
+        }
+
+        .text-montserrat {
+            font-family: "Montserrat";
+            font-size: 16px;
+            line-height: 25px;
+            font-weight: 400;
+        }
+
+        /* ---------- Banner Section CSS START ---------- */
+
+        .banner-main-section {
+            background-image: url(images/aboutt.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            text-align: center;
+            padding: 70px 20px;
+            color: #FFFFFF;
+        }
+
+        .banner-main-section p.small-title {
+            margin-bottom: 20px;
+        }
+
+        /* ---------- Banner Section CSS END ---------- */
+
+
+        /* ---------- Refer Family CSS START ---------- */
+
+        .refer-family-section {
+            background-image: url(images/iStock-962477084_lowrez_1728x.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            padding: 80px 20px 80px 55px;
+        }
+
+        .refer-family-section .refer-family-inner {
+            max-width: 48%;
+        }
+
+        .refer-family-inner h3.small-title {
+            padding-bottom: 35px;
+            color: #1E2955;
+        }
+
+        .refer-family-inner p.text-montserrat {
+            color: #757589;
+            line-height: 28px;
+        }
+
+        /* ---------- Refer Family CSS END ---------- */
+
+
+        .container-main {
+            background-color: #F8F8F8;
+        }
+
+        /* ---------- Image Box Section CSS START ---------- */
+
+        .image-box-section {
+            padding: 80px 0px;
+        }
+
+        .image-box-section .row {
+            gap: 50px;
+        }
+
+        .image-box-section .image-container {
+            line-height: 0px;
+        }
+
+        .image-box-section .image-container img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .image-box-section .text-container {
+            padding: 30px 0px 20px;
+        }
+
+        .image-box-section .text-container h3.small-title {
+            padding-bottom: 12px;
+            color: #00205b;
+        }
+
+        .image-box-section .text-container p.text-montserrat {
+            line-height: 28px;
+            color: #222222;
+        }
+
+        /* ---------- Image Box Section CSS END ---------- */
+
+
+        /* ---------- Details Section CSS START ---------- */
+        section.details-section {
+            max-width: 70%;
+            margin: auto;
+            text-align: center;
+            padding-bottom: 50px;
+        }
+
+        section.details-section p.btn-text {
+            font-weight: 400;
+            line-height: 30px;
+            color: #757589;
+        }
+
+        section.details-section p.btn-text:last-child {
+            margin-top: 15px;
+        }
+
+        /* ---------- Details Section CSS END ---------- */
+
+
+        /* ---------- Brands Section CSS START ---------- */
+
+        section.brands-main-section {
+            padding: 20px 0px 70px;
+        }
+
+        .brands-main-section .row {
+            gap: 10px;
+        }
+
+        .brands-main-section .single-brand {
+            width: 20%;
+        }
+
+        .brands-main-section .single-brand img {
+            width: 100%;
+            aspect-ratio: 13/5;
+            object-fit: contain;
+        }
+
+        /* ---------- Brands Section CSS END ---------- */
+
+
+        /* ---------- Referal Plan Section CSS START ---------- */
+
+        .referal-plan-section .call-to-action-title {
+            padding-bottom: 30px;
+        }
+
+        .referal-plan-section h3.title-font-montserrat {
+            color: #182857;
+            text-align: center;
+            text-transform: capitalize;
+        }
+
+        .referal-plan-section .row {
+            align-items: unset;
+        }
+
+        .referal-plan-section .image-section {
+            line-height: 0px;
+        }
+
+        .referal-plan-section .image-section img {
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .referal-plan-content-section {
+            color: #FFFFFF;
+            background-color: #B53243;
+            padding: 55px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .referal-plan-content-section h3.small-title {
+            padding-bottom: 20px;
+        }
+
+        .referal-plan-content-section ul {
+            padding-left: 20px;
+            line-height: 22px;
+        }
+
+        .referal-plan-content-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .referal-plan-content-section ul li:last-child {
+            margin-bottom: 0px;
+        }
+
+        .referal-plan-content-section ul li::marker {
+            font-size: 18px;
+            line-height: 18px;
+        }
+
+        /* ---------- Referal Plan Section CSS END ---------- */
+
+
+        /* ***** Media Query START ***** */
+
+        @media only screen and (max-width: 1024px) {
+
+            .title {
+                font-size: 36px;
+                line-height: 40px;
+            }
+
+            .small-title {
+                font-size: 28px;
+                line-height: 34px;
+            }
+
+            .sub-title {
+                font-size: 25px;
+                line-height: 32px;
+            }
+
+            .btn-text {
+                font-size: 18px;
+                line-height: 18px;
+            }
+
+
+            .refer-family-section {
+                padding: 70px 20px 70px 55px;
+            }
+
+            .refer-family-section .refer-family-inner {
+                max-width: 55%;
+            }
+
+            .refer-family-inner h3.small-title {
+                padding-bottom: 20px;
+            }
+
+
+
+
+            .image-box-section {
+                padding: 70px 0px 50px;
+            }
+
+            .image-box-section .row {
+                gap: 30px;
+            }
+
+            .image-box-section .text-container {
+                padding: 25px 0px 20px;
+            }
+
+            .image-box-section .text-container h3.small-title {
+                padding-bottom: 10px;
+            }
+
+            .image-box-section .text-container p.text-montserrat {
+                line-height: 26px;
+            }
+
+
+            section.details-section {
+                max-width: 85%;
+            }
+
+
+            .brands-main-section .row {
+                gap: 25px 10px;
+                flex-wrap: wrap;
+            }
+
+            .brands-main-section .single-brand {
+                width: 22.5%;
+            }
+
+
+
+
+            .referal-plan-section .row {
+                flex-wrap: wrap;
+            }
+
+            .referal-plan-section .row .col-1,
+            .referal-plan-section .row .col-2 {
+                width: 100%;
+            }
+
+        }
+
+        /* 1024 */
+
+
+        @media only screen and (max-width: 767px) {
+
+            .title {
+                font-size: 30px;
+                line-height: 34px;
+            }
+
+            .small-title {
+                font-size: 25px;
+                line-height: 32px;
+            }
+
+            .sub-title {
+                font-size: 22px;
+                line-height: 30px;
+            }
+
+            .btn-text {
+                font-size: 16px;
+                line-height: 16px;
+            }
+
+
+
+            .banner-main-section {
+                padding: 50px 20px;
+            }
+
+
+
+            .refer-family-section {
+                padding: 50px 20px 50px 20px;
+            }
+
+            .refer-family-section .refer-family-inner {
+                max-width: 100%;
+            }
+
+            .refer-family-inner p.text-montserrat {
+                color: #222222;
+                line-height: 26px;
+            }
+
+            .image-box-section {
+                padding: 50px 0px 30px;
+            }
+
+            .image-box-section .row {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .row .col-1,
+            .row .col-2 {
+                width: 100%;
+            }
+
+
+            section.details-section {
+                max-width: 90%;
+                padding-bottom: 30px;
+            }
+
+            section.details-section p.btn-text {
+                line-height: 26px;
+            }
+
+
+            section.brands-main-section {
+                padding: 20px 0px 50px;
+            }
+
+
+            .brands-main-section .single-brand {
+                width: 48.5%;
+            }
+
+            .brands-main-section .row {
+                gap: 20px 10px;
+            }
+
+            .referal-plan-content-section {
+                padding: 50px 20px;
+            }
+
+        }
+
+        /* 767 */
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <section class="banner-main-section">
+            <div class="container-fluid">
+                <p class="small-title">Introducing Patriot Mobile</p>
+                <h2 class="title">Referral Rewards Program</h2>
+            </div>
+        </section>
+        <section class="refer-family-section">
+            <div class="container-fluid">
+                <div class="refer-family-inner">
+                    <h3 class="small-title">Refer Family and Friends</h3>
+                    <p class="text-montserrat">We know how easy it is to talk about a company you love and shares your
+                        same values and beliefs! Thank you for spreading the word about Patriot Mobile and our mission.
+                        We have always sought to build a company based on integrity, trust, and conservative values.
+                        Thanks to you, we continue to grow and do just that! We want to make sure that you get the
+                        credit you are due, so here is how referring family member or friend to Patriot Mobile can save
+                        you BIG on your next phone bill.</p>
+                </div>
+            </div>
+        </section>
+        <section class="image-box-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-1">
+                        <div class="image-container">
+                            <img src="images/iStock-1221264318_lowrez_770x.jpg" alt="">
+                        </div>
+                        <div class="text-container">
+                            <h3 class="small-title">Save up to $600 per year.</h3>
+                            <p class="text-montserrat">Through our friends and family Referral Rewards program, you can
+                                receive $10 off your bill for each member you refer for an entire calendar year! That
+                                means, if your plan is around $50 a month, or $600 a year, and you refer five people in
+                                the same month that become Patriot Mobile members, your bill could be paid for an entire
+                                year!</p>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="image-container">
+                            <img src="images/iStock-859478534_lowrez_770x.jpg" alt="">
+                        </div>
+                        <div class="text-container">
+                            <h3 class="small-title">Make a Difference</h3>
+                            <p class="text-montserrat">Our success and impact on the conservative movement are directly
+                                due to you, our members. Please continue to spread the word about Patriot Mobile. It is
+                                as easy as sharing your Referral Code (first and last name and/or account number) with
+                                friends and family. Don’t let them settle for Big Mobile. Choose Patriotism like never
+                                before. Choose Patriot Mobile.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="details-section">
+            <div class="container">
+                <p class="btn-text">Our success and impact on the Christian conservative movement are directly due to
+                    you, our members. Please continue to spread the word about Patriot Mobile and earn rewards while
+                    doing so! </p>
+                <p class="btn-text"> We’d appreciate you going to one of the following sites and sharing your Patriot
+                    Mobile experience.</p>
+            </div>
+        </section>
+        <section class="brands-main-section">
+            <div class="container">
+                <div class="row">
+                    <div class="single-brand">
+                        <a href="#"><img src="images/TrustPilot_logo.png" alt="" width="100%"></a>
+                    </div>
+                    <div class="single-brand">
+                        <a href="#"><img src="images/BBB_logo.png" alt="" width="100%"></a>
+                    </div>
+                    <div class="single-brand">
+                        <a href="#"><img src="images/facebook_f1b5e432-8b7c-41c4-90bf-6165729ec9ee.png" alt=""
+                                width="100%"></a>
+                    </div>
+                    <div class="single-brand">
+                        <a href="#"><img
+                                src="images/google-logo-icon-PNG-Transparent-Background-letter-G-multiple-colors.png"
+                                alt="" width="100%"></a>
+                    </div>
+                    <div class="single-brand">
+                        <a href="#"><img src="images/MSP_logo.png" alt="" width="100%"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="referal-plan-section">
+            <div class="container-fluid"></div>
+            <div class="row">
+                <div class="image-section col-1">
+                    <img src="images/iStock-623901114-1.jpg" alt="" width="100%">
+                </div>
+                <div class="referal-plan-content-section col-2">
+                    <h3 class="small-title">Referral Plan Conditions</h3>
+                    <ul class="text-montserrat">
+                        <li>The referred member must be a first-time, new member that opens a separate new account with
+                            a different address.</li>
+                        <li>Referral credit amount: $10 per month per new Patriot Mobile member.</li>
+                        <li>Referral credit duration: 12 months per new Patriot Mobile member.</li>
+                        <li>The referred member must be enrolled in one of Patriot Mobile’s automatic payment plans.
+                        </li>
+                        <li>Both members may not be late or miss a payment for 12 months.</li>
+                        <li>The existing and referred members must BOTH remain active Patriot Mobile members.</li>
+                        <li>Referral credit cannot exceed referring member’s monthly bill amount.</li>
+                        <li>If you refer 6 people and your monthly phone bill is $50, you will only receive a $50 credit
+                            that equals to $600 a year.</li>
+                        <li>Your phone bill will be credited starting the first month after the new member has joined
+                            Patriot Mobile.</li>
+                        <li>If either one of the members is late on payments or becomes an inactive Patriot Mobile
+                            member, the referral credits ceases for the referring member.</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

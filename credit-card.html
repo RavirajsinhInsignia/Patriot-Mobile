@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>credit-card</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            font-family: 'Montserrat';
+            border-color: #DEE2E6;
+            color: #212529;
+            background-color: #FFFFFF;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1440px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0px 20px;
+        }
+
+        .container-fluid {
+            width: 100%;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .row .col-1,
+        .row .col-2 {
+            width: 50%;
+        }
+
+        .small-title {
+            font-family: "Montserrat";
+            font-size: 32px;
+            line-height: 40px;
+            font-weight: 700;
+        }
+
+        .text-montserrat {
+            font-family: "Montserrat";
+            font-size: 16px;
+            line-height: 25px;
+            font-weight: 400;
+        }
+
+        /* ---------- Banner Section CSS START ---------- */
+
+        section.banner-section {
+            margin-bottom: 10px;
+            line-height: 0px;
+        }
+
+        section.banner-section img {
+            width: 100%;
+        }
+
+        /* ---------- Banner Section CSS END ---------- */
+
+
+        /* ---------- Blue Bg CTA Section CSS START ---------- */
+
+        .blue-bg-cta-section {
+            padding: 50px 20px;
+            text-align: center;
+            color: #fff;
+            background-color: #182857;
+        }
+
+        .blue-bg-cta-section h2.main-title {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .blue-bg-cta-section .button-link {
+            display: inline-block;
+            font-family: 'Montserrat';
+            font-size: 20px;
+            font-weight: 700;
+            color: #FFFFFF;
+            background-color: #C41F3E;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+            padding: 10px 24px;
+            border-radius: 3px;
+            text-decoration: none;
+            outline: none;
+        }
+
+        /* ---------- Blue Bg CTA Section CSS END ---------- */
+
+
+        /* ---------- credit-card Section CSS START ---------- */
+
+        .credit-card-main-section .credit-card-section h2.small-title {
+            color: #182857;
+        }
+
+        section.credit-card-main-section {
+            padding: 80px 0px;
+        }
+
+        .credit-card-main-section .row {
+            gap: 50px;
+        }
+
+        .credit-card-main-section .img-container {
+            padding: 22px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .credit-card-main-section .img-container h2.small-title {
+            color: #182857;
+            padding-left: 10px;
+        }
+
+        .credit-card-main-section .info-container {
+            color: #757589;
+        }
+
+        .credit-card-main-section .info-container p.text-montserrat {
+            margin-bottom: 15px;
+        }
+
+        .credit-card-main-section .info-container .details-list.text-montserrat {
+            line-height: 28px;
+            padding-left: 40px;
+        }
+
+        /* ---------- credit-card Section CSS END ---------- */
+
+
+        /* ---------- FAQ Section CSS START ---------- */
+
+        .faq-section {
+            padding: 0px 0px 80px;
+        }
+
+        .faq-section h2.small-title {
+            color: #182857;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .faq-item:last-child {
+            margin-bottom: 0px;
+        }
+
+        .faq-item {
+            background-color: transparent;
+            border: none;
+            margin-bottom: 15px;
+        }
+
+        .faq-question {
+            padding: 15px 60px 15px 30px;
+            cursor: pointer;
+            position: relative;
+            border: none;
+            font-weight: 700;
+            color: #141714;
+            border-radius: 10px;
+            box-shadow: none;
+            background-color: #F9FAFF;
+            text-transform: uppercase;
+        }
+
+        .faq-question::after {
+            content: "\f078";
+            width: auto;
+            height: auto;
+            background-image: none;
+            font-weight: 700;
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: "Font Awesome 5 Free";
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: translateY(-50%) rotate(-180deg);
+        }
+
+        .faq-answer {
+            padding: 20px 70px 10px 30px;
+            display: none;
+            border: none;
+            background-color: transparent;
+            font-weight: 400;
+            color: #757589;
+        }
+
+        .faq-answer a {
+            text-decoration: none;
+            text-shadow: none;
+            color: #7E54F8;
+        }
+
+        .faq-item.active .faq-question {
+            background-color: #1d1d1d;
+            color: #fff;
+            box-shadow: none;
+        }
+
+        /* ---------- FAQ Section CSS END ---------- */
+
+
+
+        /* ***** Media Query START ***** */
+
+        @media only screen and (max-width: 1024px) {
+
+            .small-title {
+                font-size: 28px;
+                line-height: 34px;
+            }
+
+            .blue-bg-cta-section {
+                padding: 40px 20px;
+            }
+
+            .blue-bg-cta-section .button-link {
+                font-size: 18px;
+            }
+
+            section.credit-card-main-section {
+                padding: 50px 0px 40px;
+            }
+
+            .credit-card-main-section .row {
+                gap: 30px;
+            }
+
+            .credit-card-main-section .img-container {
+                padding: 15px;
+                gap: 15px;
+            }
+
+            .credit-card-main-section .info-container .details-list.text-montserrat {
+                line-height: 20px;
+                padding-left: 35px;
+            }
+
+            .credit-card-main-section .info-container .details-list.text-montserrat li {
+                padding-bottom: 9px;
+            }
+
+            .faq-section {
+                padding: 0px 0px 50px;
+            }
+
+            .faq-section h2.small-title {
+                margin-bottom: 30px;
+            }
+        } /* 1024 */
+
+
+
+        @media only screen and (max-width: 767px) {
+
+            .small-title {
+                font-size: 25px;
+                line-height: 32px;
+            }
+
+            .row {
+                flex-wrap: wrap;
+            }
+
+            .row .col-1,
+            .row .col-2 {
+                width: 100%;
+            }
+
+            .blue-bg-cta-section .button-link {
+                font-size: 16px;
+                padding: 8px 20px;
+            }
+
+            .blue-bg-cta-section {
+                padding: 30px 20px;
+            }
+
+            .credit-card-main-section .img-container {
+                padding: 15px;
+                gap: 10px;
+            }
+
+            .faq-section {
+                padding: 0px 0px 50px;
+            }
+
+            .faq-section h2.small-title {
+                margin-bottom: 30px;
+            }
+
+            .faq-question {
+                padding: 12px 55px 12px 20px;
+                font-weight: 600;
+            }
+
+            .faq-question::after {
+                right: 25px;
+                /* top: 12px; */
+            }
+
+            .faq-answer {
+                padding: 15px 40px 5px 20px;
+            }
+        } /* 767 */
+    </style>
+</head>
+<body>
+
+    <main>
+        <section class="banner-section">
+            <div class="container-fluid">
+                <img decoding="async" src="images/Patriot-Mobile-Credit-Card-3-1536x400.png">
+            </div>
+        </section>
+        <section class="blue-bg-cta-section">
+            <div class="container-fluid">
+                <h2 class="main-title small-title">Click below to Apply for the Patriot Mobile Credit Card!</h2>
+                <a class="button-link"
+                    href="https://servisfirstbank.my.salesforce-sites.com/ccredit?name=https://landing.patriotmobile.com">Apply
+                    Here</a>
+            </div>
+        </section>
+        <section class="credit-card-main-section">
+            <div class="container">
+                <div class="row">
+                    <div class="img-container col-1">
+                        <h2 class="small-title">Patriot Mobile Credit Card</h2>
+                        <img src="images/New-Card.png" alt="">
+                    </div>
+                    <div class="info-container col-2">
+                        <p class="text-montserrat">Great For: Consumers that need a convenient way to merge everyday
+                            expenses, normal day-to-day transactions, earning cash back on all purchases.</p>
+                        <ul class="details-list text-montserrat">
+                            <li>Track purchases on itemized statements</li>
+                            <li>Make purchases around the world</li>
+                            <li>Manage payment options and transactions online</li>
+                            <li>Set account alerts to track payments and balances online</li>
+                            <li>Earn a full 1% cash back on everything you buy</li>
+                            <li>0% APR on purchases and balance transfers for the ﬁrst 7 billing cycles after account
+                                opening</li>
+                            <li>2 product options: Platinum Card with Cash Back Rewards</li>
+                            <li>2% cash back on Patriot Mobile purchases with no annual fee</li>
+                            <li>1% cash back on all other purchases with no annual fee.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="small-title">Frequently Asked Questions</h2>
+                <div class="faq-item active">
+                    <div class="faq-question text-montserrat">How do I apply for the patriot mobile credit card?
+                    </div>
+                    <div class="faq-answer text-montserrat">Apply online:
+                        https://cdepartment.secure.force.com/ccredit?name=https://landing.patriotmobile.com</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question text-montserrat">When will I know if I am approved for the Patriot Mobile
+                        Credit Card?</div>
+                    <div class="faq-answer text-montserrat">Once you’ve submitted your application online, it is
+                        processed by
+                        ServisFirst Bank. In 7-10 days, depending on the approval decision, you will receive one of the
+                        following via mail: The Patriot Mobile Credit Card with instructions on how to activate and set
+                        up the account online or An adverse action notice, meaning the lender denied the credit card
+                        application. Patriot Mobile has no evolvement in the approval process. Approval is given
+                        directly from ServisFirst Bank using the usual credit process. ServisFirst Bank will communicate
+                        all communication about the status of the application process</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question text-montserrat">How to I contact ServisFirst Bank?</div>
+                    <div class="faq-answer text-montserrat">Phone Number: 1-888-990-3340, Mailing Address: PO Box 1508
+                        Birmingham, AL,
+                        35282 and Email: CDepartment@servisfirstbank.com</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question text-montserrat">What is the regular APR after the 0% interest period ends?
+                    </div>
+                    <div class="faq-answer text-montserrat">The APR will revert to APR Wall Street Prime Rate+8.00.%
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question text-montserrat">Is the Patriot Mobile Credit Cards EMV chip enabled?</div>
+                    <div class="faq-answer text-montserrat">Yes</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question text-montserrat">Can I load the Patriot Mobile Credit Card to my mobile
+                        wallet?</div>
+                    <div class="faq-answer text-montserrat">Yes, the Patriot Mobile Credit Card is supported by all
+                        mobile wallets.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question text-montserrat">Is there a mobile app for the Patriot Mobile Credit Card?
+                    </div>
+                    <div class="faq-answer text-montserrat">Yes, you will have access to the Patriot Mobile Credit Card
+                        through the Card
+                        Valet app (NOTE: This is DIFFERENT than your Patriot Mobile MyAccount. You will not be able to
+                        see Patriot Mobile Credit Card account information on your Patriot Mobile MyAccount)</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question text-montserrat">Can I call ServisFirst customer Service?</div>
+                    <div class="faq-answer text-montserrat">Yes, ServisFirst Customer Service number is 888-999-3340
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Open the first FAQ item by default
+            $('.faq-item').first().find('.faq-answer').show();
+
+            $('.faq-question').on('click', function () {
+                const $faqItem = $(this).closest('.faq-item');
+
+                // Toggle active state
+                $faqItem.toggleClass('active');
+
+                // Slide toggle answer
+                $faqItem.find('.faq-answer').slideToggle();
+
+                // Close other answers if open
+                $('.faq-item').not($faqItem).removeClass('active').find('.faq-answer').slideUp();
+            });
+        });
+    </script>
+
+</body>
+</html>

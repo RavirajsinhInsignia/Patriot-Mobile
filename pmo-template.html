@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Patriot Mobile Pmo</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Montserrat';
+            border-color: #DEE2E6;
+            color: #212529;
+            background-color: #FFFFFF;
+            margin: 0;
+            padding: 0;
+        }
+
+        
+        .container {
+            max-width: 1440px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0px 20px;
+        }
+        .container-fluid {
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0px;
+        }
+        .small-title {
+            font-family: "Montserrat";
+            font-size: 32px;
+            line-height: 40px;
+            font-weight: 700;
+        }
+        .sub-title {
+            font-family: "Montserrat";
+            font-size: 28px;
+            line-height: normal;
+            font-weight: 700;
+        }
+        .small-sub-title {
+            font-family: "Montserrat";
+            font-size: 22px;
+            line-height: 28px;
+            font-weight: 500;
+        }
+        .text-montserrat {
+            font-family: "Montserrat";
+            font-size: 16px;
+            line-height: 25px;
+            font-weight: 400;
+        }
+
+        /* product-banner-section section css */
+
+        .product-banner-section {
+            margin: 0;
+            padding: 0;
+        }
+        .product-banner-section .full-width-col {
+            padding: 0px;
+            line-height: 0;
+        }
+        .product-banner-section img {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        /* video-section section css */
+
+        .video-section {
+            padding: 100px 0px 90px;
+            color: #001468;
+        }
+        .video-section h2.sub-title {
+            font-weight: 800;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .video-section h3.small-sub-title {
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .video-section .iframe-video {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding-bottom: 56.25%;
+            background: #000;
+            border-radius: opx;
+            box-shadow: none;
+            overflow: hidden;
+        }
+        .video-section iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* grid-box-section section css */
+
+        .grid-box-section {
+            padding: 10px 0px 90px;
+        }
+        .grid-box-section h2.small-title {
+            text-align: center;
+            color: #001468;
+            margin-bottom: 40px;
+        }
+        .grid-box-section .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            row-gap: 40px;
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0px 0px;
+        }
+        .grid-box-section .grid-item {
+            text-align: left;
+        }
+        .grid-box-section .grid-item img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .grid-box-section .grid-item h3.small-sub-title {
+            color: #01135F;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 0px 0px 15px;
+        }
+        .grid-box-section .grid-item p.text-montserrat {
+            color: #001468;
+        }
+
+        /* details-section section css */
+
+        .details-section .container {
+            padding-top: 10px;
+            padding-bottom: 55px;
+        }
+        .details-section .row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .details-section .col:last-child {
+            padding-left: 20px;
+        }
+        .details-section .col {
+            flex: 1;
+        }
+        .details-section img {
+            width: 100%;
+        }
+        .details-section h2.small-title {
+            color: #001468;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .details-section p.small-sub-title {
+            color: #001468;
+            margin-bottom: 8px;
+        }
+        .details-section ul.text-montserrat {
+            line-height: 25px;
+            padding-left: 32px;
+            margin-bottom: 16px;
+            color: #212529;
+        }
+
+        /* grey-content-section section css */
+
+        .grey-content-section {
+            background-color: #E6E6E6;
+            padding: 40px 0px;
+        }
+        .grey-content-section .row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .grey-content-section .col {
+            flex: 1;
+            padding: 10px;
+        }
+        .grey-content-section h2.small-title {
+            color: #001468;
+            margin-bottom: 20px;
+        }
+        .grey-content-section p.text-montserrat {
+            line-height: 30px;
+            margin-bottom: 15px;
+            color: #757589;
+            width: 90%;
+        }
+
+        /* faq-section section css */
+
+        .faq-section {
+            padding: 100px 0px;
+        }
+        .faq-section h2.small-title {
+            color: #182857;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .faq-item:last-child {
+            margin-bottom: 0px;
+        }
+        .faq-item {
+            background-color: transparent;
+            border: none;
+            margin-bottom: 15px;
+        }
+        .faq-question {
+            padding: 15px 60px 15px 30px;
+            cursor: pointer;
+            position: relative;
+            border: none;
+            font-weight: 700;
+            color: #141714;
+            border-radius: 10px;
+            box-shadow: none;
+            background-color: #F9FAFF;
+            text-transform: uppercase;
+        }
+        .faq-question::after {
+            content: "\f078";
+            width: auto;
+            height: auto;
+            background-image: none;
+            font-weight: 700;
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: "Font Awesome 5 Free";
+        }
+        .faq-item.active .faq-question::after {
+            transform: translateY(-50%) rotate(-180deg);
+        }
+        .faq-answer {
+            padding: 20px 70px 10px 30px;
+            display: none;
+            border: none;
+            background-color: transparent;
+            font-weight: 400;
+            color: #757589;
+        }
+        .faq-answer a {
+            text-decoration: none;
+            text-shadow: none;
+            color: #7E54F8;
+        }
+        .faq-item.active .faq-question {
+            background-color: #1d1d1d;
+            color: #fff;
+            box-shadow: none;
+        }
+
+
+        /* ***** Media Query START ***** */
+
+        @media only screen and (max-width: 1024px) {
+
+            .small-title {
+                font-size: 28px;
+                line-height: 34px;
+            }
+            .sub-title {
+                font-size: 25px;
+                line-height: 32px;
+            }
+            .btn-text {
+                font-size: 18px;
+                line-height: 18px;
+            }
+
+
+            .video-section {
+                padding: 70px 0px 60px;
+            }
+            .grid-box-section {
+                padding: 10px 0px 60px;
+            }
+            .grid-box-section .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+                row-gap: 30px;
+            }
+            .grid-box-section .grid-item h3.small-sub-title {
+                margin: 0px 0px 10px;
+            }
+            .grey-content-section p.text-montserrat {
+                width: 100%;
+                line-height: 26px;
+            }
+            .details-section .col:last-child {
+                padding-left: 0px;
+            }
+            .faq-section {
+                padding: 70px 0px;
+            }
+
+        }/* 1024 */
+
+
+        @media only screen and (max-width: 767px) {
+
+            .small-title {
+                font-size: 25px;
+                line-height: 32px;
+            }
+            .sub-title {
+                font-size: 22px;
+                line-height: 30px;
+            }
+            .small-sub-title {
+                font-size: 20px;
+                line-height: 26px;
+            }
+
+
+            .video-section {
+                padding: 50px 0px 40px;
+            }
+            .video-section h2.sub-title {
+                margin-bottom: 20px;
+            }
+
+
+            .grid-box-section {
+                padding: 10px 0px 40px;
+            }
+            .grid-box-section h2.small-title {
+                margin-bottom: 30px;
+            }
+            .grid-box-section .grid-container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .grid-box-section .grid-item img {
+                margin-bottom: 15px;
+            }
+
+
+            .grey-content-section {
+                padding: 50px 0px;
+            }
+            .grey-content-section .col {
+                width: 100%;
+                flex: unset;
+                padding: 0px;
+            }
+            .grey-content-section p.text-montserrat {
+                margin-bottom: 30px;
+            }
+
+
+            .details-section .container {
+                padding-bottom: 35px;
+            }
+            .details-section .col {
+                flex: unset;
+            }
+            .details-section img {
+                margin-bottom: 20px;
+            }
+
+
+            .faq-section {
+                padding: 50px 0px;
+            }
+            .faq-section h2.small-title {
+                margin-bottom: 30px;
+            }
+            .faq-question {
+                padding: 12px 55px 12px 20px;
+                font-weight: 600;
+            }
+            .faq-question::after {
+                right: 25px;
+                /* top: 12px; */
+            }
+            .faq-answer {
+                padding: 15px 40px 5px 20px;
+            }
+        } /* 767 */
+
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <section class="product-banner-section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="full-width-col">
+                        <picture>
+                            <source media="(max-width:767px)" srcset="images/PM_ONE_600x400_v397-1.jpg">
+                            <img src="/images/PM_product_banner.png" style="width:100%;">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="video-section">
+            <div class="container">
+                <div class="row">
+                    <div class="content">
+                        <h2 class="sub-title">Did you know you can have multiple Networks on one Smartphone?</h2>
+                        <h3 class="small-sub-title">All you need is an available SIM on a Dual SIM smartphone, a Patriot
+                            Mobile
+                            Primary phone plan, and for as low as $15 a month you can ensure you're covered with a
+                            second
+                            line on a different network.</h3>
+                        <div class="iframe-video">
+                            <iframe class="video-iframe" allowfullscreen="" allow="clipboard-write"
+                                title="vimeo Video Player"
+                                src="https://player.vimeo.com/video/970807693?color&amp;autopause=0&amp;loop=1&amp;muted=0&amp;title=0&amp;portrait=0&amp;byline=0#t="></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="grid-box-section">
+            <div class="container">
+                <div class="title">
+                    <h2 class="small-title">Why you need Patriot Mobile One</h2>
+                </div>
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <img src="./images/backup-line.jpg" alt="Backup Line">
+                        <h3 class="small-sub-title">BACKUP LINE</h3>
+                        <p class="text-montserrat">Network towers can sometimes go down, and having a second line on a
+                            different network can
+                            help
+                            increase the likelihood of staying connected.</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="./images/traveler.jpg" alt="Frequent Traveler">
+                        <h3 class="small-sub-title">FREQUENT TRAVELER</h3>
+                        <p class="text-montserrat">Stay connected when you travel to remote locations where a particular
+                            network may not have
+                            coverage.</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="./images/personal.jpg" alt="Work and Personal">
+                        <h3 class="small-sub-title">WORK AND PERSONAL</h3>
+                        <p class="text-montserrat">No need to carry two phones; combine your work and personal number
+                            into one device.</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="./images/connected.jpg" alt="Stay Connected">
+                        <h3 class="small-sub-title">STAY CONNECTED</h3>
+                        <p class="text-montserrat">Having a second line minimizes the chance that you will be without
+                            use of your cell phone,
+                            giving
+                            you peace of mind.</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="./images/owner.jpg" alt="Small Business Owner">
+                        <h3 class="small-sub-title">SMALL BUSINESS OWNER</h3>
+                        <p class="text-montserrat">Effectively handle client calls using separate business lines,
+                            eliminating the need for two
+                            phones.</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="./images/situations.jpg" alt="Emergency Situations">
+                        <h3 class="small-sub-title">EMERGENCY SITUATIONS</h3>
+                        <p class="text-montserrat">Stay connected during crisis situations; having a backup line may
+                            save someone’s life.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="details-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col" style="line-height: 0;">
+                        <img src="./images/duel-network.png" alt="">
+                    </div>
+                    <div class="col">
+                        <h2 class="small-title">Patriot Mobile is one of the only carriers that can offer you three
+                            different networks. Two networks can be on one device.</h2>
+                        <p class="small-sub-title"><span style="color: #bf0d3e;"><span style="color: #001468;">Patriot
+                                    Mobile
+                                    One</span> is One Carrier, One Phone, Multiple Networks:</span></p>
+                        <ul class="text-montserrat">
+                            <li>Add a second line to your eSIM-compatible smartphone.</li>
+                            <li>Ideal for separating work and personal calls or texts.</li>
+                            <li>Manage privacy effectively with a dedicated number.</li>
+                            <li>Eliminate the need for multiple devices, reducing cost and clutter.</li>
+                        </ul>
+                        <p class="small-sub-title">Two Networks, One phone:</p>
+                        <ul class="text-montserrat">
+                            <li>Access two different networks simultaneously on one device.</li>
+                            <li>Ensure consistent and reliable coverage, in rural areas.</li>
+                            <li>Allows cellular data switching. Use data from both data plans when needed.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="grey-content-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2 class="small-title">One Phone, One Carrier, Multiple Networks</h2>
+                        <p class="text-montserrat">
+                            Dual SIM smartphones allow you to use two SIM cards simultaneously, either eSIM or hard SIM.
+                            With <strong>Patriot Mobile One</strong>, not only can you have a second number, but that
+                            number
+                            can be on on a different network. This can be useful for managing network coverage issues
+                            when
+                            traveling the country or for using personal and business lines on the same
+                            device.<br><strong>Patriot Mobile’s got you covered as one of the only cell phone carriers
+                                to
+                                provide all three major networks!</strong>
+                        </p>
+                    </div>
+                    <div class="col" style="line-height: 0;">
+                        <img src="./images/ethan-build.png" alt="" width="100%
+                        ">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="small-title">Frequently Asked Questions</h2>
+                <div class="faq-item  active">
+                    <div class="faq-question text-montserrat">What is Patriot Mobile One (PMO)?</div>
+                    <div class="faq-answer text-montserrat">Patriot Mobile is one of the only wireless Carriers that
+                        offers three
+                        different
+                        networks. PMO allows you to have two numbers with access to two networks on a single dual-SIM
+                        smartphone. This service combines work and personal numbers on one phone, doubles coverage
+                        options,
+                        and ensures connectivity in rural or remote areas.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question text-montserrat">How do I set up my second number or network with PMO?
+                    </div>
+                    <div class="faq-answer text-montserrat">If your device supports dual SIMs with eSIM technology, call
+                        972-PATRIOT and
+                        add
+                        a second line starting at $15 monthly. You can activate your second line directly from your
+                        device
+                        settings.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question text-montserrat">Who can benefit from using PMO?</div>
+                    <div class="faq-answer text-montserrat">PMO is perfect for professionals who need separate lines for
+                        work and
+                        personal
+                        use, individuals who require reliable coverage in various locations, and travelers who need
+                        consistent connectivity across different networks.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question text-montserrat">Are there specific devices that are compatible with PMO?
+                    </div>
+                    <div class="faq-answer text-montserrat">PMO is compatible with any smartphone with dual SIM
+                        functionality, including
+                        eSIM technology. Popular compatible devices include the latest Apple, Samsung, and Google
+                        models.
+                        Please check your device specifications to confirm compatibility.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question text-montserrat">How much does PMO cost?</div>
+                    <div class="faq-answer text-montserrat">Pricing for PMO starts at $15 per month for the additional
+                        line. This fee
+                        allows
+                        you to access the second number or network without needing a separate physical SIM card. Note
+                        talk,
+                        text, and data charges may apply based on your plan choice.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question text-montserrat">Can I manage both lines separately?</div>
+                    <div class="faq-answer text-montserrat">Yes, with PMO, you can manage both lines independently. Each
+                        line can have
+                        its
+                        own data plan and settings for calls, texts, and data usage. <a
+                            href="https://vimeo.com/946975086" target="_blank">Click here</a> to watch a short video on
+                        how to use PMO.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question text-montserrat">What happens if I travel internationally with PMO?</div>
+                    <div class="faq-answer text-montserrat">PMO can be a great asset when traveling internationally. You
+                        can switch
+                        between
+                        networks to leverage local carriers, potentially saving on roaming fees. Be sure to check
+                        international rates and network compatibility before you travel.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question text-montserrat">How do I switch between numbers or networks on PMO?</div>
+                    <div class="faq-answer text-montserrat">Switching between numbers or networks is managed through
+                        your phone’s
+                        settings.<a href="https://vimeo.com/946975086" target="_blank">Click here</a> to watch a short
+                        video
+                        on how to use PMO.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question text-montserrat">What support is available for PMO users?</div>
+                    <div class="faq-answer text-montserrat"><a href="https://vimeo.com/946975086" target="_blank">Click
+                            here</a> to
+                        watch a
+                        short video on how to use PMO or call member services at 972-PATRIOT</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Open the first FAQ item by default
+            $('.faq-item').first().find('.faq-answer').show();
+
+            $('.faq-question').on('click', function () {
+                const $faqItem = $(this).closest('.faq-item');
+
+                // Toggle active state
+                $faqItem.toggleClass('active');
+
+                // Slide toggle answer
+                $faqItem.find('.faq-answer').slideToggle();
+
+                // Close other answers if open
+                $('.faq-item').not($faqItem).removeClass('active').find('.faq-answer').slideUp();
+            });
+        });
+    </script>
+</body>
+</html>
