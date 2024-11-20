@@ -218,16 +218,45 @@
 
         /* ---------- Joining Image Section CSS START ---------- */
 
-        .joining-img-section .joining-img {
-            margin-top: 40px;
+        .joining-image-section .joining-img {
+            margin-top: 100px;
             line-height: 0px;
+            position: relative;
         }
 
-        .joining-img-section .joining-img img {
+        .joining-image-section .joining-img img {
             width: 100%;
         }
 
-        /* ---------- Joining Image Section CSS End ---------- */
+        .joining-image-section .joining-img .get-started-button {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 8px;
+            color: #616874;
+            border: 1px solid #00205B;
+            box-shadow: 0 4px 2px -2px #595d64;
+            background-color: white;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+
+        .joining-img .get-started-button i.fas.fa-mobile-alt {
+            margin-right: 10px;
+        }
+
+        .joining-image-section .joining-img .get-started-button:hover {
+            color: rgb(191, 13, 62);
+            border-color: rgb(191, 13, 62);
+        }
+
+        /* ---------- Testimonial Section CSS START ---------- */
 
 
         /* ---------- Welcome Patriots Section CSS START ---------- */
@@ -540,6 +569,19 @@
                 margin-bottom: 5px;
             }
 
+            .joining-image-section .joining-img {
+                margin-top: 70px;
+            }
+
+            .joining-image-section .joining-img .get-started-button {
+                bottom: 10px;
+                padding: 7px 20px;
+            }
+
+            .joining-image-section .joining-img .get-started-button.small-btn-text {
+                font-size: 13px;
+                line-height: 13px;
+            }
 
             .why-choose-section {
                 padding: 70px 0px 40px;
@@ -682,6 +724,19 @@
                 margin-bottom: 10px;
             }
 
+            .joining-image-section .joining-img {
+                margin-top: 50px;
+            }
+
+            .joining-image-section .joining-img .get-started-button {
+                bottom: 20px;
+                padding: 12px 15px;
+            }
+
+            .joining-image-section .joining-img .get-started-button.small-btn-text {
+                font-size: 15px;
+                line-height: 15px;
+            }
 
             .why-choose-section {
                 padding: 50px 0px 30px;
@@ -842,14 +897,16 @@
                 </div>
             </div>
         </section>
-        <section class="joining-img-section">
-            <div class="container">
-                <div class="joining-img">
-                    <picture>
-                        <source media="(max-width:767px)" srcset="images/easy-one-two-three.png">
-                        <img src="images/Easy-as-one-two-three-1536x556.png" style="width:100%;">
-                    </picture>
-                </div>
+        <section class="joining-image-section">
+            <div class="container-fluid">
+              <div class="joining-img">
+                <picture>
+                  <source media="(max-width:767px)" srcset="images/SwitchToPMv4_2_mobile_v2.png" />
+                  <img src="images/SwitchToPMv4_2.png" style="width: 100%" />
+                </picture>
+                <a href="https://patriotmobile.com/shop/shopplans" target="_blank"
+                  class="get-started-button small-btn-text"><i class="fas fa-mobile-alt"></i> GET STARTED</a>
+              </div>
             </div>
         </section>
         <section class="why-choose-section">
@@ -967,7 +1024,6 @@
             </div>
             </div>
         </section>
-
         <section class="white-bg-cta-section">
             <div class="container">
                 <h2 class="small-title">Use Promo code: NEWSMAX now and get a FREE month of

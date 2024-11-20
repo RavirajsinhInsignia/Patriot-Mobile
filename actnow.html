@@ -251,17 +251,56 @@
       color: #757589;
     }
 
-    .welcome-patriots-section .joining-img {
-      margin-top: 100px;
+    /* ---------- Welcome Patriots Section CSS END ---------- */
+
+
+    /* ---------- Joining Image Section CSS START ---------- */
+
+    .joining-image-section .joining-img {
+      margin-top: 75px;
       line-height: 0px;
+      position: relative;
     }
 
-    .welcome-patriots-section .joining-img img {
+    .joining-image-section .joining-img img {
       width: 100%;
     }
 
+    .joining-image-section .joining-img .get-started-button {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px 25px;
+      text-decoration: none;
+      border-radius: 8px;
+      color: #616874;
+      border: 1px solid #00205B;
+      box-shadow: 0 4px 2px -2px #595d64;
+      background-color: white;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.3s;
+    }
+
+    .joining-img .get-started-button i.fas.fa-mobile-alt {
+      margin-right: 10px;
+    }
+
+    .joining-image-section .joining-img .get-started-button:hover {
+      color: rgb(191, 13, 62);
+      border-color: rgb(191, 13, 62);
+    }
+
+    /* ---------- Joining Image Section CSS END ---------- */
+
+
+    /* ---------- Why Choose Section CSS START ---------- */
+
     .why-choose-section {
-      padding: 90px 0px 100px;
+      padding: 100px 0px;
     }
 
     .why-choose-section .why-choose-upper-container {
@@ -323,7 +362,7 @@
       color: #757589;
     }
 
-    /* ---------- Welcome Patriots Section CSS END ---------- */
+    /* ---------- Why Choose Section CSS END ---------- */
 
     /* ---------- Image Box Section CSS START ---------- */
 
@@ -494,8 +533,18 @@
         gap: 40px;
       }
 
-      .welcome-patriots-section .joining-img {
-        margin-top: 55px;
+      .joining-image-section .joining-img {
+        margin-top: 45px;
+      }
+
+      .joining-image-section .joining-img .get-started-button {
+        bottom: 10px;
+        padding: 7px 20px;
+      }
+
+      .joining-image-section .joining-img .get-started-button.small-btn-text {
+        font-size: 13px;
+        line-height: 13px;
       }
 
       .form-main-section .video-section {
@@ -507,7 +556,7 @@
       }
 
       .why-choose-section {
-        padding: 60px 0px 70px;
+        padding: 70px 0px;
       }
 
       .why-choose-section .why-choose-upper-container .divider {
@@ -625,10 +674,6 @@
         padding: 50px 0px 40px;
       }
 
-      .welcome-patriots-section .joining-img {
-        margin-top: 40px;
-      }
-
       .welcome-patriots-section .row {
         gap: 30px;
       }
@@ -641,8 +686,22 @@
         margin-bottom: 10px;
       }
 
+      .joining-image-section .joining-img {
+        margin-top: 30px;
+      }
+
+      .joining-image-section .joining-img .get-started-button {
+        bottom: 20px;
+        padding: 12px 15px;
+      }
+
+      .joining-image-section .joining-img .get-started-button.small-btn-text {
+        font-size: 15px;
+        line-height: 15px;
+      }
+
       .why-choose-section {
-        padding: 40px 0px 50px;
+        padding: 50px 0px;
       }
 
       .why-choose-section .why-choose-upper-container h3.small-title {
@@ -789,11 +848,17 @@
             </p>
           </div>
         </div>
+      </div>
+    </section>
+    <section class="joining-image-section">
+      <div class="container-fluid">
         <div class="joining-img">
           <picture>
-            <source media="(max-width:767px)" srcset="images/easy-one-two-three.png" />
-            <img src="images/Easy-as-one-two-three-1536x556.png" style="width: 100%" />
+            <source media="(max-width:767px)" srcset="images/SwitchToPMv4_2_mobile_v2.png" />
+            <img src="images/SwitchToPMv4_2.png" style="width: 100%" />
           </picture>
+          <a href="https://patriotmobile.com/shop/shopplans" target="_blank"
+            class="get-started-button small-btn-text"><i class="fas fa-mobile-alt"></i> GET STARTED</a>
         </div>
       </div>
     </section>
