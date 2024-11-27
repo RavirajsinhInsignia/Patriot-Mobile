@@ -43,28 +43,49 @@
         .title {
             font-family: "Montserrat";
             font-size: 42px;
-            line-height: 47px;
+            line-height: 50px;
             font-weight: 700;
         }
 
         .small-title {
             font-family: "Montserrat";
             font-size: 32px;
-            line-height: 32px;
+            line-height: 40px;
             font-weight: 700;
+        }
+
+        .sub-title {
+            font-family: "Montserrat";
+            font-size: 28px;
+            line-height: normal;
+            font-weight: 700;
+        }
+
+        .small-sub-title {
+            font-family: "Montserrat";
+            font-size: 22px;
+            line-height: 28px;
+            font-weight: 500;
         }
 
         .btn-text {
             font-family: "Montserrat";
-            font-size: 28px;
-            line-height: 28px;
+            font-size: 20px;
+            line-height: 20px;
             font-weight: 700;
+        }
+
+        .small-btn-text {
+            font-family: "Montserrat";
+            font-size: 15px;
+            line-height: 15px;
+            font-weight: 400;
         }
 
         .text-montserrat {
             font-family: "Montserrat";
             font-size: 16px;
-            line-height: 24px;
+            line-height: 25px;
             font-weight: 400;
         }
 
@@ -128,7 +149,7 @@
 
         .banner-slider-section .right-col .mini-white-txet {
             font-family: "Montserrat";
-            font-size: 17px;
+            font-size: 16px;
             line-height: 24px;
             letter-spacing: 0.01px;
             font-weight: 400;
@@ -139,7 +160,7 @@
 
         .banner-slider-section .right-col .call-text {
             font-family: "Montserrat";
-            font-size: 22px;
+            font-size: 16px;
             line-height: 24px;
             letter-spacing: 0;
             font-weight: 400;
@@ -190,7 +211,8 @@
         /* stand-for-section section css */
 
         .stand-for-section {
-            padding: 46px 0px 30px;
+            padding: 25px 0px;
+            background-color: #F6F6F6;
         }
 
         .stand-for-section .row {
@@ -205,7 +227,7 @@
 
         .stand-for-section .right-col {
             width: 59%;
-            padding: 10px 0px 0px 15px;
+            padding: 0px 0px 0px 15px;
             text-align: end;
             line-height: 0;
         }
@@ -218,12 +240,11 @@
         .stand-for-section p.text-montserrat {
             color: #757589;
             margin-top: 0;
-            margin-bottom: 15px;
         }
 
         /* full-img-section section css */
 
-        .full-img-section {
+        /* .full-img-section {
             margin-top: 14px;
             margin-bottom: 0px;
             padding: 0px 0px 0px 0px;
@@ -237,12 +258,12 @@
         .full-img-section img {
             width: 100%;
             max-width: 100%;
-        }
+        } */
 
         /* icons-section section css */
 
         .icons-section {
-            padding: 40px 0px 90px;
+            padding: 25px 0;
         }
 
         .icons-section .row,
@@ -255,7 +276,6 @@
         .icons-section .center-col {
             max-width: 980px;
             margin: auto;
-            padding: 10px 10px;
             text-align: center;
         }
 
@@ -268,7 +288,7 @@
         .icons-section p.text-margin.text-montserrat {
             color: #757589;
             margin-top: 0;
-            margin-bottom: 55px;
+            margin-bottom: 30px;
         }
 
         .icons-section .inner-row .col {
@@ -296,7 +316,7 @@
         }
 
         .why-choose-section {
-            padding: 0px 0px 85px;
+            padding: 0px 0px 25px;
         }
 
         .why-choose-section .why-choose-upper-container {
@@ -305,13 +325,59 @@
 
         .why-choose-section .why-choose-upper-container h2.title {
             color: #001468;
-            margin: 0px 0px 30px;
+            margin: 0px 0px 20px;
         }
 
         .why-choose-section .why-choose-upper-container p.text-montserrat {
             color: #757589;
+            /* color: #000080; */
             margin-bottom: 15px;
         }
+
+        .why-choose-section .why-choose-upper-container p.text-montserrat:last-child {
+            margin-bottom: 0px;
+        }
+
+        /* ---------- Joining Image Section CSS START ---------- */
+
+        .joining-image-section .joining-img {
+            line-height: 0px;
+            position: relative;
+        }
+
+        .joining-image-section .joining-img img {
+            width: 100%;
+        }
+
+        .joining-image-section .joining-img .get-started-button {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 8px;
+            color: #616874;
+            border: 1px solid #00205B;
+            box-shadow: 0 4px 2px -2px #595d64;
+            background-color: white;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+
+        .joining-img .get-started-button i.fas.fa-mobile-alt {
+            margin-right: 10px;
+        }
+
+        .joining-image-section .joining-img .get-started-button:hover {
+            color: rgb(191, 13, 62);
+            border-color: rgb(191, 13, 62);
+        }
+
+        /* ---------- Joining Image Section CSS END ---------- */
 
 
         /* ***** Media Query START ***** */
@@ -319,7 +385,7 @@
         @media only screen and (max-width: 1440px) {
 
             .banner-slider-section .right-col {
-                padding: 80px;
+                padding: 25px 80px;
             }
 
         }
@@ -355,22 +421,6 @@
                 max-width: 450px;
             }
 
-            .identification-section {
-                padding: 7.5% 0%;
-            }
-
-            .icons-section {
-                padding: 40px 0px 60px;
-            }
-
-            .icons-section p.text-margin.text-montserrat {
-                margin-bottom: 40px;
-            }
-
-            .why-choose-section {
-                padding: 0px 0px 55px;
-            }
-
             .banner-slider-section .right-col {
                 padding: 53px 50px;
             }
@@ -378,6 +428,16 @@
             .banner-slider-section .left-col figcaption {
                 font-size: 28px;
                 line-height: 45px;
+            }
+
+            .joining-image-section .joining-img .get-started-button {
+                bottom: 10px;
+                padding: 7px 20px;
+            }
+
+            .joining-image-section .joining-img .get-started-button.small-btn-text {
+                font-size: 13px;
+                line-height: 13px;
             }
         }
 
@@ -414,7 +474,7 @@
 
             .banner-slider-section .right-col {
                 width: 100%;
-                padding: 50px 20px 40px 20px;
+                padding: 25px 20px;
             }
 
             .banner-slider-section .left-col figcaption {
@@ -431,7 +491,7 @@
             }
 
             .identification-section {
-                padding: 50px 0px;
+                padding: 25px 0px;
             }
 
             .identification-section .right-content-col {
@@ -440,26 +500,20 @@
 
             .stand-for-section .row {
                 flex-wrap: wrap;
-                gap: 20px;
+                gap: 25px;
             }
 
             .stand-for-section .left-col {
                 width: 100%;
-                padding: 4px 0px 0px 0px;
             }
 
             .stand-for-section .right-col {
                 width: 100%;
-                padding: 15px 0px 0px 0px;
+                padding: 0px;
             }
-
-            .full-img-section {
-                margin-top: 4px;
-            }
-
 
             .icons-section p.text-margin.text-montserrat {
-                margin-bottom: 30px;
+                margin-bottom: 20px;
             }
 
             .icons-section .inner-row {
@@ -469,7 +523,11 @@
             .icons-section .inner-row .col {
                 flex: unset;
                 width: 100%;
-                margin-bottom: 30px;
+                margin-bottom: 25px;
+            }
+
+            .icons-section .inner-row .col:last-child {
+                margin-bottom: 0px;
             }
 
             .icons-section .inner-row img {
@@ -480,13 +538,16 @@
                 margin-bottom: 10px;
             }
 
-            .icons-section {
-                padding: 40px 0px 10px;
+            .joining-image-section .joining-img .get-started-button {
+                bottom: 20px;
+                padding: 12px 15px;
             }
 
-            .why-choose-section {
-                padding: 0px 0px 35px;
+            .joining-image-section .joining-img .get-started-button.small-btn-text {
+                font-size: 15px;
+                line-height: 15px;
             }
+
         }
 
         /* 767 End */
@@ -499,7 +560,7 @@
             <div class="row">
                 <div class="col left-col">
                     <figure>
-                        <img src="images/bannon-banner-man.png" alt="">
+                        <img src="./images/bannon-banner-man.png" alt="">
                         <figcaption>Use Code FRIDAY for <br>A FREE A15 Smartphone</figcaption>
                     </figure>
                 </div>
@@ -567,15 +628,27 @@
             </div>
         </div>
     </section>
-    <section class="full-img-section">
+    <!-- <section class="full-img-section">
         <div class="container">
             <div class="row">
                 <div class="full-width-col">
                     <picture>
                         <source media="(max-width:767px)" srcset="images/2022-1-March-for-Life-27-1024x683.jpeg">
-                        <img src="/images/2022-1-March-for-Life-27.jpeg" style="width:100%;">
+                        <img src="./images/2022-1-March-for-Life-27.jpeg" style="width:100%;">
                     </picture>
                 </div>
+            </div>
+        </div>
+    </section> -->
+    <section class="joining-image-section">
+        <div class="container-fluid">
+            <div class="joining-img">
+                <picture>
+                    <source media="(max-width:767px)" srcset="./images/SwitchToPMv4_2_mobile_v2.png" />
+                    <img src="./images/SwitchToPMv4_2.png" style="width: 100%" />
+                </picture>
+                <a href="https://patriotmobile.com/shop/shopplans" target="_blank"
+                    class="get-started-button small-btn-text"><i class="fas fa-mobile-alt"></i> GET STARTED</a>
             </div>
         </div>
     </section>
@@ -646,7 +719,7 @@
                 <p class="text-montserrat"><strong>SIM: </strong>Customers will be required to pay a $10 SIM fee per
                     line of service</p>
 
-                <div style="height: 43px;"></div>
+                <div style="height: 20px;"></div>
 
                 <p class="text-montserrat">Additional terms and conditions apply. See Terms & Conditions (including
                     arbitration provision) at https://www.patriotmobile.com/terms-and-conditions/.</p>
@@ -672,5 +745,4 @@
         });
     </script>
 </body>
-
 </html>

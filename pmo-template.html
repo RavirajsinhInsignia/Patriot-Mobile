@@ -38,24 +38,48 @@
             margin: 0 auto;
             padding: 0px;
         }
+        .title {
+            font-family: "Montserrat";
+            font-size: 42px;
+            line-height: 50px;
+            font-weight: 700;
+        }
+
         .small-title {
             font-family: "Montserrat";
             font-size: 32px;
             line-height: 40px;
             font-weight: 700;
         }
+
         .sub-title {
             font-family: "Montserrat";
             font-size: 28px;
             line-height: normal;
             font-weight: 700;
         }
+
         .small-sub-title {
             font-family: "Montserrat";
             font-size: 22px;
             line-height: 28px;
             font-weight: 500;
         }
+
+        .btn-text {
+            font-family: "Montserrat";
+            font-size: 20px;
+            line-height: 20px;
+            font-weight: 700;
+        }
+
+        .small-btn-text {
+            font-family: "Montserrat";
+            font-size: 15px;
+            line-height: 15px;
+            font-weight: 400;
+        }
+
         .text-montserrat {
             font-family: "Montserrat";
             font-size: 16px;
@@ -81,27 +105,26 @@
         /* video-section section css */
 
         .video-section {
-            padding: 100px 0px 90px;
+            padding: 25px 0px;
             color: #001468;
         }
         .video-section h2.sub-title {
             font-weight: 800;
             text-transform: uppercase;
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 15px;
         }
         .video-section h3.small-sub-title {
             font-weight: 600;
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 25px;
         }
         .video-section .iframe-video {
             position: relative;
             width: 100%;
             height: 100%;
-            padding-bottom: 56.25%;
-            background: #000;
-            border-radius: opx;
+            padding-bottom: 35%;
+            border-radius: 0px;
             box-shadow: none;
             overflow: hidden;
         }
@@ -116,19 +139,15 @@
 
         /* grid-box-section section css */
 
-        .grid-box-section {
-            padding: 10px 0px 90px;
-        }
         .grid-box-section h2.small-title {
             text-align: center;
             color: #001468;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
         .grid-box-section .grid-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            row-gap: 40px;
+            gap: 25px;
             max-width: 1440px;
             margin: 0 auto;
             padding: 0px 0px;
@@ -139,14 +158,14 @@
         .grid-box-section .grid-item img {
             width: 100%;
             height: auto;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         .grid-box-section .grid-item h3.small-sub-title {
             color: #01135F;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            margin: 0px 0px 15px;
+            margin: 0px 0px 10px;
         }
         .grid-box-section .grid-item p.text-montserrat {
             color: #001468;
@@ -155,8 +174,9 @@
         /* details-section section css */
 
         .details-section .container {
-            padding-top: 10px;
-            padding-bottom: 55px;
+            /* padding-top: 10px;
+            padding-bottom: 55px; */
+            padding: 25px 20px;
         }
         .details-section .row {
             display: flex;
@@ -188,20 +208,25 @@
             color: #212529;
         }
 
+        .details-section ul.text-montserrat:last-child {
+            margin-bottom: 0px;
+        }
+
         /* grey-content-section section css */
 
         .grey-content-section {
             background-color: #E6E6E6;
-            padding: 40px 0px;
+            /* padding: 40px 0px; */
+            padding: 25px 0;
         }
         .grey-content-section .row {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
+            gap: 25px;
         }
         .grey-content-section .col {
             flex: 1;
-            padding: 10px;
         }
         .grey-content-section h2.small-title {
             color: #001468;
@@ -209,7 +234,6 @@
         }
         .grey-content-section p.text-montserrat {
             line-height: 30px;
-            margin-bottom: 15px;
             color: #757589;
             width: 90%;
         }
@@ -217,12 +241,12 @@
         /* faq-section section css */
 
         .faq-section {
-            padding: 100px 0px;
+            padding: 25px 0px;
         }
         .faq-section h2.small-title {
             color: #182857;
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
         .faq-item:last-child {
             margin-bottom: 0px;
@@ -296,29 +320,16 @@
                 line-height: 18px;
             }
 
-
-            .video-section {
-                padding: 70px 0px 60px;
-            }
-            .grid-box-section {
-                padding: 10px 0px 60px;
-            }
             .grid-box-section .grid-container {
                 grid-template-columns: repeat(2, 1fr);
-                row-gap: 30px;
             }
-            .grid-box-section .grid-item h3.small-sub-title {
-                margin: 0px 0px 10px;
-            }
+
             .grey-content-section p.text-montserrat {
                 width: 100%;
                 line-height: 26px;
             }
             .details-section .col:last-child {
                 padding-left: 0px;
-            }
-            .faq-section {
-                padding: 70px 0px;
             }
 
         }/* 1024 */
@@ -339,59 +350,31 @@
                 line-height: 26px;
             }
 
-
-            .video-section {
-                padding: 50px 0px 40px;
-            }
             .video-section h2.sub-title {
                 margin-bottom: 20px;
             }
 
+            .video-section .iframe-video {
+                min-height: 300px;
+            }
 
-            .grid-box-section {
-                padding: 10px 0px 40px;
-            }
-            .grid-box-section h2.small-title {
-                margin-bottom: 30px;
-            }
             .grid-box-section .grid-container {
                 grid-template-columns: repeat(1, 1fr);
             }
-            .grid-box-section .grid-item img {
-                margin-bottom: 15px;
-            }
 
-
-            .grey-content-section {
-                padding: 50px 0px;
-            }
             .grey-content-section .col {
                 width: 100%;
                 flex: unset;
                 padding: 0px;
             }
-            .grey-content-section p.text-montserrat {
-                margin-bottom: 30px;
-            }
 
-
-            .details-section .container {
-                padding-bottom: 35px;
-            }
             .details-section .col {
                 flex: unset;
             }
             .details-section img {
-                margin-bottom: 20px;
+                margin-bottom: 25px;
             }
 
-
-            .faq-section {
-                padding: 50px 0px;
-            }
-            .faq-section h2.small-title {
-                margin-bottom: 30px;
-            }
             .faq-question {
                 padding: 12px 55px 12px 20px;
                 font-weight: 600;
@@ -405,6 +388,12 @@
             }
         } /* 767 */
 
+        @media only screen and (max-width: 767px) {
+            .video-section .iframe-video {
+                min-height: 250px;
+            }
+        } /* 480*/
+
     </style>
 
 </head>
@@ -416,8 +405,8 @@
                 <div class="row">
                     <div class="full-width-col">
                         <picture>
-                            <source media="(max-width:767px)" srcset="images/PM_ONE_600x400_v397-1.jpg">
-                            <img src="/images/PM_product_banner.png" style="width:100%;">
+                            <source media="(max-width:767px)" srcset="./images/PM_ONE_600x400_v397-1.jpg">
+                            <img src="./images/PM_product_banner.png" style="width:100%;">
                         </picture>
                     </div>
                 </div>
@@ -562,7 +551,7 @@
                     <div class="faq-question text-montserrat">How do I set up my second number or network with PMO?
                     </div>
                     <div class="faq-answer text-montserrat">If your device supports dual SIMs with eSIM technology, call
-                        972-PATRIOT and
+                        (972) PATRIOT and
                         add
                         a second line starting at $15 monthly. You can activate your second line directly from your
                         device

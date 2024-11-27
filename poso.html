@@ -43,15 +43,29 @@
         .title {
             font-family: "Montserrat";
             font-size: 42px;
-            line-height: 47px;
+            line-height: 50px;
             font-weight: 700;
         }
 
         .small-title {
             font-family: "Montserrat";
             font-size: 32px;
-            line-height: 32px;
+            line-height: 40px;
             font-weight: 700;
+        }
+
+        .sub-title {
+            font-family: "Montserrat";
+            font-size: 28px;
+            line-height: normal;
+            font-weight: 700;
+        }
+
+        .small-sub-title {
+            font-family: "Montserrat";
+            font-size: 22px;
+            line-height: 28px;
+            font-weight: 500;
         }
 
         .btn-text {
@@ -61,10 +75,17 @@
             font-weight: 700;
         }
 
+        .small-btn-text {
+            font-family: "Montserrat";
+            font-size: 15px;
+            line-height: 15px;
+            font-weight: 400;
+        }
+
         .text-montserrat {
             font-family: "Montserrat";
             font-size: 16px;
-            line-height: 24px;
+            line-height: 25px;
             font-weight: 400;
         }
 
@@ -120,7 +141,7 @@
 
         .red-globle-btn {
             text-align: left;
-            margin: 35px auto 0px;
+            margin: 20px auto 0px;
         }
 
         .cta-button {
@@ -182,7 +203,8 @@
         /* stand-for-section section css */
 
         .stand-for-section {
-            padding: 46px 0px 30px;
+            padding: 25px 0px;
+            background-color: #F6F6F6;
         }
 
         .stand-for-section .row {
@@ -193,12 +215,12 @@
 
         .stand-for-section .left-col {
             width: 41%;
-            padding: 10px 15px 0px 0px;
+            padding: 0px 15px 0px 0px;
         }
 
         .stand-for-section .right-col {
             width: 59%;
-            padding: 10px 0px 0px 15px;
+            padding: 0px 0px 0px 15px;
             text-align: end;
             line-height: 0;
         }
@@ -210,32 +232,16 @@
 
         .stand-for-section p.text-montserrat {
             color: #757589;
-            margin-top: 0;
-            margin-bottom: 15px;
+            margin-top: 0px;
         }
 
         /* full-img-section section css */
 
-        .full-img-section {
-            margin-top: 14px;
-            margin-bottom: 0px;
-            padding: 0px 0px 0px 0px;
-        }
-
-        .full-img-section .full-width-col {
-            padding: 0px 0px;
-            line-height: 0;
-        }
-
-        .full-img-section img {
-            width: 100%;
-            max-width: 100%;
-        }
 
         /* icons-section section css */
 
         .icons-section {
-            padding: 40px 0px 90px;
+            padding: 25px 0px;
         }
 
         .icons-section .row,
@@ -248,7 +254,6 @@
         .icons-section .center-col {
             max-width: 980px;
             margin: auto;
-            padding: 10px 10px;
             text-align: center;
         }
 
@@ -261,7 +266,7 @@
         .icons-section p.text-margin.text-montserrat {
             color: #757589;
             margin-top: 0;
-            margin-bottom: 55px;
+            margin-bottom: 30px;
         }
 
         .icons-section .inner-row .col {
@@ -291,21 +296,20 @@
         /* last one section css  */
 
         .last-one-sec {
-            padding: 0px 0px 85px;
+            padding: 0px 0px 25px;
         }
 
         .last-one-sec .last-one-sec-upper-container {
             text-align: left;
         }
 
-        /* .last-one-sec .last-one-sec-upper-container h2.title {
-            color: #001468;
-            margin: 0px 0px 30px;
-        } */
-
         .last-one-sec .last-one-sec-upper-container p.text-montserrat {
             color: #757589;
             margin-bottom: 15px;
+        }
+
+        .last-one-sec .last-one-sec-upper-container p.text-montserrat:last-child {
+            margin-bottom: 0px;
         }
 
         .last-one-sec .last-one-sec-upper-container p.text-montserrat a {
@@ -313,11 +317,52 @@
             color: #7E54F8;
         }
 
+        /* ---------- Joining Image Section CSS START ---------- */
+
+        .joining-image-section .joining-img {
+            line-height: 0px;
+            position: relative;
+        }
+
+        .joining-image-section .joining-img img {
+            width: 100%;
+        }
+
+        .joining-image-section .joining-img .get-started-button {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 8px;
+            color: #616874;
+            border: 1px solid #00205B;
+            box-shadow: 0 4px 2px -2px #595d64;
+            background-color: white;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+
+        .joining-img .get-started-button i.fas.fa-mobile-alt {
+            margin-right: 10px;
+        }
+
+        .joining-image-section .joining-img .get-started-button:hover {
+            color: rgb(191, 13, 62);
+            border-color: rgb(191, 13, 62);
+        }
+
+        /* ---------- Joining Image Section CSS END ---------- */
+
         /* ***** Media Query START ***** */
 
         @media only screen and (max-width: 1440px) {
             .banner-slider-section .right-col {
-                padding: 80px;
+                padding: 25px 80px;
             }
         }
 
@@ -351,24 +396,14 @@
                 max-width: 450px;
             }
 
-            .identification-section {
-                padding: 7.5% 0%;
+            .joining-image-section .joining-img .get-started-button {
+                bottom: 10px;
+                padding: 7px 20px;
             }
 
-            .icons-section {
-                padding: 40px 0px 60px;
-            }
-
-            .icons-section p.text-margin.text-montserrat {
-                margin-bottom: 40px;
-            }
-
-            .last-one-sec {
-                padding: 0px 0px 55px;
-            }
-
-            .banner-slider-section .right-col {
-                padding: 70px 50px;
+            .joining-image-section .joining-img .get-started-button.small-btn-text {
+                font-size: 13px;
+                line-height: 13px;
             }
         }
 
@@ -394,8 +429,6 @@
 
             .banner-slider-section .col {
                 flex: unset;
-                padding-top: 50px;
-                padding-bottom: 0px;
             }
 
             .banner-slider-section .left-col {
@@ -406,19 +439,19 @@
 
             .banner-slider-section .right-col {
                 width: 100%;
-                padding: 50px 20px 50px 20px;
+                padding: 25px 20px;
             }
 
             .banner-slider-section .swiper-slide img {
                 min-height: 650px;
             }
 
-            .identification-section .blank-col {
-                display: none;
+            .identification-section {
+                padding: 25px 0px;
             }
 
-            .identification-section {
-                padding: 50px 0px;
+            .identification-section .blank-col {
+                display: none;
             }
 
             .identification-section .right-content-col {
@@ -427,26 +460,20 @@
 
             .stand-for-section .row {
                 flex-wrap: wrap;
-                gap: 20px;
+                gap: 25px;
             }
 
             .stand-for-section .left-col {
                 width: 100%;
-                padding: 4px 0px 0px 0px;
             }
 
             .stand-for-section .right-col {
                 width: 100%;
-                padding: 15px 0px 0px 0px;
+                padding: 0px;
             }
-
-            .full-img-section {
-                margin-top: 4px;
-            }
-
 
             .icons-section p.text-margin.text-montserrat {
-                margin-bottom: 30px;
+                margin-bottom: 20px;
             }
 
             .icons-section .inner-row {
@@ -456,7 +483,11 @@
             .icons-section .inner-row .col {
                 flex: unset;
                 width: 100%;
-                margin-bottom: 30px;
+                margin-bottom: 25px;
+            }
+
+            .icons-section .inner-row .col:last-child {
+                margin-bottom: 0px;
             }
 
             .icons-section .inner-row img {
@@ -467,12 +498,14 @@
                 margin-bottom: 10px;
             }
 
-            .icons-section {
-                padding: 40px 0px 10px;
+            .joining-image-section .joining-img .get-started-button {
+                bottom: 20px;
+                padding: 12px 15px;
             }
 
-            .last-one-sec {
-                padding: 0px 0px 35px;
+            .joining-image-section .joining-img .get-started-button.small-btn-text {
+                font-size: 15px;
+                line-height: 15px;
             }
         }
 
@@ -487,19 +520,24 @@
                 <div class="col left-col">
                     <picture>
                         <source media="(max-width:767px)"
-                            srcset="images/Jack-Posobiec-header_grey_background-1024x897.jpg">
-                        <img src="/images/Jack-Posobiec-header_grey_background.jpg" style="width:100%;">
+                            srcset="./images/Jack-Posobiec-header_grey_background-1024x897.jpg">
+                        <img src="./images/Jack-Posobiec-header_grey_background.jpg" style="width:100%;">
                     </picture>
                 </div>
                 <div class="col right-col">
                     <h5 class="btn-text">Welcome Members!</h5>
                     <h3 class="title">Patriot Mobile</h3>
-                    <p class="text-montserrat">Are you getting tired of woke companies trying to destroy our country and
-                        strip us of our freedoms? Join Patriot Mobile, a company that loves America, defends our
-                        God-given constitutional rights and freedoms, and doesn’t engage in conservative censorship.</p>
-                    <p class="text-montserrat">America’s ONLY Christian conservative wireless provider. Patriot Mobile
+                    <p class="text-montserrat">Are you getting tired of woke
+                        companies trying to destroy our country and
+                        strip us of our freedoms? Join Patriot Mobile, a
+                        company that loves America, defends our
+                        God-given constitutional rights and freedoms, and
+                        doesn’t engage in conservative censorship.</p>
+                    <p class="text-montserrat">America’s ONLY Christian
+                        conservative wireless provider. Patriot Mobile
                         is proud to partner with Jack Posobiec.</p>
-                    <p class="text-montserrat"><strong>Use promo code POSO for a FREE Month!</strong></p>
+                    <p class="text-montserrat"><strong>Use promo code POSO
+                            for a FREE Month!</strong></p>
                     <div class="red-globle-btn">
                         <a class="cta-button text-montserrat" href="https://patriotmobile.com/Shop/ShopPlans/">Get
                             Started</a>
@@ -515,19 +553,27 @@
                 </div>
                 <div class="right-content-col">
                     <h3 class="title">Who is Patriot Mobile?</h3>
-                    <div class="text-montserrat">Patriot Mobile is America’s ONLY Christian conservative wireless
+                    <div class="text-montserrat">Patriot Mobile is America’s
+                        ONLY Christian conservative wireless
                         provider. We offer
-                        broad coverage on dependable, nationwide 4G or 5G networks. We are committed to providing our
-                        members dependable wireless service and exceptional support, while relentlessly fighting for our
-                        shared values. Patriot Mobile donates a portion of every dollar earned to support organizations
+                        broad coverage on dependable, nationwide 4G or 5G
+                        networks. We are committed to providing our
+                        members dependable wireless service and exceptional
+                        support, while relentlessly fighting for our
+                        shared values. Patriot Mobile donates a portion of
+                        every dollar earned to support organizations
                         that fight for
                         <ul>
-                            <li>First Amendment Freedom of Speech &amp; Religion</li>
+                            <li>First Amendment Freedom of Speech &amp;
+                                Religion</li>
                             <li>Second Amendment Right to Bear Arms</li>
                             <li>Sanctity of Life</li>
-                            <li>The needs of our Veterans and First Responders.</li>
+                            <li>The needs of our Veterans and First
+                                Responders.</li>
                         </ul>
-                        <strong>Join the movement of like-minded conservatives who support companies that share their
+                        <strong>Join the movement of like-minded
+                            conservatives who support companies that share
+                            their
                             values.</strong>
                     </div>
                 </div>
@@ -539,28 +585,45 @@
             <div class="row">
                 <div class="left-col">
                     <h3 class="title">What we stand for.</h3>
-                    <p class="text-montserrat">Each year, Patriot Mobile helps raise money and awareness to support
-                        freedom of speech, freedom of religion, freedom of peaceful assembly, the right to bear arms,
-                        sanctity of life and the unique needs of our Veterans and First Responders. A portion of every
-                        dollar we earn goes toward supporting organizations that share our Christian conservative
-                        values. In 2022 we donated $2 million to our causes. Join us so we can give even more in 2023.
+                    <p class="text-montserrat">Each year, Patriot Mobile
+                        helps raise money and awareness to support
+                        freedom of speech, freedom of religion, freedom of
+                        peaceful assembly, the right to bear arms,
+                        sanctity of life and the unique needs of our
+                        Veterans and First Responders. A portion of every
+                        dollar we earn goes toward supporting organizations
+                        that share our Christian conservative
+                        values. In 2022 we donated $2 million to our causes.
+                        Join us so we can give even more in 2023.
                     </p>
                 </div>
                 <div class="right-col">
-                    <img src="./images/template-collage.png" alt="" style="width: 100%;">
+                    <img src="./images/template-collage.png" alt style="width: 100%;">
                 </div>
             </div>
         </div>
     </section>
-    <section class="full-img-section">
+    <!-- <section class="full-img-section">
         <div class="container">
             <div class="row">
                 <div class="full-width-col">
                     <picture>
                         <source media="(max-width:767px)" srcset="images/2022-1-March-for-Life-27-1024x683.jpeg">
-                        <img src="/images/2022-1-March-for-Life-27.jpeg" style="width:100%;">
+                        <img src="./images/2022-1-March-for-Life-27.jpeg" style="width:100%;">
                     </picture>
                 </div>
+            </div>
+        </div>
+    </section> -->
+    <section class="joining-image-section">
+        <div class="container-fluid">
+            <div class="joining-img">
+                <picture>
+                    <source media="(max-width:767px)" srcset="./images/SwitchToPMv4_2_mobile_v2.png" />
+                    <img src="./images/SwitchToPMv4_2.png" style="width: 100%" />
+                </picture>
+                <a href="https://patriotmobile.com/shop/shopplans" target="_blank"
+                    class="get-started-button small-btn-text"><i class="fas fa-mobile-alt"></i> GET STARTED</a>
             </div>
         </div>
     </section>
@@ -568,26 +631,35 @@
         <div class="container">
             <div class="row">
                 <div class="col center-col">
-                    <h3 class="title">America’s ONLY Christian Conservative Wireless Service Provider</h3>
-                    <p class="text-margin text-montserrat">We are humbled to have achieved the highest customer
+                    <h3 class="title">America’s ONLY Christian Conservative
+                        Wireless Service Provider</h3>
+                    <p class="text-margin text-montserrat">We are humbled to
+                        have achieved the highest customer
                         satisfaction among
-                        all wireless companies. And, now, with the broadest coverage of any provider on dependable,
+                        all wireless companies. And, now, with the broadest
+                        coverage of any provider on dependable,
                         nationwide 4G or 5G networks.</p>
                     <div class="inner-row">
                         <div class="col">
-                            <a href="#"><img src="./images/coverage.png" alt=""></a>
-                            <h3><a href="#" class="small-title">1. Coverage</a></h3>
-                            <p class="text-montserrat">Check your location</p>
+                            <a href="#"><img src="./images/coverage.png" alt></a>
+                            <h3><a href="#" class="small-title">1.
+                                    Coverage</a></h3>
+                            <p class="text-montserrat">Check your
+                                location</p>
                         </div>
                         <div class="col">
-                            <a href="#"><img src="./images/plan.png" alt=""></a>
-                            <h3><a href="#" class="small-title">2. Plans</a></h3>
-                            <p class="text-montserrat">Build the right plan for you</p>
+                            <a href="#"><img src="./images/plan.png" alt></a>
+                            <h3><a href="#" class="small-title">2.
+                                    Plans</a></h3>
+                            <p class="text-montserrat">Build the right plan
+                                for you</p>
                         </div>
                         <div class="col">
-                            <a href="#"><img src="./images/phone.png" alt=""></a>
-                            <h3><a href="#" class="small-title">3. Phones</a></h3>
-                            <p class="text-montserrat">All the latest brands</p>
+                            <a href="#"><img src="./images/phone.png" alt></a>
+                            <h3><a href="#" class="small-title">3.
+                                    Phones</a></h3>
+                            <p class="text-montserrat">All the latest
+                                brands</p>
                         </div>
                     </div>
                 </div>
@@ -597,29 +669,72 @@
     <section class="last-one-sec">
         <div class="container">
             <div class="last-one-sec-upper-container">
-                <p class="text-montserrat"><strong>Terms and Conditions for “Free Motorola G Play Phone Promotion”</strong></p>
+                <p class="text-montserrat"><strong>Terms and Conditions for
+                        “Free Motorola G Play Phone Promotion”</strong></p>
 
-                <p class="text-montserrat"><strong>Offer Details: </strong>New customers who sign a 12-month contract for a new line of service of at least a 3GB Plan will receive a complimentary Motorola G Play 2023 (32 GB) mobile device. The offer is limited to one device per new line of service. <strong>Customers must place their orders via phone and use the promotional code “POSO” at the time of purchase.</strong></p>
+                <p class="text-montserrat"><strong>Offer Details:
+                    </strong>New customers who sign a 12-month contract for
+                    a new line of service of at least a 3GB Plan will
+                    receive a complimentary Motorola G Play 2023 (32 GB)
+                    mobile device. The offer is limited to one device per
+                    new line of service. <strong>Customers must place their
+                        orders via phone and use the promotional code “POSO”
+                        at the time of purchase.</strong></p>
 
-                <p class="text-montserrat"><strong>Limited Time Offer: </strong>This Offer is valid from the earlier of: June 11th, 2024 through June 30th, 2024 or while supplies last. <strong>Available to new customers only.</strong> Pricing, promotions, terms and restrictions subject to change and may be modified or terminated at any time without notice.</p>
+                <p class="text-montserrat"><strong>Limited Time Offer:
+                    </strong>This Offer is valid from the earlier of: June
+                    11th, 2024 through June 30th, 2024 or while supplies
+                    last. <strong>Available to new customers only.</strong>
+                    Pricing, promotions, terms and restrictions subject to
+                    change and may be modified or terminated at any time
+                    without notice.</p>
 
-                <p class="text-montserrat"><strong>No Credit Check: </strong>A credit check is not required to participate in this promotion.</p>
+                <p class="text-montserrat"><strong>No Credit Check:
+                    </strong>A credit check is not required to participate
+                    in this promotion.</p>
 
-                <p class="text-montserrat"><strong>Data Plan Requirement: </strong>Customers are required to subscribe to and maintain a data plan of 3GB or greater during the contract period.</p>
+                <p class="text-montserrat"><strong>Data Plan Requirement:
+                    </strong>Customers are required to subscribe to and
+                    maintain a data plan of 3GB or greater during the
+                    contract period.</p>
 
-                <p class="text-montserrat"><strong>Promotion Payment: </strong>The device will be billed to the customer in 12 monthly installments with an equal monthly credit applied against the installment for each month of customer’s contract. If customer terminates the contract prior to the end of the contract period, then customer will be responsible for the entire unpaid balance with respect to the device at the time of termination.</p>
+                <p class="text-montserrat"><strong>Promotion Payment:
+                    </strong>The device will be billed to the customer in 12
+                    monthly installments with an equal monthly credit
+                    applied against the installment for each month of
+                    customer’s contract. If customer terminates the contract
+                    prior to the end of the contract period, then customer
+                    will be responsible for the entire unpaid balance with
+                    respect to the device at the time of termination.</p>
 
-                <p class="text-montserrat"><strong>Taxes: </strong>The customer will be responsible for paying all taxes on the retail value of the Motorola G Play 2023 (32 GB) (MSRP – $129.00), billed in equal, monthly increments for the duration of the 12-month contract.</p>
+                <p class="text-montserrat"><strong>Taxes: </strong>The
+                    customer will be responsible for paying all taxes on the
+                    retail value of the Motorola G Play 2023 (32 GB) (MSRP –
+                    $129.00), billed in equal, monthly increments for the
+                    duration of the 12-month contract.</p>
 
-                <p class="text-montserrat"><strong>Early Termination Fee (ETF): </strong>In the event the contract for a new line of service is terminated prior to the end of the 12-month period, customer will also be responsible for an ETF of $250.</p>
+                <p class="text-montserrat"><strong>Early Termination Fee
+                        (ETF): </strong>In the event the contract for a new
+                    line of service is terminated prior to the end of the
+                    12-month period, customer will also be responsible for
+                    an ETF of $250.</p>
 
-                <p class="text-montserrat"><strong>Activation Fee: </strong>Customers will be required to pay a $30 activation fee per line up to two lines of service.</p>
+                <p class="text-montserrat"><strong>Activation Fee:
+                    </strong>Customers will be required to pay a $30
+                    activation fee per line up to two lines of service.</p>
 
-                <div style="height: 43px;"></div>
+                <div style="height: 20px;"></div>
 
-                <p class="text-montserrat"><strong>General: </strong>Additional terms and conditions apply. See Terms & Conditions (including arbitration provision) at 
-                    <a href="https://patriotmobile.com/terms-and-conditions/">https://www.patriotmobile.com/terms-and-conditions/</a>.</p>
-                <p class="text-montserrat">Copyright © 2024 patriotmobile – Patriot Mobile, Patriot Mobile Mobilizing Conservatives, Patriot Mobile Mobilizing Freedom are trademarks or registered trademarks of Patriot Mobile LLC.</p>
+                <p class="text-montserrat"><strong>General:
+                    </strong>Additional terms and conditions apply. See
+                    Terms & Conditions (including arbitration provision) at
+                    <a
+                        href="https://patriotmobile.com/terms-and-conditions/">https://www.patriotmobile.com/terms-and-conditions/</a>.
+                </p>
+                <p class="text-montserrat">Copyright © 2024 patriotmobile –
+                    Patriot Mobile, Patriot Mobile Mobilizing Conservatives,
+                    Patriot Mobile Mobilizing Freedom are trademarks or
+                    registered trademarks of Patriot Mobile LLC.</p>
             </div>
     </section>
 
@@ -639,5 +754,4 @@
         });
     </script>
 </body>
-
 </html>

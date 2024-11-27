@@ -40,6 +40,13 @@
             padding: 0px;
         }
 
+        .title {
+            font-family: "Montserrat";
+            font-size: 42px;
+            line-height: 50px;
+            font-weight: 700;
+        }
+
         .small-title {
             font-family: "Montserrat";
             font-size: 32px;
@@ -64,8 +71,15 @@
         .btn-text {
             font-family: "Montserrat";
             font-size: 20px;
-            line-height: 28px;
+            line-height: 20px;
             font-weight: 700;
+        }
+
+        .small-btn-text {
+            font-family: "Montserrat";
+            font-size: 15px;
+            line-height: 15px;
+            font-weight: 400;
         }
 
         .text-montserrat {
@@ -101,7 +115,8 @@
         /* connect-section section css */
 
         .connect-section {
-            padding: 70px 0px;
+            /* padding: 70px 0px; */
+            padding: 25px 0;
         }
 
         .connect-section h3.sub-title {
@@ -122,7 +137,7 @@
         /* service-section section css */
 
         .service-section {
-            padding: 0px 0px 40px;
+            padding: 0 0 15px;
             text-align: center;
         }
 
@@ -135,11 +150,11 @@
             color: #003366;
             font-weight: 400;
             letter-spacing: 0.7px;
-            margin: 10px 0 40px;
+            margin: 10px 0 25px;
         }
 
         .service-section .device-images {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .service-section .device-images img {
@@ -150,7 +165,6 @@
 
         .service-section h3.small-title {
             color: #BF0D3E;
-            margin-bottom: 30px;
         }
 
         .service-section h3.small-title a {
@@ -167,15 +181,11 @@
 
         /* facilities-section section css */
 
-        .facilities-section {
-            padding: 0px 0px 90px;
-        }
-
         .facilities-section .row {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            gap: 10px;
+            gap: 0px;
             margin: 0px -10px;
         }
 
@@ -215,27 +225,27 @@
             font-weight: 400;
             line-height: 35px;
             width: 60%;
-            margin: 50px auto 0px;
+            margin: 15px auto 0px;
             text-align: center;
         }
 
         /* grid-box-section section css */
 
         .grid-box-section {
-            padding: 10px 0px 100px;
+            /* padding: 10px 0px 100px; */
+            padding: 25px 0;
         }
 
         .grid-box-section h2.small-title {
             text-align: center;
             color: #001468;
-            margin-bottom: 50px;
+            margin-bottom: 20px;
         }
 
         .grid-box-section .grid-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 50px;
-            row-gap: 90px;
+            gap: 25px;
             max-width: 1440px;
             margin: 0 auto;
             padding: 0px 0px;
@@ -269,6 +279,11 @@
             color: #001468;
         }
 
+        .grid-box-section .grid-img{
+            line-height: 0;
+            padding-bottom: 15px;
+        }
+
 
         /* devices-section section css */
 
@@ -283,7 +298,7 @@
         .devices-section .big-heading {
             color: #00205B;
             font-family: 'Montserrat';
-            font-size: 55px;
+            font-size: 42px;
             font-weight: 700;
             line-height: 1.3em;
             text-align: center;
@@ -325,28 +340,23 @@
         /* data-plans-section section css */
 
         .data-plans-section {
-            padding: 100px 0px 0px;
+            padding: 25px 0px 0px;
         }
 
         .data-plans-section .row {
             text-align: center;
         }
 
-        .data-plans-section h3.small-title {
-            color: #182857;
-            margin-bottom: 20px;
-        }
-
         .data-plans-section p.btn-text {
             color: #003366;
             font-weight: 400;
             letter-spacing: 0.7px;
-            margin: 0 0 20px;
+            margin: 0 0 25px;
         }
 
         .data-plans-section .call-heading.small-title {
             color: #001468;
-            margin-bottom: 40px;
+            margin-bottom: 15px;
         }
 
         .data-plans-section .call-heading a {
@@ -366,13 +376,13 @@
         /* faq-section section css */
 
         .faq-section {
-            padding: 100px 0px;
+            padding: 25px 0px;
         }
 
         .faq-section h2.small-title {
             color: #182857;
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
 
         .faq-item:last-child {
@@ -443,10 +453,6 @@
 
         @media only screen and (max-width: 1280px) {
 
-            .facilities-section .row {
-                gap: 0px;
-            }
-
             .facilities-section .col {
                 padding: 20px 20px 30px;
             }
@@ -466,26 +472,8 @@
                 line-height: 32px;
             }
 
-            .btn-text {
-                font-size: 18px;
-                line-height: 26px;
-            }
-
-
-            .connect-section {
-                padding: 60px 0px;
-            }
-
             .connect-section p.btn-text {
                 max-width: 80%;
-            }
-
-            .service-section h3.small-title {
-                margin-bottom: 20px;
-            }
-
-            .facilities-section {
-                padding: 0px 0px 60px;
             }
 
             .facilities-section .col {
@@ -502,22 +490,9 @@
                 width: 85%;
             }
 
-            .grid-box-section {
-                padding: 10px 0px 70px;
-            }
-
-            .grid-box-section h2.small-title {
-                margin-bottom: 40px;
-            }
-
             .grid-box-section .grid-container {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 40px;
-                row-gap: 60px;
-            }
-
-            .devices-section .big-heading {
-                font-size: 50px;
+                gap: 20px;
             }
 
             .devices-section {
@@ -535,16 +510,8 @@
                 line-height: 32px;
             }
 
-            .data-plans-section {
-                padding: 70px 0px 0px;
-            }
-
             .data-plans-section .data-fees {
                 padding: 50px 30px 50px 30px;
-            }
-
-            .faq-section {
-                padding: 70px 0px;
             }
         }
 
@@ -574,20 +541,8 @@
                 line-height: 24px;
             }
 
-            .connect-section {
-                padding: 50px 0px;
-            }
-
-            .service-section h3.small-title {
-                margin-bottom: 10px;
-            }
-
             .connect-section p.btn-text {
                 max-width: 90%;
-            }
-
-            .facilities-section {
-                padding: 0px 0px 40px;
             }
 
             .facilities-section .col {
@@ -602,20 +557,11 @@
 
             .facilities-section P.small-sub-title {
                 line-height: 28px;
-                margin: 40px auto 0px;
-            }
-
-            .grid-box-section {
-                padding: 10px 0px 50px;
-            }
-
-            .grid-box-section h2.small-title {
-                margin-bottom: 30px;
+                margin: 15px auto 0px;
             }
 
             .grid-box-section .grid-container {
                 grid-template-columns: repeat(1, 1fr);
-                row-gap: 30px;
             }
 
             .grid-box-section .grid-item .above-p {
@@ -656,10 +602,6 @@
                 padding-bottom: 10px;
             }
 
-            .data-plans-section {
-                padding: 50px 0px 0px;
-            }
-
             .data-plans-section p.btn-text {
                 line-height: 22px;
             }
@@ -668,20 +610,8 @@
                 margin-bottom: 10px;
             }
 
-            .data-plans-section .call-heading.small-title {
-                margin-bottom: 30px;
-            }
-
             .data-plans-section .data-fees {
                 padding: 30px 10px 30px 10px;
-            }
-
-            .faq-section {
-                padding: 50px 0px;
-            }
-
-            .faq-section h2.small-title {
-                margin-bottom: 30px;
             }
 
             .faq-question {
@@ -710,15 +640,17 @@
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
+                           
                             <picture>
-                                <source media="(max-width:767px)" srcset="/images/pm_pmc_mobile_banner_1.jpg">
-                                <img src="/images/pm_pmc_banner_1.jpg" style="width:100%;">
+                                <source media="(max-width:767px)" srcset="./images/pm_pmc_mobile_banner_1.jpg">
+                                <img src="./images/pm_pmc_banner_1.jpg" style="width:100%;">
                             </picture>
                         </div>
                         <div class="swiper-slide">
+                            
                             <picture>
-                                <source media="(max-width:767px)" srcset="/images/pm_pmc_mobile_banner_v2.jpg">
-                                <img src="/images/pm_pmc_banner_v2.jpg" style="width:100%;">
+                                <source media="(max-width:767px)" srcset="./images/pm_pmc_mobile_banner_v2.jpg">
+                                <img src="./images/pm_pmc_banner_v2.jpg" style="width:100%;">
                             </picture>
                         </div>
                     </div>
@@ -748,7 +680,7 @@
                     <p class="btn-text">Automatically connect to the strongest cellular signal from multiple
                         networks.
                     </p>
-                    <h3 class="small-title"><a href="tel:9727287468">Call </a>972-PATRIOT</h3>
+                    <h3 class="small-title"><a href="tel:9727287468">Call </a>(972) PATRIOT</h3>
                     <span class="btn-text">Order your device today and stay connected.</span>
                 </div>
             </div>
@@ -811,6 +743,9 @@
                 </div>
                 <div class="grid-container">
                     <div class="grid-item">
+                        <div class="grid-img">
+                            <img src="./images/Copy-of-Untitled-Design-768x768.png" alt="" width="100%">
+                        </div>
                         <h3 class="small-sub-title">RV Travelers</h3>
                         <p class="above-p">* Ideal for Patriot Router</p>
                         <h5 class="extra-small-heading text-montserrat">Stay connected on the road for work and leisure.
@@ -821,6 +756,9 @@
                             work and entertainment.</p>
                     </div>
                     <div class="grid-item">
+                        <div class="grid-img">
+                            <img src="./images/Copy-of-Untitled-Design-768x768.png" alt="" width="100%">
+                        </div>
                         <h3 class="small-sub-title">Business Travelers</h3>
                         <p class="above-p">* Ideal for Patriot Puck</p>
                         <h5 class="extra-small-heading text-montserrat">Ensure connectivity during business trips.</h5>
@@ -830,6 +768,9 @@
                             to emails, virtual meetings, and work applications.</p>
                     </div>
                     <div class="grid-item">
+                        <div class="grid-img">
+                            <img src="./images/Copy-of-Untitled-Design-768x768.png" alt="" width="100%">
+                        </div>
                         <h3 class="small-sub-title">Digital Nomads</h3>
                         <p class="above-p">* Ideal for Patriot Puck</p>
                         <h5 class="extra-small-heading text-montserrat">Establish a mobile office anywhere in the world.
@@ -840,6 +781,9 @@
                             in diverse locations.</p>
                     </div>
                     <div class="grid-item">
+                        <div class="grid-img">
+                            <img src="./images/Copy-of-Untitled-Design-768x768.png" alt="" width="100%">
+                        </div>
                         <h3 class="small-sub-title">Hunters</h3>
                         <p class="above-p">* Ideal for Patriot Puck</p>
                         <h5 class="extra-small-heading text-montserrat">Establish a mobile office anywhere in the world.
@@ -850,6 +794,9 @@
                             in diverse locations.</p>
                     </div>
                     <div class="grid-item">
+                        <div class="grid-img">
+                            <img src="./images/Copy-of-Untitled-Design-768x768.png" alt="" width="100%">
+                        </div>
                         <h3 class="small-sub-title">Truck Drivers</h3>
                         <p class="above-p">* Ideal for Patriot Puck</p>
                         <h5 class="extra-small-heading text-montserrat">Maintain connectivity during long-haul journeys.
@@ -859,6 +806,9 @@
                             entertainment during extended periods on the road.</p>
                     </div>
                     <div class="grid-item">
+                        <div class="grid-img">
+                            <img src="./images/Copy-of-Untitled-Design-768x768.png" alt="" width="100%">
+                        </div>
                         <h3 class="small-sub-title">Rural Americans</h3>
                         <p class="above-p">* Ideal for Patriot Router</p>
                         <h5 class="extra-small-heading text-montserrat">WiFi access in remote areas.</h5>
@@ -930,7 +880,7 @@
                     <div class="data-heading">
                         <h3 class="small-title">Data Plans</h3>
                         <p class="btn-text">All plans are Pay As You Go with no contracts or commitments.</p>
-                        <h3 class="call-heading small-title"><a href="tel:9727287468">Call 972-PATRIOT</a></h3>
+                        <h3 class="call-heading small-title"><a href="tel:9727287468">Call (972) PATRIOT</a></h3>
                         <div class="data-fees">
                             <img src="./images/PMC-Fees-.png" alt="Data Plan's Prices" style="width: 100%;">
                         </div>
@@ -993,7 +943,7 @@
                     <div class="faq-question text-montserrat">Can I change my data plan later?</div>
                     <div class="faq-answer text-montserrat">Data plans can downgraded or upgraded at any time during the
                         month. Call
-                        972-PATRIOT to make any plan changes.</div>
+                        (972) PATRIOT to make any plan changes.</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question text-montserrat">What are the speed capabilities of the devices?</div>
@@ -1013,14 +963,14 @@
                     <div class="faq-answer text-montserrat">These devices are not available for purchase through our
                         online store at
                         this
-                        time. Please call 972-PATRIOT to order your device.</div>
+                        time. Please call (972) PATRIOT to order your device.</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question text-montserrat">Who can I contact for more information or support?</div>
                     <div class="faq-answer text-montserrat">Our US-based customer support team is available to assist
                         you with any
                         inquiries
-                        or technical support for your Patriot Mobile Connect device. Call 972-PATRIOT</div>
+                        or technical support for your Patriot Mobile Connect device. Call (972) PATRIOT</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question text-montserrat">How much data do I need?</div>
@@ -1068,5 +1018,4 @@
         });
     </script>
 </body>
-
 </html>

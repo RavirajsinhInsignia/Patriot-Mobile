@@ -54,6 +54,20 @@
             font-weight: 700;
         }
 
+        .sub-title {
+            font-family: "Montserrat";
+            font-size: 28px;
+            line-height: normal;
+            font-weight: 700;
+        }
+
+        .small-sub-title {
+            font-family: "Montserrat";
+            font-size: 22px;
+            line-height: 28px;
+            font-weight: 500;
+        }
+
         .btn-text {
             font-family: "Montserrat";
             font-size: 20px;
@@ -61,10 +75,17 @@
             font-weight: 700;
         }
 
+        .small-btn-text {
+            font-family: "Montserrat";
+            font-size: 15px;
+            line-height: 15px;
+            font-weight: 400;
+        }
+
         .text-montserrat {
             font-family: "Montserrat";
             font-size: 16px;
-            line-height: 24px;
+            line-height: 25px;
             font-weight: 400;
         }
 
@@ -75,7 +96,7 @@
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
-            padding: 0px 0px;
+            padding: 25px 0px;
         }
 
         .banner-slider-section .row {
@@ -86,7 +107,6 @@
 
         .banner-slider-section .col {
             flex: 1;
-            padding: 10px 0px;
         }
 
         .banner-slider-section .swiper-slide img {
@@ -152,7 +172,7 @@
         /* form-section section css */
 
         .form-section {
-            padding: 90px 0px 73px;
+            padding: 25px 0px 8px;
             background-color: #F6F6F6;
         }
 
@@ -171,7 +191,6 @@
 
         .form-section .col {
             flex: 1;
-            padding: 10px 0px;
         }
 
         .form-section h3.title {
@@ -182,7 +201,6 @@
         .form-section p.text-montserrat {
             color: #757589;
             margin-top: 0;
-            margin-bottom: 15px;
         }
 
         /* identification-section section css */
@@ -227,7 +245,8 @@
         /* stand-for-section section css */
 
         .stand-for-section {
-            padding: 46px 0px 30px;
+            padding: 25px 0px;
+            background-color: #F6F6F6;
         }
 
         .stand-for-section .row {
@@ -243,7 +262,7 @@
 
         .stand-for-section .right-col {
             width: 59%;
-            padding: 10px 0px 0px 15px;
+            padding: 0px 0px 0px 15px;
             text-align: end;
         }
 
@@ -255,31 +274,15 @@
         .stand-for-section p.text-montserrat {
             color: #757589;
             margin-top: 0;
-            margin-bottom: 15px;
         }
 
         /* full-img-section section css */
 
-        .full-img-section {
-            margin-top: 14px;
-            margin-bottom: 0px;
-            padding: 0px 0px 0px 0px;
-        }
-
-        .full-img-section .full-width-col {
-            padding: 0px 0px;
-            line-height: 0;
-        }
-
-        .full-img-section img {
-            width: 100%;
-            max-width: 100%;
-        }
 
         /* icons-section section css */
 
         .icons-section {
-            padding: 40px 0px 90px;
+            padding: 25px 0;
         }
 
         .icons-section .row,
@@ -292,7 +295,6 @@
         .icons-section .center-col {
             max-width: 980px;
             margin: auto;
-            padding: 10px 10px;
             text-align: center;
         }
 
@@ -305,7 +307,7 @@
         .icons-section p.text-margin.text-montserrat {
             color: #757589;
             margin-top: 0;
-            margin-bottom: 55px;
+            margin-bottom: 30px;
         }
 
         .icons-section .inner-row .col {
@@ -332,6 +334,72 @@
             color: #000000A3;
         }
 
+        /* why choos section css  */
+
+        .why-choose-section {
+            padding: 0px 0px 25px;
+        }
+
+        .why-choose-section .why-choose-upper-container {
+            text-align: left;
+        }
+
+        .why-choose-section .why-choose-upper-container h2.title {
+            color: #001468;
+            margin: 0px 0px 20px;
+        }
+
+        .why-choose-section .why-choose-upper-container p.text-montserrat {
+            color: #757589;
+            /* color: #000080; */
+            margin-bottom: 15px;
+        }
+
+        .why-choose-section .why-choose-upper-container p.text-montserrat:last-child {
+            margin-bottom: 0px;
+        }
+
+        /* ---------- Joining Image Section CSS START ---------- */
+
+        .joining-image-section .joining-img {
+            line-height: 0px;
+            position: relative;
+        }
+
+        .joining-image-section .joining-img img {
+            width: 100%;
+        }
+
+        .joining-image-section .joining-img .get-started-button {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 8px;
+            color: #616874;
+            border: 1px solid #00205B;
+            box-shadow: 0 4px 2px -2px #595d64;
+            background-color: white;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+
+        .joining-img .get-started-button i.fas.fa-mobile-alt {
+            margin-right: 10px;
+        }
+
+        .joining-image-section .joining-img .get-started-button:hover {
+            color: rgb(191, 13, 62);
+            border-color: rgb(191, 13, 62);
+        }
+
+        /* ---------- Joining Image Section CSS END ---------- */
+
 
 
         /* ***** Media Query START ***** */
@@ -348,41 +416,26 @@
                 line-height: 34px;
             }
 
-            .btn-text {
-                font-size: 18px;
-                line-height: 18px;
-            }
-
-
-            .form-section {
-                padding: 60px 0px 43px;
-            }
-
             .form-section .form-left-col {
                 padding: 0px 40px 0px 0px !important;
             }
-
 
             .identification-section .right-content-col {
                 max-width: 450px;
             }
 
-            .identification-section {
-                padding: 7.5% 0%;
-            }
-
-
-            .icons-section {
-                padding: 40px 0px 60px;
-            }
-
-            .icons-section p.text-margin.text-montserrat {
-                margin-bottom: 40px;
-            }
-
-
             .stand-for-section .row {
                 gap: 10px;
+            }
+
+            .joining-image-section .joining-img .get-started-button {
+                bottom: 10px;
+                padding: 7px 20px;
+            }
+
+            .joining-image-section .joining-img .get-started-button.small-btn-text {
+                font-size: 13px;
+                line-height: 13px;
             }
         }
 
@@ -410,18 +463,11 @@
 
             .banner-slider-section .col {
                 flex: unset;
-                padding-top: 50px;
-                padding-bottom: 0px;
-            }
-
-            .banner-slider-section .left-col {
-                width: 100%;
-                padding-right: 0px;
+                padding: 0px;
             }
 
             .banner-slider-section .right-col {
                 width: 100%;
-                padding: 50px 0px 40px 0px;
             }
 
             .banner-slider-section .swiper-slide img {
@@ -443,34 +489,24 @@
 
             .form-section .form-col {
                 width: 100%;
-                padding: 15px 0px 0px !important;
+                padding: 25px 0px 0px !important;
             }
 
-            .form-section {
-                padding: 50px 0px 33px;
+            .identification-section {
+                padding: 25px 0px;
             }
 
             .identification-section .blank-col {
                 display: none;
             }
 
-            .identification-section {
-                padding: 50px 0px;
-            }
-
             .identification-section .right-content-col {
                 margin-left: auto;
             }
 
-
-
-            .stand-for-section {
-                padding: 46px 0px 50px;
-            }
-
             .stand-for-section .row {
                 flex-wrap: wrap;
-                gap: 0px;
+                gap: 25px;
             }
 
             .stand-for-section .left-col {
@@ -480,16 +516,10 @@
 
             .stand-for-section .right-col {
                 width: 100%;
-                padding: 15px 0px 0px 0px;
             }
-
-            .full-img-section {
-                margin-top: 4px;
-            }
-
 
             .icons-section p.text-margin.text-montserrat {
-                margin-bottom: 30px;
+                margin-bottom: 18px;
             }
 
             .icons-section .inner-row {
@@ -499,7 +529,11 @@
             .icons-section .inner-row .col {
                 flex: unset;
                 width: 100%;
-                margin-bottom: 30px;
+                margin-bottom: 25px;
+            }
+
+            .icons-section .inner-row .col:last-child {
+                margin-bottom: 0px;
             }
 
             .icons-section .inner-row img {
@@ -510,9 +544,16 @@
                 margin-bottom: 10px;
             }
 
-            .icons-section {
-                padding: 40px 0px 10px;
+            .joining-image-section .joining-img .get-started-button {
+                bottom: 20px;
+                padding: 12px 15px;
             }
+
+            .joining-image-section .joining-img .get-started-button.small-btn-text {
+                font-size: 15px;
+                line-height: 15px;
+            }
+
         }
 
         /* 767 End */
@@ -550,6 +591,7 @@
                         you’re fed up with the woke nonsense, it’s time to stand up for what you believe in and
                         switch to Patriot Mobile.</p>
                     <p class="text-montserrat">For a limited time use code <strong>DANA</strong> to get FREE Month!</p>
+                    <h5 class="btn-text">Call (972) PATRIOT to switch today!</h5>
                     <div class="red-globle-btn">
                         <a class="cta-button text-montserrat" href="https://patriotmobile.com/Shop/ShopPlans/">Check
                             Coverage</a>
@@ -625,12 +667,24 @@
             </div>
         </div>
     </section>
-    <section class="full-img-section">
+    <!-- <section class="full-img-section">
         <div class="container">
             <div class="row">
                 <div class="full-width-col">
                     <img src="./images/2022-1-March-for-Life-27.jpeg" alt="">
                 </div>
+            </div>
+        </div>
+    </section> -->
+    <section class="joining-image-section">
+        <div class="container-fluid">
+            <div class="joining-img">
+                <picture>
+                    <source media="(max-width:767px)" srcset="./images/SwitchToPMv4_2_mobile_v2.png" />
+                    <img src="./images/SwitchToPMv4_2.png" style="width: 100%" />
+                </picture>
+                <a href="https://patriotmobile.com/shop/shopplans" target="_blank"
+                    class="get-started-button small-btn-text"><i class="fas fa-mobile-alt"></i> GET STARTED</a>
             </div>
         </div>
     </section>
@@ -664,6 +718,53 @@
             </div>
         </div>
     </section>
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="why-choose-upper-container">
+                <h2 class="title">Every Friday Matters 2024 Terms and Conditions</h2>
+                <p class="text-montserrat"><strong>Offer Details: </strong>New customers who sign a 24-month contract
+                    for a new line of service of at least a 3GB Plan will receive a complimentary Samsung Galaxy A15 5G
+                    128 GB Smartphone mobile device. The offer is limited to one device per new line of service.
+                    Customers must place their orders via phone or online and use the promotional code “FRIDAY” at the
+                    time of purchase.</p>
+
+                <p class="text-montserrat"><strong>Limited Time Offer: </strong>This Offer is valid from the earlier of:
+                    November 11, 2024 through December 31, 2024 or while supplies last. Available to new customers only.
+                    Pricing, promotions, terms and restrictions subject to change and may be modified or terminated at
+                    any time without notice.</p>
+
+                <p class="text-montserrat"><strong>Data Plan Requirement: </strong>Customers are required to subscribe
+                    to and maintain a data plan of 3GB or greater during the contract period of 24 months.</p>
+
+                <p class="text-montserrat"><strong>Promotion Payment: </strong>The device will be billed to the customer
+                    in 24 monthly installments with an equal monthly credit applied against the installment for each
+                    month of customer’s contract. If customer terminates the contract prior to the end of the contract
+                    period, then customer will be responsible for the entire unpaid balance with respect to the device
+                    at the time of termination.</p>
+
+                <p class="text-montserrat"><strong>Taxes: </strong>The customer will be responsible for paying all taxes
+                    on the retail value of the Samsung Galaxy A15 5G 128 GB (MSRP $229), billed in equal, monthly
+                    increments for the duration of the 24-month contract.</p>
+
+                <p class="text-montserrat"><strong>Early Termination Fee (ETF): </strong>In the event the contract for a
+                    new line of service is terminated prior to the end of the 24-month period, customer will also be
+                    responsible for an ETF of $250.</p>
+
+                <p class="text-montserrat"><strong>Activation Fee: </strong>Customers will be required to pay a $30
+                    activation fee per line of service.</p>
+
+                <p class="text-montserrat"><strong>SIM: </strong>Customers will be required to pay a $10 SIM fee per
+                    line of service</p>
+
+                <div style="height: 20px;"></div>
+
+                <p class="text-montserrat">Additional terms and conditions apply. See Terms & Conditions (including
+                    arbitration provision) at https://www.patriotmobile.com/terms-and-conditions/.</p>
+                <p class="text-montserrat">Copyright © 2024 patriotmobile – Patriot Mobile, Patriot Mobile Mobilizing
+                    Conservatives, Patriot Mobile Mobilizing Freedom are trademarks or registered trademarks of Patriot
+                    Mobile LLC</p>
+            </div>
+    </section>
 
     <!-- Swiper JavaScript and Initialization -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
@@ -680,6 +781,43 @@
             navigation: false,
         });
     </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
 </body>
-
 </html>
